@@ -13,7 +13,6 @@ let SITE_URL = 'https://www.leohuynh.dev'
     'data/blog/**/*.md',
     'public/tags/**/*.xml',
     '!pages/_*.tsx',
-    '!pages/api',
   ])
 
   let sitemap = `

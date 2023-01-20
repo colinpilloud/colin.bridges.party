@@ -13,14 +13,8 @@ export function BuiltWith() {
         <Link href="https://tailwindcss.com/">
           <DevIcon type="TailwindCSS" className="h-5 w-5" />
         </Link>
-        <Link href="https://www.prisma.io/">
-          <DevIcon type="Prisma" className="h-5 w-5" />
-        </Link>
         <Link href="https://www.typescriptlang.org/">
           <DevIcon type="Typescript" className="h-5 w-5" />
-        </Link>
-        <Link href="https://umami.is/" className="pl-px">
-          <DevIcon type="Umami" className="h-5 w-5" />
         </Link>
       </div>
       <span className="px-1 text-gray-400 dark:text-gray-500">-</span>

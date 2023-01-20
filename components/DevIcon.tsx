@@ -8,7 +8,6 @@ import Liquid from '~/icons/liquid.svg'
 import Markdown from '~/icons/markdown.svg'
 import NextJS from '~/icons/nextjs.svg'
 import TailwindCSS from '~/icons/tailwind.svg'
-import Prisma from '~/icons/prisma.svg'
 import Umami from '~/icons/umami.svg'
 import Vercel from '~/icons/vercel.svg'
 import Railway from '~/icons/railway.svg'
@@ -24,7 +23,6 @@ export let DevIconsMap = {
   Markdown,
   NextJS,
   TailwindCSS,
-  Prisma,
   Umami,
   Vercel,
   Railway,

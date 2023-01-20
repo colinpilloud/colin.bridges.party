@@ -12,8 +12,6 @@
     "upgrade": "rimraf package-lock.json && npx taze major -w && ni"
   },
   "dependencies": {
-    "@octokit/graphql": "^5.0.4",
-    "@prisma/client": "^4.8.1",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
@@ -62,7 +60,6 @@
     "next-remote-watch": "^2.0.0",
     "prettier": "^2.8.2",
     "prettier-plugin-tailwindcss": "^0.2.1",
-    "prisma": "^4.8.1",
     "rehype": "^12.0.1",
     "remark-frontmatter": "^4.0.1",
     "remark-parse": "^10.0.1",
