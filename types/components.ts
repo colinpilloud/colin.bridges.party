@@ -2,7 +2,6 @@ import type { ImageProps as NextImageProps } from 'next/image'
 import type React from 'react'
 import type { SocialIconsMap } from '~/components/SocialIcon'
 import type { projectsData } from '~/data/projectsData'
-import type { commentConfig } from '~/data/siteMetadata'
 import type { MdxFrontMatter, ReadingTime } from './mdx'
 
 export interface PageTitleProps {
@@ -22,7 +21,7 @@ export interface ImageProps extends NextImageProps {
   shouldOpenLightbox?: boolean
 }
 
-export type ProjectDataType = typeof projectsData[0]
+export type ProjectDataType = (typeof projectsData)[0]
 
 export interface ProjectCardProps {
   project: ProjectDataType
@@ -56,28 +55,8 @@ export interface BlogHeaderProps {
   readingTime: ReadingTime
 }
 
-export type CommentConfigType = typeof commentConfig
-
 export interface BlogMetaProps {
   date: string
   slug: string
   readingTime: ReadingTime
-}
-
-export interface CommentsProps {
-  frontMatter: MdxFrontMatter
-  config: CommentConfigType
-}
-
-export interface GiscusProps {
-  config: CommentConfigType['giscusConfig']
-}
-
-export interface UtterancesProps {
-  config: CommentConfigType['utterancesConfig']
-}
-
-export interface DisqusProps {
-  identifier: string
-  disqus: CommentConfigType['disqus']
 }
