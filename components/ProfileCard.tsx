@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { ProfileCardInfo } from './ProfileInfo'
-import { SpotifyNowPlaying } from './SpotifyNowPlaying'
 
 export function ProfileCard() {
   let ref = useRef(null)
@@ -63,9 +62,7 @@ export function ProfileCard() {
           style={{ objectPosition: '50% 16%', width: 340, height: 220 }}
           priority
         />
-        <SpotifyNowPlaying />
         <ProfileCardInfo />
-        <span className="h-1.5 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
       </div>
     </div>
   )
