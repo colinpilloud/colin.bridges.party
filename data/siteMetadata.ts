@@ -1,23 +1,20 @@
 export let siteMetadata = {
-  title: "Leo's blog - Leo's coding journey",
-  author: 'Leo Huynh',
-  fullName: 'Tuan Anh Huynh',
-  headerTitle: "Leo's blog - Leo's coding journey",
-  footerTitle: "Leo's blog - Leo's coding journey",
+  title: 'colin.bridges.party',
+  author: 'Colin Bridges',
+  fullName: 'Colin Bridges',
+  headerTitle: 'Colin Bridges — Computer Toucher',
+  footerTitle: "Colin Bridges — This site protected by the Neighborhood 'Squatch",
   description:
     "Leo's coding journey - work and life stories through the keyboard of an open-minded Software Engineer",
   language: 'en-us',
-  siteUrl: 'https://www.leohuynh.dev',
-  siteRepo: 'https://github.com/hta218/leohuynh.dev',
+  siteUrl: 'https://colin.bridges.party',
+  siteRepo: 'https://github.com/colinpilloud/colin.bridges.party',
   siteLogo: '/static/images/logo.jpg',
   image: '/static/images/logo.jpg',
   socialBanner: '/static/images/logo.jpg',
-  email: 'leohuynh@pm.me',
-  github: 'https://github.com/hta218',
-  twitter: 'https://twitter.com/hta218_',
-  facebook: 'https://facebook.com/hta218',
-  youtube: 'https://www.youtube.com/@hta218_',
-  linkedin: 'https://www.linkedin.com/in/hta218/',
+  email: 'colin@bridges.party',
+  github: 'https://github.com/colinpilloud',
+  twitter: 'https://twitter.com/colinpilloud',
   locale: 'en-US',
   analyticsURL: 'https://analytics.leohuynh.dev/share/AwnJYH6n/leohuynh.dev',
   analytics: {
@@ -27,9 +24,9 @@ export let siteMetadata = {
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
   },
   socialAccounts: {
-    github: 'hta218',
-    twitter: 'hta218_',
-    linkedin: 'hta218',
+    github: 'colinpilloud',
+    twitter: 'colinpilloud',
+    linkedin: 'colinpilloud',
   },
 }
 

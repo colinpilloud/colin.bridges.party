@@ -17,11 +17,14 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
               <div className="mr-3 flex items-center justify-center">
                 <NextImage
                   src="/static/images/logo.jpg"
-                  alt="Leo's Blog logo"
+                  alt="I'm smiling at you, wearing a black beanie and jacket with a white metal t-shirt underneath"
                   width={45}
                   height={45}
                   className="rounded-full"
                 />
+                <p className="inline-block rounded py-1 px-2 text-lg font-extrabold text-gray-900 dark:text-gray-100 sm:py-2 sm:px-3">
+                  colin.bridges.party
+                </p>
               </div>
             </div>
           </Link>
