@@ -15,6 +15,7 @@ export let siteMetadata = {
   email: 'colin@bridges.party',
   github: 'https://github.com/colinpilloud',
   twitter: 'https://twitter.com/colinpilloud',
+  linkedin: 'https://linkedin.com/in/colinpilloud',
   locale: 'en-US',
   analyticsURL: 'https://analytics.leohuynh.dev/share/AwnJYH6n/leohuynh.dev',
   analytics: {
