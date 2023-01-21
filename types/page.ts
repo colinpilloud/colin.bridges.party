@@ -1,10 +1,6 @@
 import type { AuthorFrontMatter, BlogFrontMatter, MdxFileData } from './mdx'
 import type { PaginationType } from './server'
 
-export interface SnippetProps {
-  snippet: MdxFileData
-}
-
 export interface BlogListProps {
   posts: BlogFrontMatter[]
   initialDisplayPosts: BlogFrontMatter[]

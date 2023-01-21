@@ -13,8 +13,8 @@ export function ProfileCard() {
     let { width, height, x, y } = ref.current.getBoundingClientRect()
     let mouseX = Math.abs(clientX - x)
     let mouseY = Math.abs(clientY - y)
-    let rotateMin = -5
-    let rotateMax = 5
+    let rotateMin = -3
+    let rotateMax = 3
     let rotateRange = rotateMax - rotateMin
 
     let rotate = {
@@ -45,13 +45,13 @@ export function ProfileCard() {
 
   return (
     <div
-      className="umami--mouseenter--profile-card-hover z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.15]"
+      className="umami--mouseenter--profile-card-hover z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.23]"
       style={{ perspective: '600px' }}
       ref={ref}
     >
       <div
         style={style}
-        className="flex flex-col overflow-hidden bg-white shadow-cyan-100/50 transition-all duration-200 ease-out dark:bg-dark dark:shadow-cyan-700/50 xl:rounded-lg xl:shadow-lg"
+        className="flex flex-col overflow-hidden bg-white shadow-primary-700/50 transition-all duration-200 ease-out dark:bg-dark dark:shadow-primary-600/100 xl:rounded-lg xl:shadow-lg"
       >
         <Image
           src={'/static/images/logo.jpg'}

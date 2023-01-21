@@ -7,7 +7,6 @@ export type MdxPageLayout =
   | 'PostLayout'
   | 'PostSimple'
   | 'ResumeLayout'
-  | 'SnippetLayout'
 
 export interface MdxFrontMatter {
   layout?: MdxPageLayout
@@ -28,11 +27,6 @@ export type ReadingTime = ReturnType<typeof readingTime>
 export interface BlogFrontMatter extends MdxFrontMatter {
   readingTime: ReadingTime
   fileName: string
-}
-
-export interface SnippetFrontMatter extends BlogFrontMatter {
-  heading: string
-  type: keyof typeof DevIconsMap
 }
 
 export interface AuthorFrontMatter extends MdxFrontMatter {

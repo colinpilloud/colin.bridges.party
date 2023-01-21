@@ -4,6 +4,7 @@ import NextImage from 'next/image'
 import { useRouter } from 'next/router'
 import { Link } from './Link'
 import { ThemeSwitcher } from './ThemeSwitcher'
+import { siteMetadata } from '~/data/siteMetadata'
 
 export function Header({ onToggleNav }: { onToggleNav: () => void }) {
   let router = useRouter()
@@ -11,12 +12,12 @@ export function Header({ onToggleNav }: { onToggleNav: () => void }) {
     <header className="supports-backdrop-blur:bg-white/95 sticky top-0 z-40 overflow-x-hidden bg-white/75 py-3 backdrop-blur dark:bg-dark/75">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
-          <Link href="/" aria-label="Leo's Blog">
+          <Link href="/" aria-label={siteMetadata.headerTitle}>
             <div className="umami--click--logo flex items-center justify-between">
               <div className="mr-3 flex items-center justify-center">
                 <NextImage
                   src="/static/images/logo.jpg"
-                  alt="I'm smiling at you, wearing a black beanie and jacket with a white metal t-shirt underneath"
+                  alt="I'm a bearded man smiling wryly at you against a lush green backdrop, wearing a black beanie and jacket with a white metal t-shirt underneath"
                   width={45}
                   height={45}
                   className="rounded-full"

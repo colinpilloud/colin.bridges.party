@@ -25,8 +25,7 @@ export function TypedBios() {
         </li>
         <li>I like functional programming.</li>
         <li>
-          I love both death metal and doom metal <Twemoji emoji="skull" />
-          <Twemoji emoji="skull" />
+          I love both death metal and doom metal <Twemoji emoji="the-horns" />
         </li>
         <li>
           I have three cats and one dog

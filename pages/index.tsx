@@ -20,8 +20,8 @@ export default function Home({ posts }: { posts: BlogFrontMatter[] }) {
   return (
     <>
       <PageSeo title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="mt-8 divide-y divide-gray-200 dark:divide-gray-700 md:mt-16">
-        <div className="space-y-2 md:my-4 md:space-y-5 md:pt-6 md:pb-8 xl:grid xl:grid-cols-3">
+      <div className="mt-4 divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="md:my-4 md:mx-8 md:space-y-5 md:pt-4 md:pb-8 xl:grid xl:grid-cols-3">
           <div className="md:pr-8 xl:col-span-2">
             <Greeting />
             <div className="text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -29,10 +29,6 @@ export default function Home({ posts }: { posts: BlogFrontMatter[] }) {
               <TypedBios />
               <ShortDescription />
               <BlogLinks />
-              <p className="my-8 flex">
-                <span className="mr-2">Happy reading</span>
-                <Twemoji emoji="clinking-beer-mugs" />
-              </p>
             </div>
           </div>
           <div className="hidden xl:block">

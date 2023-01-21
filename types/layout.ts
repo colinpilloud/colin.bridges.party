@@ -1,5 +1,5 @@
 import type React from 'react'
-import type { AuthorFrontMatter, BlogFrontMatter, MdxFrontMatter, SnippetFrontMatter } from './mdx'
+import type { AuthorFrontMatter, BlogFrontMatter, MdxFrontMatter } from './mdx'
 import type { PaginationType } from './server'
 
 export interface AuthorLayoutProps {
@@ -23,11 +23,6 @@ export interface PostSimpleLayoutProps {
 }
 
 export interface PostLayoutProps extends PostSimpleLayoutProps {}
-
-export interface SnippetLayoutProps {
-  snippets: SnippetFrontMatter[]
-  description: string
-}
 
 export interface ResumeLayoutProps {
   children: React.ReactNode
