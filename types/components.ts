@@ -27,12 +27,6 @@ export interface ProjectCardProps {
   project: ProjectDataType
 }
 
-export interface SocialButtonsProps {
-  postUrl: string
-  title: string
-  fileName: string
-}
-
 export type TwemojiProps = {
   emoji: string
   size?: string

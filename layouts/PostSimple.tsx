@@ -4,7 +4,6 @@ import { PageTitle } from '~/components/PageTitle'
 import { ScrollTopButton } from '~/components/ScrollTopButton'
 import { SectionContainer } from '~/components/SectionContainer'
 import { BlogSeo } from '~/components/SEO'
-import { SocialButtons } from '~/components/SocialButtons'
 import { siteMetadata } from '~/data/siteMetadata'
 import type { PostSimpleLayoutProps } from '~/types'
 
@@ -39,9 +38,6 @@ export function PostSimple(props: PostSimpleLayoutProps) {
             <div className="xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose prose-lg max-w-none pb-8 dark:prose-dark md:prose-xl">
                 {children}
-              </div>
-              <div className="border-t border-gray-200 dark:border-gray-700">
-                <SocialButtons postUrl={postUrl} title={title} fileName={fileName} />
               </div>
             </div>
           </div>

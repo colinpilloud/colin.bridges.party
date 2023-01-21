@@ -24,8 +24,7 @@ export function ListLayout(props: ListLayoutProps) {
             {title}
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            I write mostly about web development, tech related, and sometime about my personal life.
-            Use the search below to filter by title.
+            Check out my latest haul from deep down in the ol' Content Mine
           </p>
           <PostsSearch onChange={setSearchValue} />
         </div>

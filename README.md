@@ -1,4 +1,4 @@
-# colin.bridges.party
+# colin.bridges.party 🎉
 
 My personal website, built on top of [this heavily modified](https://github.com/hta218/leohuynh.dev) version of the [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and then hacked up.
 
