@@ -2,7 +2,7 @@ import fs from 'fs'
 import { globby } from 'globby'
 import prettier from 'prettier'
 
-let SITE_URL = 'https://www.leohuynh.dev'
+let SITE_URL = 'https://colin.bridges.party'
 
 ;(async () => {
   console.log('Generating sitemap...')
@@ -24,6 +24,7 @@ let SITE_URL = 'https://www.leohuynh.dev'
               .replace('pages/', '/')
               .replace('data/blog', '/blog')
               .replace('public/', '/')
+              .replace('.tsx', '')
               .replace('.ts', '')
               .replace('.mdx', '')
               .replace('.md', '')

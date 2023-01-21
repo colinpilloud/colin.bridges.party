@@ -9,6 +9,7 @@ module.exports = withBundleAnalyzer({
     dirs: ['components', 'constant', 'layouts', 'libs', 'pages', 'scripts', 'utils'],
   },
   images: {
+    unoptimized: true,
     domains: ['i.scdn.co'],
   },
   typescript: { tsconfigPath: './tsconfig.json' },
