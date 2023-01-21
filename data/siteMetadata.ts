@@ -4,8 +4,7 @@ export let siteMetadata = {
   fullName: 'Colin Bridges',
   headerTitle: 'Colin Bridges — Computer Toucher',
   footerTitle: "Colin Bridges — This site protected by the Neighborhood 'Squatch",
-  description:
-    "Leo's coding journey - work and life stories through the keyboard of an open-minded Software Engineer",
+  description: 'Big brain thoughts from yours truly — Colin Bridges',
   language: 'en-us',
   siteUrl: 'https://colin.bridges.party',
   siteRepo: 'https://github.com/colinpilloud/colin.bridges.party',
@@ -14,12 +13,10 @@ export let siteMetadata = {
   socialBanner: '/static/images/logo.jpg',
   email: 'colin@bridges.party',
   github: 'https://github.com/colinpilloud',
-  twitter: 'https://twitter.com/colinpilloud',
   linkedin: 'https://linkedin.com/in/colinpilloud',
   locale: 'en-US',
   socialAccounts: {
     github: 'colinpilloud',
-    twitter: 'colinpilloud',
     linkedin: 'colinpilloud',
   },
 }

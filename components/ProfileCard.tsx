@@ -13,8 +13,8 @@ export function ProfileCard() {
     let { width, height, x, y } = ref.current.getBoundingClientRect()
     let mouseX = Math.abs(clientX - x)
     let mouseY = Math.abs(clientY - y)
-    let rotateMin = -15
-    let rotateMax = 15
+    let rotateMin = -5
+    let rotateMax = 5
     let rotateRange = rotateMax - rotateMin
 
     let rotate = {

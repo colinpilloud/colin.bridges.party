@@ -40,6 +40,9 @@ export function TypedBios() {
           I love watching sports! <Twemoji emoji="football" />
           <Twemoji emoji="basketball" />
         </li>
+        <li>
+          I made the theme dark by default on purpose <Twemoji emoji="smiling-face-with-horns" />
+        </li>
       </ul>
       <span ref={el} className="text-neutral-900 dark:text-neutral-200" />
     </div>
