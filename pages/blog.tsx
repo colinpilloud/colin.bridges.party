@@ -19,10 +19,7 @@ export function getStaticProps() {
 export default function Blog({ posts, initialDisplayPosts, pagination }: BlogListProps) {
   return (
     <>
-      <PageSeo
-        title={`All posts - ${siteMetadata.author}`}
-        description={siteMetadata.description}
-      />
+      <PageSeo title={`${siteMetadata.title} — All posts`} description={siteMetadata.description} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
