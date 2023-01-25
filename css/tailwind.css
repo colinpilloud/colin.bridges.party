@@ -134,12 +134,41 @@ html.lightbox-loading * {
   margin-bottom: 2em;
 }
 
+.resume h2 {
+  font-size: 1.6em;
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+.resume h3 {
+  font-size: 1.4em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.resume h4 {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.resume li {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 * {
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 .thumbnail-image img {
   border-radius: 10px;
+}
+
+@media screen {
+  .printOnly {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) {

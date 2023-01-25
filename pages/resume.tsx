@@ -11,10 +11,12 @@ export default function About({ resumeData }: { resumeData: MdxFileData }) {
   let { mdxSource, frontMatter } = resumeData
 
   return (
-    <MDXLayoutRenderer
-      layout={frontMatter.layout}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
+    <div className="resume">
+      <MDXLayoutRenderer
+        layout={frontMatter.layout}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
+    </div>
   )
 }
