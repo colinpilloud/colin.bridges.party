@@ -8,7 +8,8 @@ export function ShortDescription() {
       </p>
       <p>
         I'm a people person with{' '}
-        <span className="font-semibold">management experience and interest</span>.
+        <span className="font-semibold">management experience and the soft skills to prove it</span>
+        .
       </p>
       <p className="font-black">I'm looking for my next role and I want to hear from you!</p>
     </div>
