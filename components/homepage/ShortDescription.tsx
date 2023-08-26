@@ -11,7 +11,6 @@ export function ShortDescription() {
         <span className="font-semibold">management experience and the soft skills to prove it</span>
         .
       </p>
-      <p className="font-black">I'm looking for my next role and I want to hear from you!</p>
     </div>
   )
 }
