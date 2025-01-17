@@ -11,15 +11,6 @@ export function App() {
   });
 
   useEffect(() => {
-    const metaThemeColor = document.querySelector("meta[name=theme-color]");
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute(
-        "content",
-        // TODO should be a better way to sync this with tailwind's colors
-        darkMode.value ? "#0000ff" : "#0070f3",
-      );
-    }
-
     const html = document.querySelector("html");
     if (html) {
       if (!darkMode.value) {
@@ -32,9 +23,7 @@ export function App() {
 
   return (
     <NextUIProvider navigate={navigate}>
-      <div className="flex min-h-screen flex-col items-center justify-center bg-white text-center text-black dark:bg-black dark:text-white">
-        <Outlet />
-      </div>
+      <Outlet />
     </NextUIProvider>
   );
 }

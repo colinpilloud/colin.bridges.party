@@ -3,17 +3,24 @@ import "./index.css";
 import { App } from "./App.tsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { RetroPoster } from "./components/RetroPoster.tsx";
+import { IndexContent } from "./components/IndexContent.tsx";
+import { Error } from "./components/Error.tsx";
+import { About } from "./components/About.tsx";
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
       element: <App />,
+      errorElement: <Error />,
       children: [
         {
           index: true,
-          element: <RetroPoster />,
+          element: <IndexContent />,
+        },
+        {
+          path: "about",
+          element: <About />,
         },
       ],
     },
