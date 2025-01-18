@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ButtonLink } from "../components/ButtonLink.tsx";
 
 function RedBannerHeader({ content }: { content: string }) {
@@ -19,7 +20,7 @@ function Blurb() {
         of everything.
       </p>
       <p className="w-64 md:w-96">
-        I like programming on the JVM and writing React/TypeScript webapps.
+        I like programming on the JVM and writing React / TypeScript webapps.
       </p>
     </section>
   );
@@ -42,13 +43,15 @@ function HighlightedLike() {
   );
 }
 
-function LikesSection({ header, likes }: { header: string; likes: string[] }) {
+type Like = string | ReactNode;
+
+function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
   return (
     <section className="flex flex-col flex-nowrap items-end space-y-6">
       <h4 className="text-lg font-bold">{header}</h4>
       <ul className="flex flex-col flex-nowrap items-end space-y-2">
-        {likes.map((like) => (
-          <li key={like} className="w-64 list-inside list-disc md:w-96">
+        {likes.map((like, i) => (
+          <li key={i} className="w-64 list-inside list-disc md:w-96">
             {like}
           </li>
         ))}
@@ -67,7 +70,10 @@ const workLikes = [
 
 const outsideWorkLikes = [
   "listening to metal.",
-  "playing Magic: The Gathering™️, pinball, and pickleball.",
+  <span>
+    playing Magic: The Gathering
+    <span className="align-super text-xs">TM</span>, pinball, and pickleball."
+  </span>,
   "watching sports.",
   "attempting various home improvement projects.",
 ];
@@ -76,7 +82,7 @@ export function About() {
   return (
     <>
       <RedBannerHeader content={"Colin\nBridges"} />
-      <div className="space-y-16 md:mr-[20vw]">
+      <div className="space-y-16">
         <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />

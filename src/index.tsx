@@ -3,7 +3,7 @@ import "./index.css";
 import { App } from "./App.tsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About, Error, IndexContent } from "./pages/index.ts";
+import { About, Error, IndexContent, Resume } from "./pages/index.ts";
 
 const router = createBrowserRouter(
   [
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
         },
         {
           path: "resume",
-          element: <h1>oh yeah</h1>,
+          element: <Resume />,
         },
       ],
     },
