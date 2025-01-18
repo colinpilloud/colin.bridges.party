@@ -5,15 +5,7 @@ export function Error() {
   return (
     <AppLayout>
       <RedBandCta
-        header={
-          <span>
-            You have
-            <br />
-            browsing problems.
-          </span>
-        }
-        secondaryHeader="We can solve them."
-        buttonText="Click here."
+        header={<span>You have{"\n"}browsing problems.</span>}
         buttonHref="/"
       />
     </AppLayout>

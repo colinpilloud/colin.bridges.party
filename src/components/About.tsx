@@ -12,13 +12,9 @@ function RedBannerHeader({ content }: { content: string }) {
 
 function HighlightedLike() {
   return (
-    <section className="mb-24 flex flex-col items-end gap-4 text-2xl font-bold md:text-4xl">
+    <section className="mb-24 flex flex-col items-end gap-4 whitespace-pre-line text-2xl font-bold md:text-4xl">
       <h4 className="text-lg font-bold">I really like</h4>
-      <span>
-        solving problems
-        <br />
-        with software.
-      </span>
+      <span>solving problems{"\n"}with software.</span>
       <div className="grid grid-cols-2 gap-4">
         <Button size="sm" radius="lg" className="bg-primary p-6 md:p-8">
           <Link className="font-black uppercase text-black" href="/resume">
