@@ -1,5 +1,5 @@
-import { AppLayout } from "./AppLayout.tsx";
-import { RedBandCta } from "./RedBandCta.tsx";
+import { AppLayout } from "../components/AppLayout.tsx";
+import { RedBandCta } from "../components/RedBandCta.tsx";
 
 export function Error() {
   return (

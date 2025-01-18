@@ -17,7 +17,7 @@ export function RedBandCta(props: RedBandCtaProps) {
   } = props;
 
   return (
-    <div className="-mx-2 mt-16 flex flex-col gap-4 bg-primary py-4 pr-4 text-black md:pr-32">
+    <div className="-mx-2 mt-16 flex flex-col gap-4 bg-primary py-4 pr-4 text-black md:pr-[20vw]">
       <h1 className="whitespace-pre-line text-2xl font-black md:text-4xl">
         {header}
       </h1>

@@ -3,9 +3,7 @@ import "./index.css";
 import { App } from "./App.tsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { IndexContent } from "./components/IndexContent.tsx";
-import { Error } from "./components/Error.tsx";
-import { About } from "./components/About.tsx";
+import { About, Error, IndexContent } from "./pages/index.ts";
 
 const router = createBrowserRouter(
   [
@@ -21,6 +19,10 @@ const router = createBrowserRouter(
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "resume",
+          element: <h1>oh yeah</h1>,
         },
       ],
     },

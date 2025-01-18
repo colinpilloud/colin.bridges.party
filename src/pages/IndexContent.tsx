@@ -1,4 +1,4 @@
-import { RedBandCta } from "./RedBandCta.tsx";
+import { RedBandCta } from "../components/RedBandCta.tsx";
 
 export function IndexContent() {
   return (

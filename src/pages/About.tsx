@@ -1,9 +1,9 @@
-import { ButtonLink } from "./ButtonLink.tsx";
+import { ButtonLink } from "../components/ButtonLink.tsx";
 
 function RedBannerHeader({ content }: { content: string }) {
   return (
     <div className="-mx-2 w-screen bg-primary pb-4 pt-16">
-      <h1 className="mr-2 whitespace-pre-line text-2xl font-black text-black md:text-4xl">
+      <h1 className="mr-2 whitespace-pre-line text-2xl font-black text-black md:mr-[20vw] md:text-4xl">
         {content}
       </h1>
     </div>
@@ -76,7 +76,7 @@ export function About() {
   return (
     <>
       <RedBannerHeader content={"Colin\nBridges"} />
-      <div className="space-y-16">
+      <div className="space-y-16 md:mr-[20vw]">
         <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />
