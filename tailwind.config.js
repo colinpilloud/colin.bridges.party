@@ -1,4 +1,5 @@
 const { nextui } = require("@nextui-org/react");
+const { base } = require("framer-motion/client");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
@@ -18,22 +19,14 @@ module.exports = {
           DEFAULT: "#e84828",
         },
       },
+      fontSize: {
+        "4xl": "5rem",
+        "2xl": "3rem",
+        xl: "1.5rem",
+        lg: "1.25rem",
+        base: "0.8rem",
+      },
     },
   },
-  plugins: [
-    nextui({
-      themes: {
-        light: {
-          colors: {
-            // primary: "#e84828",
-          },
-        },
-        dark: {
-          colors: {
-            // primary: "#e84828",
-          },
-        },
-      },
-    }),
-  ],
+  plugins: [nextui()],
 };

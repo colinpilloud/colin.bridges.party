@@ -2,6 +2,7 @@ import useDarkMode from "@fisch0920/use-dark-mode";
 import { NextUIProvider } from "@nextui-org/react";
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import { AppLayout } from "./components/AppLayout.tsx";
 
 export function App() {
   const navigate = useNavigate();
@@ -23,7 +24,9 @@ export function App() {
 
   return (
     <NextUIProvider navigate={navigate}>
-      <Outlet />
+      <AppLayout>
+        <Outlet />
+      </AppLayout>
     </NextUIProvider>
   );
 }
