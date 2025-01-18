@@ -1,4 +1,4 @@
-import { Button, Link } from "@nextui-org/react";
+import { ButtonLink } from "./ButtonLink.tsx";
 
 function RedBannerHeader({ content }: { content: string }) {
   return (
@@ -10,22 +10,33 @@ function RedBannerHeader({ content }: { content: string }) {
   );
 }
 
+function Blurb() {
+  return (
+    <section className="flex flex-col flex-nowrap items-end space-y-4">
+      <p className="w-64 md:w-96">
+        I'm a career backend engineer in{" "}
+        <span className="font-black">Portland, OR</span> who's done a little bit
+        of everything.
+      </p>
+      <p className="w-64 md:w-96">
+        I like programming on the JVM and writing React/TypeScript webapps.
+      </p>
+    </section>
+  );
+}
+
 function HighlightedLike() {
   return (
     <section className="mb-24 flex flex-col items-end gap-4 whitespace-pre-line text-2xl font-bold md:text-4xl">
       <h4 className="text-lg font-bold">I really like</h4>
       <span>solving problems{"\n"}with software.</span>
-      <div className="grid grid-cols-2 gap-4">
-        <Button size="sm" radius="lg" className="bg-primary p-6 md:p-8">
-          <Link className="font-black uppercase text-black" href="/resume">
-            Résumé
-          </Link>
-        </Button>
-        <Button size="sm" radius="lg" className="bg-primary p-6 md:p-8">
-          <Link className="font-black uppercase text-black" href="/portfolio">
-            Portfolio
-          </Link>
-        </Button>
+      <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
+        <ButtonLink
+          href="/portfolio"
+          text="Portfolio"
+          variant="primary-on-black"
+        />
+        <ButtonLink href="/resume" text="Résumé" variant="primary-on-black" />
       </div>
     </section>
   );
@@ -66,16 +77,7 @@ export function About() {
     <>
       <RedBannerHeader content={"Colin\nBridges"} />
       <div className="space-y-16">
-        <section className="flex flex-col flex-nowrap items-end space-y-4">
-          <p className="w-64 md:w-96">
-            I'm a career backend engineer in{" "}
-            <span className="font-black">Portland, OR</span> who's done a little
-            bit of everything.
-          </p>
-          <p className="w-64 md:w-96">
-            I like programming on the JVM and writing React/TypeScript webapps.
-          </p>
-        </section>
+        <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />
         <LikesSection

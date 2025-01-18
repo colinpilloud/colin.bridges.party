@@ -1,5 +1,5 @@
-import { Button, Link } from "@nextui-org/react";
 import { ReactNode } from "react";
+import { ButtonLink } from "./ButtonLink.tsx";
 
 interface RedBandCtaProps {
   header: ReactNode;
@@ -23,11 +23,11 @@ export function RedBandCta(props: RedBandCtaProps) {
       </h1>
       <h3 className="font-bold md:text-2xl">{secondaryHeader}</h3>
       <div className="flex flex-col items-end gap-4 font-semibold">
-        <Button size="sm" radius="lg" className="bg-black p-6 md:p-8">
-          <Link href={buttonHref} className="uppercase">
-            {buttonText}
-          </Link>
-        </Button>
+        <ButtonLink
+          href={buttonHref}
+          text={buttonText}
+          variant="black-on-primary"
+        />
       </div>
     </div>
   );
