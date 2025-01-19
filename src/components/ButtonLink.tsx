@@ -3,7 +3,7 @@ import { Button, Link } from "@nextui-org/react";
 interface ButtonLinkProps {
   href: string;
   text: string;
-  variant: "primary-on-black" | "black-on-primary";
+  variant: "primary-on-black" | "black-on-secondary";
 }
 
 export function ButtonLink(props: ButtonLinkProps) {
@@ -12,7 +12,7 @@ export function ButtonLink(props: ButtonLinkProps) {
   const buttonStyle =
     variant === "primary-on-black"
       ? "bg-primary text-black"
-      : "bg-black text-primary";
+      : "bg-black text-secondary";
 
   return (
     <Button

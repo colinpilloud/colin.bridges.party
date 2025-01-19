@@ -1,5 +1,7 @@
+import { Divider } from "@nextui-org/react";
 import { Prose } from "../components/Prose.tsx";
 import {
+  Job,
   List,
   ResumeSection,
   SkillList,
@@ -41,8 +43,9 @@ function TechnicalSkills() {
           </span>,
           <span>
             Cloud-based architecture in{" "}
-            <span className="font-semibold">AWS</span> including scale-to-zero
-            deploys in <SkillList skills={["Lambda", "API Gateway"]} />
+            <span className="font-semibold text-secondary">AWS</span> including
+            scale-to-zero deploys in{" "}
+            <SkillList skills={["Lambda", "API Gateway"]} />
           </span>,
           <span>
             Database integration and management with{" "}
@@ -64,8 +67,10 @@ function AdditionalSkills() {
       <List
         items={[
           <span>
-            <span className="font-semibold">Management experience</span>,
-            leading two teams of engineers towards aggressive goals
+            <span className="font-semibold text-secondary">
+              Management experience
+            </span>
+            , leading two teams of engineers towards aggressive goals
           </span>,
           "Ability to work efficiently in a team environment as well as independently",
           "Effective interpersonal and written communication skills",
@@ -76,9 +81,102 @@ function AdditionalSkills() {
 }
 
 function WorkExperience() {
+  const jobs = [
+    {
+      company: "Truework",
+      roles: [
+        {
+          title: "Senior Software Engineer",
+          startDate: "Apr 2023",
+          endDate: "",
+        },
+      ],
+      responsibilities: [
+        "Deliver user-facing features, contributing towards Python monorepo and React/Typescript frontend",
+        "Add integrations with LOS platforms and employment/income data providers",
+      ],
+    },
+    {
+      company: "Flow Finance",
+      roles: [
+        {
+          title: "Lead Engineer",
+          startDate: "Sep 2022",
+          endDate: "Jan 2023",
+        },
+        {
+          title: "Senior Software Engineer",
+          startDate: "Feb 2021",
+          endDate: "Sep 2022",
+        },
+      ],
+      responsibilities: [
+        "Develop generic platform for building and deploying Scala code to AWS Lambda",
+        "Build data pipeline from scratch, pulling data in real time and at low cost from several data providers",
+        "Write backing logic for internal services, enabling bookkeepers to easily manipulate data upstream",
+        "Mentor junior engineers on the JVM, Scala, and functional programming concepts from the ground up",
+      ],
+    },
+    {
+      company: "Cash App",
+      roles: [
+        {
+          title: "Senior Software Engineer",
+          startDate: "Sep 2020",
+          endDate: "Feb 2021",
+        },
+      ],
+      responsibilities: [
+        "Maintain integration with Salesforce, empowering Cash App's customer support team",
+        "Discovery and solution work for handling official customer complaints via multiple input sources",
+      ],
+    },
+    {
+      company: "Acorns",
+      roles: [
+        {
+          title: "Engineering Manager",
+          startDate: "Oct 2019",
+          endDate: "May 2020",
+        },
+        {
+          title: "Senior Software Engineer",
+          startDate: "Jul 2018",
+          endDate: "Oct 2019",
+        },
+      ],
+      responsibilities: [
+        "Harden, refine, and reconstruct monolithic Scala service, responsible for managing over a million IRAs",
+        "Create serverless infrastructure to synchronize investment statuses across systems",
+        "Lead engineering team of nine, emphasizing individual growth and team achievements",
+        "Reinforce adherence to Scrum principles, increasing velocity and productivity",
+      ],
+    },
+    {
+      company: "Nike",
+      roles: [
+        {
+          title: "Senior Software Engineer",
+          startDate: "Jan 2017",
+          endDate: "Jul 2018",
+        },
+      ],
+      responsibilities: [
+        "Devise and implement architecture for promoting search results on store.nike.com",
+        "Craft Elasticsearch solutions for multi-tenant needs",
+        "Implement and tune search engine scoring mechanism via Apache Spark/Hive",
+      ],
+    },
+  ];
+
   return (
     <ResumeSection headingProps={{ variant: "h1", content: "Work Experience" }}>
-      <p>hello</p>
+      {jobs.map((job, i) => (
+        <>
+          <Job key={i} {...job} />
+          {i < jobs.length - 1 && <Divider className="w-64 bg-primary" />}
+        </>
+      ))}
     </ResumeSection>
   );
 }
@@ -104,7 +202,7 @@ function Education() {
 function AchievementsAndAwards() {
   return (
     <ResumeSection
-      headingProps={{ variant: "h1", content: "Achievements /\nAwards" }}
+      headingProps={{ variant: "h1", content: "Achievements / Awards" }}
     >
       <p>hello</p>
     </ResumeSection>

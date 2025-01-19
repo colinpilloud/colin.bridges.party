@@ -8,17 +8,16 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ["Helvetica", "Roboto", "sans-serif"],
-    },
     extend: {
+      fontFamily: {
+        sans: ['"Helvetica Neue"', "Roboto", "sans-serif"],
+      },
       colors: {
-        primary: {
-          DEFAULT: "#e84828",
-        },
+        primary: "#e84828",
+        secondary: "#cfa6be",
       },
       fontSize: {
-        "4xl": "5rem",
+        "4xl": "4rem",
         "2xl": "3rem",
         xl: "1.75rem",
         lg: "1.25rem",

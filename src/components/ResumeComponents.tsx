@@ -4,21 +4,21 @@ type ResumeHeadingVariant = "h1" | "h2" | "h3";
 
 interface ResumeHeadingProps {
   variant: ResumeHeadingVariant;
-  content: string;
+  content: string | ReactNode;
 }
 
-function ResumeHeading(props: ResumeHeadingProps) {
+export function ResumeHeading(props: ResumeHeadingProps) {
   const { variant, content } = props;
 
   switch (variant) {
     case "h1":
       return (
-        <h1 className="-mr-2 w-screen bg-gradient-to-r from-transparent to-primary to-40% pb-2 pr-2 pt-5 text-lg font-black text-black md:-mr-[20vw] md:pr-[20vw] md:text-xl">
+        <h1 className="-mr-2 w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-2 pr-2 pt-5 text-xl font-black text-black md:-mr-[calc(12vw+2px)] md:pr-[calc(12vw+2px)]">
           {content}
         </h1>
       );
     case "h2":
-      return <h2 className="text-xl">{content}</h2>;
+      return <h2 className="text-xl font-extrabold">{content}</h2>;
     case "h3":
       return <h3 className="text-lg">{content}</h3>;
   }
@@ -58,7 +58,7 @@ export function List(props: ListProps) {
       {items.map((item, i) => (
         <li
           key={i}
-          className={`${classNames?.li || ""} w-64 list-inside list-disc md:w-96`}
+          className={`${classNames?.li || ""} w-[20rem] list-inside list-disc md:w-[32rem]`}
         >
           {item}
         </li>
@@ -67,12 +67,53 @@ export function List(props: ListProps) {
   );
 }
 
+interface JobProps {
+  company: string;
+  roles: RoleProps[];
+  responsibilities: string[];
+}
+
+export function Job(props: JobProps) {
+  return (
+    <ResumeSection
+      headingProps={{
+        variant: "h2",
+        content: <span className="text-secondary">{props.company}</span>,
+      }}
+    >
+      {props.roles.map((role, i) => (
+        <div>
+          <ResumeHeading
+            variant="h3"
+            content={
+              <div className="flex flex-row-reverse items-center justify-items-end gap-2">
+                <span className="font-semibold">{role.title}</span>
+                <span className="align-middle text-xs">
+                  ({role.startDate} – {role.endDate})
+                </span>
+              </div>
+            }
+            key={i}
+          />
+        </div>
+      ))}
+      <List items={props.responsibilities} />
+    </ResumeSection>
+  );
+}
+
+export interface RoleProps {
+  title: string;
+  startDate: string;
+  endDate: string;
+}
+
 export function SkillList({ skills }: { skills: string[] }) {
   return skills.map((item, i) => (
-    <span className="font-semibold" key={i}>
+    <span className="font-semibold text-secondary" key={i}>
       {item}
       {i < skills.length - 1 && (
-        <span className="font-normal">
+        <span className="font-normal text-primary">
           {i === skills.length - 2
             ? `${skills.length === 2 ? "" : ","} and `
             : ", "}
