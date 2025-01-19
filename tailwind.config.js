@@ -1,6 +1,4 @@
 const { nextui } = require("@nextui-org/react");
-const { base } = require("framer-motion/client");
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -22,7 +20,7 @@ module.exports = {
       fontSize: {
         "4xl": "5rem",
         "2xl": "3rem",
-        xl: "1.5rem",
+        xl: "1.75rem",
         lg: "1.25rem",
         base: "0.9rem",
         sm: "0.75rem",

@@ -15,14 +15,14 @@ export function ButtonLink(props: ButtonLinkProps) {
       : "bg-black text-primary";
 
   return (
-    <Link href={href}>
-      <Button
-        size="sm"
-        radius="lg"
-        className={`w-48 p-6 text-lg font-black uppercase md:p-8 ${buttonStyle}`}
-      >
-        {text}
-      </Button>
-    </Link>
+    <Button
+      size="sm"
+      radius="lg"
+      className={`w-48 p-6 text-lg font-black uppercase md:p-8 ${buttonStyle}`}
+      as={Link}
+      href={href}
+    >
+      {text}
+    </Button>
   );
 }

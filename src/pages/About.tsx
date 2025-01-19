@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
 import { ButtonLink } from "../components/ButtonLink.tsx";
+import { Prose } from "../components/Prose.tsx";
 
 function RedBannerHeader({ content }: { content: string }) {
   return (
-    <div className="-mx-2 w-screen bg-primary pb-4 pt-16">
+    <div className="-mx-2 w-screen bg-gradient-to-r from-transparent to-primary pb-4 pt-16">
       <h1 className="mr-2 whitespace-pre-line text-2xl font-black text-black md:mr-[20vw] md:text-4xl">
         {content}
       </h1>
@@ -14,14 +15,14 @@ function RedBannerHeader({ content }: { content: string }) {
 function Blurb() {
   return (
     <section className="flex flex-col flex-nowrap items-end space-y-4">
-      <p className="w-64 md:w-96">
+      <Prose>
         I'm a career backend engineer in{" "}
         <span className="font-black">Portland, OR</span> who's done a little bit
         of everything.
-      </p>
-      <p className="w-64 md:w-96">
+      </Prose>
+      <Prose>
         I like programming on the JVM and writing React / TypeScript webapps.
-      </p>
+      </Prose>
     </section>
   );
 }
