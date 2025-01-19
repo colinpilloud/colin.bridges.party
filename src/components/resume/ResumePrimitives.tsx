@@ -67,47 +67,6 @@ export function List(props: ListProps) {
   );
 }
 
-interface JobProps {
-  company: string;
-  roles: RoleProps[];
-  responsibilities: string[];
-}
-
-export function Job(props: JobProps) {
-  return (
-    <ResumeSection
-      headingProps={{
-        variant: "h2",
-        content: <span className="text-secondary">{props.company}</span>,
-      }}
-    >
-      {props.roles.map((role, i) => (
-        <div>
-          <ResumeHeading
-            variant="h3"
-            content={
-              <div className="flex flex-row-reverse items-center justify-items-end gap-2">
-                <span className="font-semibold">{role.title}</span>
-                <span className="align-middle text-xs">
-                  ({role.startDate} – {role.endDate})
-                </span>
-              </div>
-            }
-            key={i}
-          />
-        </div>
-      ))}
-      <List items={props.responsibilities} />
-    </ResumeSection>
-  );
-}
-
-export interface RoleProps {
-  title: string;
-  startDate: string;
-  endDate: string;
-}
-
 export function SkillList({ skills }: { skills: string[] }) {
   return skills.map((item, i) => (
     <span className="font-semibold text-secondary" key={i}>

@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 import { ButtonLink } from "./ButtonLink.tsx";
 
-interface RedBandCtaProps {
+interface WideBandCallToActionProps {
   header: ReactNode;
   buttonHref: string;
   buttonText?: string;
   secondaryHeader?: string;
 }
 
-export function RedBandCta(props: RedBandCtaProps) {
+export function WideBandCallToAction(props: WideBandCallToActionProps) {
   const {
     header,
     buttonHref,
