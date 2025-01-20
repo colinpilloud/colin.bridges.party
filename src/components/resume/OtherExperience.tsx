@@ -1,11 +1,38 @@
-import { ResumeSection } from "./ResumePrimitives.tsx";
+import { Link } from "@heroui/react";
+import { List, ResumeHeading, ResumeSection } from "./ResumePrimitives.tsx";
 
 export function OtherExperience() {
   return (
     <ResumeSection
-      headingProps={{ variant: "h1", content: "Other Experience" }}
+      headingProps={{ variant: "h1", children: "Other Experience" }}
     >
-      <p>hello</p>
+      <ResumeHeading variant="h2">
+        <Link
+          isExternal={true}
+          className="text-[length:inherit] text-inherit"
+          href="https://bestmagiccard.com"
+        >
+          bestmagiccard.com
+        </Link>
+        <span className="text-lg"> // </span>
+        <Link
+          isExternal={true}
+          className="text-[length:inherit] text-inherit"
+          href="https://bestbasicland.com"
+        >
+          bestbasicland.com
+        </Link>
+      </ResumeHeading>
+      <List
+        items={[
+          <span>
+            Sister sites that crowd-source rankings for Magic: the Gathering
+            <span className="align-super text-xs">TM</span> cards
+          </span>,
+          "Monorepo TypeScript / React frontend powering both web applications",
+          "AWS infrastructure deployed via TypeScript CDK v2",
+        ]}
+      />
     </ResumeSection>
   );
 }

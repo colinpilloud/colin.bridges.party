@@ -3,7 +3,7 @@ import { List, ResumeSection } from "./ResumePrimitives.tsx";
 export function AdditionalSkills() {
   return (
     <ResumeSection
-      headingProps={{ variant: "h1", content: "Additional Skills" }}
+      headingProps={{ variant: "h1", children: "Additional Skills" }}
     >
       <List
         items={[

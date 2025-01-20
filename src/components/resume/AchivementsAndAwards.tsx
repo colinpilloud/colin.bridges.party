@@ -1,11 +1,16 @@
-import { ResumeSection } from "./ResumePrimitives.tsx";
+import { List, ResumeSection } from "./ResumePrimitives.tsx";
 
 export function AchievementsAndAwards() {
   return (
     <ResumeSection
-      headingProps={{ variant: "h1", content: "Achievements / Awards" }}
+      headingProps={{ variant: "h1", children: "Achievements / Awards" }}
     >
-      <p>hello</p>
+      <List
+        items={[
+          "National Merit Scholarship Finalist",
+          "Northrop Grumman Corporate Sponsor Scholarship Winner",
+        ]}
+      />
     </ResumeSection>
   );
 }

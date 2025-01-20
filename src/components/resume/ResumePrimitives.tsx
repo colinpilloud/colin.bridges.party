@@ -4,11 +4,11 @@ type ResumeHeadingVariant = "h1" | "h2" | "h3";
 
 interface ResumeHeadingProps {
   variant: ResumeHeadingVariant;
-  content: string | ReactNode;
+  children: string | ReactNode;
 }
 
 export function ResumeHeading(props: ResumeHeadingProps) {
-  const { variant, content } = props;
+  const { variant, children: content } = props;
 
   switch (variant) {
     case "h1":
@@ -18,7 +18,9 @@ export function ResumeHeading(props: ResumeHeadingProps) {
         </h1>
       );
     case "h2":
-      return <h2 className="text-xl font-extrabold">{content}</h2>;
+      return (
+        <h2 className="text-xl font-extrabold text-secondary">{content}</h2>
+      );
     case "h3":
       return <h3 className="text-lg">{content}</h3>;
   }
