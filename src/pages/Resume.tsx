@@ -9,7 +9,7 @@ import { Header } from "../components/resume/Header.tsx";
 
 export function Resume() {
   return (
-    <div className="flex flex-col items-end gap-8">
+    <div className="mb-8 flex flex-col items-end gap-8">
       <Header />
       <Objective />
       <TechnicalSkills />
