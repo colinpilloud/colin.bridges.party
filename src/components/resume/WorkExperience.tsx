@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import { List, ResumeHeading, ResumeSection } from "./ResumePrimitives.tsx";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/react";
 import jobs from "./jobs.json";
 
 interface JobProps {
