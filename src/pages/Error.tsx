@@ -1,5 +1,5 @@
 import { AppLayout } from "../components/AppLayout.tsx";
-import { WideBandCallToAction } from "../components/RedBandCta.tsx";
+import { WideBandCallToAction } from "../components/WideBandCallToAction.tsx";
 
 export function Error() {
   return (

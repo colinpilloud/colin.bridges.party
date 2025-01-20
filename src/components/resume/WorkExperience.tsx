@@ -21,11 +21,13 @@ function Job(props: JobProps) {
         <ResumeHeading
           variant="h3"
           content={
-            <div className="flex flex-row items-center justify-items-end gap-2">
-              <span className="align-middle text-sm">
+            <div className="justify-content-end flex flex-row items-center gap-2">
+              <span className="text-nowrap align-middle text-xs sm:text-sm">
                 ({role.startDate} – {role.endDate})
               </span>
-              <span className="font-semibold">{role.title}</span>
+              <span className="text-md font-semibold sm:text-lg">
+                {role.title}
+              </span>
             </div>
           }
           key={i}

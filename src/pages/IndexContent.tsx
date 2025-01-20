@@ -1,4 +1,4 @@
-import { WideBandCallToAction } from "../components/RedBandCta.tsx";
+import { WideBandCallToAction } from "../components/WideBandCallToAction.tsx";
 
 export function IndexContent() {
   return (
