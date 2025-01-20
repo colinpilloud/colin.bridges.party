@@ -7,5 +7,5 @@ export function Prose({
   children: ReactNode;
   className?: string;
 }) {
-  return <p className={`w-64 md:w-96 ${className || ""}`}>{children}</p>;
+  return <p className={`w-64 md:w-[32rem] ${className || ""}`}>{children}</p>;
 }
