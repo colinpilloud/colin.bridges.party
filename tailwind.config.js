@@ -16,8 +16,8 @@ module.exports = {
         secondary: "#cfa6be",
       },
       fontSize: {
-        "4xl": "4rem",
-        "2xl": "3rem",
+        "4xl": "3.33rem",
+        "2xl": "2.5rem",
         xl: "1.75rem",
         lg: "1.25rem",
         md: "1rem",

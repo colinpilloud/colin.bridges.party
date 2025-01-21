@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type ResumeHeadingVariant = "h1" | "h2" | "h3";
+type ResumeHeadingVariant = "h2" | "h3";
 
 interface ResumeHeadingProps {
   variant: ResumeHeadingVariant;
@@ -11,12 +11,6 @@ export function ResumeHeading(props: ResumeHeadingProps) {
   const { variant, children: content } = props;
 
   switch (variant) {
-    case "h1":
-      return (
-        <h1 className="-mr-2 w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-2 pr-2 pt-5 text-xl font-black text-black md:-mr-[calc(12vw+2px)] md:pr-[calc(12vw+2px)]">
-          {content}
-        </h1>
-      );
     case "h2":
       return (
         <h2 className="text-xl font-extrabold text-secondary">{content}</h2>
@@ -24,21 +18,6 @@ export function ResumeHeading(props: ResumeHeadingProps) {
     case "h3":
       return <h3 className="text-lg">{content}</h3>;
   }
-}
-
-export function ResumeSection({
-  headingProps,
-  children,
-}: {
-  headingProps: ResumeHeadingProps;
-  children: ReactNode;
-}) {
-  return (
-    <div className="flex flex-col flex-nowrap items-end space-y-4">
-      <ResumeHeading {...headingProps} />
-      {children}
-    </div>
-  );
 }
 
 type ListItem = string | ReactNode;

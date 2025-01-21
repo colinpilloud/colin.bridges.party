@@ -1,11 +1,9 @@
 import { Link } from "@heroui/react";
-import { List, ResumeHeading, ResumeSection } from "./ResumePrimitives.tsx";
+import { List, ResumeHeading } from "./ResumePrimitives.tsx";
 
 export function OtherExperience() {
   return (
-    <ResumeSection
-      headingProps={{ variant: "h1", children: "Other Experience" }}
-    >
+    <>
       <ResumeHeading variant="h2">
         <Link
           isExternal={true}
@@ -33,6 +31,6 @@ export function OtherExperience() {
           "AWS infrastructure deployed via TypeScript CDK v2",
         ]}
       />
-    </ResumeSection>
+    </>
   );
 }

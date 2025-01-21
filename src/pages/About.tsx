@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 import { ButtonLink } from "../components/ButtonLink.tsx";
 import { Prose } from "../components/Prose.tsx";
 
-function RedBannerHeader({ content }: { content: string }) {
+function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="-mx-2 w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pt-16">
-      <h1 className="whitespace-pre-line text-2xl font-black text-black md:mr-[calc(12vw+2px)] md:text-4xl">
+    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-16 md:pr-[10vw]">
+      <h1 className="whitespace-pre-line text-2xl font-black text-black md:text-4xl">
         {content}
       </h1>
     </div>
@@ -82,7 +82,7 @@ const outsideWorkLikes = [
 export function About() {
   return (
     <>
-      <RedBannerHeader content={"Colin\nBridges"} />
+      <BannerHeader content={"Colin\nBridges"} />
       <div className="space-y-16">
         <Blurb />
         <HighlightedLike />

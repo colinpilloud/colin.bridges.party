@@ -17,7 +17,7 @@ export function WideBandCallToAction(props: WideBandCallToActionProps) {
   } = props;
 
   return (
-    <div className="-ml-2 mt-16 w-screen bg-gradient-to-r from-transparent to-primary to-20% py-4 pr-4 text-black md:pr-[calc(12vw+2px)]">
+    <div className="mt-16 w-screen bg-gradient-to-r from-transparent to-primary to-20% py-4 pr-4 text-black md:pr-[10vw]">
       <div className="flex flex-col gap-4">
         <h1 className="whitespace-pre-line pl-8 text-2xl font-black md:text-4xl">
           {header}

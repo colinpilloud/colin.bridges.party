@@ -1,6 +1,5 @@
-import { Fragment } from "react/jsx-runtime";
-import { List, ResumeHeading, ResumeSection } from "./ResumePrimitives.tsx";
-import { Divider } from "@heroui/react";
+import { List, ResumeHeading } from "./ResumePrimitives.tsx";
+import { Accordion, AccordionItem, Divider } from "@heroui/react";
 import jobs from "./jobs.json";
 
 interface JobProps {
@@ -11,12 +10,7 @@ interface JobProps {
 
 function Job(props: JobProps) {
   return (
-    <ResumeSection
-      headingProps={{
-        variant: "h2",
-        children: props.company,
-      }}
-    >
+    <>
       {props.roles.map((role, i) => (
         <ResumeHeading variant="h3" key={i}>
           <div className="justify-content-end flex flex-row items-center gap-2">
@@ -30,7 +24,7 @@ function Job(props: JobProps) {
         </ResumeHeading>
       ))}
       <List items={props.responsibilities} />
-    </ResumeSection>
+    </>
   );
 }
 
@@ -42,17 +36,26 @@ interface RoleProps {
 
 export function WorkExperience() {
   return (
-    <ResumeSection
-      headingProps={{ variant: "h1", children: "Work Experience" }}
+    <Accordion
+      selectionMode="multiple"
+      defaultExpandedKeys={["0", "1", "2"]}
+      itemClasses={{
+        base: "-mr-2",
+        title: "text-xl font-bold uppercase text-right text-secondary",
+        trigger: "w-screen flex flex-row md:pr-[10vw]",
+        indicator:
+          "text-secondary text-xl mr-3 pr-4 rotate-0 data-[open=true]:rotate-45 pr-5",
+        content: "flex flex-col flex-nowrap items-end space-y-4 mb-4",
+      }}
     >
       {jobs.map((job, i) => (
-        <Fragment key={i}>
+        <AccordionItem title={job.company} key={i} indicator="+">
           <Job key={i} {...job} />
           {i < jobs.length - 1 && (
             <Divider key={`divider-${i}`} className="w-64 bg-primary" />
           )}
-        </Fragment>
+        </AccordionItem>
       ))}
-    </ResumeSection>
+    </Accordion>
   );
 }

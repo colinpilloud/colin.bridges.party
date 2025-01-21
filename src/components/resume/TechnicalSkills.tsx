@@ -1,10 +1,8 @@
-import { List, ResumeSection, SkillList } from "./ResumePrimitives.tsx";
+import { List, SkillList } from "./ResumePrimitives.tsx";
 
 export function TechnicalSkills() {
   return (
-    <ResumeSection
-      headingProps={{ variant: "h1", children: "Technical Skills" }}
-    >
+    <>
       <List
         items={[
           <span>
@@ -33,6 +31,6 @@ export function TechnicalSkills() {
           </span>,
         ]}
       />
-    </ResumeSection>
+    </>
   );
 }
