@@ -24,7 +24,7 @@ export function OtherExperience() {
       <List
         items={[
           <span>
-            Sister sites that crowd-source rankings for Magic: the Gathering
+            Sister sites that crowdsource rankings for Magic: the Gathering
             <span className="align-super text-xs">TM</span> cards
           </span>,
           "Monorepo TypeScript / React frontend powering both web applications",
