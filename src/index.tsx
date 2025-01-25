@@ -10,6 +10,7 @@ import {
   Portfolio,
   Resume,
 } from "./pages/index.ts";
+import { StrictMode } from "react";
 
 const router = createBrowserRouter(
   [
@@ -48,7 +49,7 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  // <React.StrictMode>
-  <RouterProvider router={router} />,
-  // </React.StrictMode>,
+  <StrictMode>
+    <RouterProvider router={router} />,
+  </StrictMode>,
 );

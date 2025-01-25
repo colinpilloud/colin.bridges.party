@@ -2,6 +2,9 @@
   "name": "colin.bridges.party",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@heroui/react": "2.6.14",
     "@types/react": "^19.0.0",
