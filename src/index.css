@@ -7,3 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+  font-family: "Burn The Witch";
+  src: url("assets/fonts/BurnTheWitch.ttf") format("truetype");
+}

@@ -4,7 +4,7 @@ import { Prose } from "../components/Prose.tsx";
 
 function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-10 md:pr-[10vw] md:pt-16">
+    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-10 leading-[0.9] md:pr-[10vw] md:pt-16">
       <h1 className="whitespace-pre-line text-2xl font-black text-black md:text-4xl">
         {content}
       </h1>
@@ -29,7 +29,7 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="flex flex-col items-end gap-2 whitespace-pre-line text-2xl font-bold text-secondary md:text-4xl">
+    <section className="flex flex-col items-end gap-2 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
       <h4 className="text-lg font-bold">I really like</h4>
       <span>solving problems{"\n"}with software.</span>
       <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
