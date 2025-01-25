@@ -1,5 +1,6 @@
-import { Accordion, AccordionItem } from "@heroui/react";
-import { ReactNode } from "react";
+import { Accordion, AccordionItem, Selection } from "@heroui/react";
+import { ReactNode, useState } from "react";
+import { useOnPrint } from "../UseOnPrint.tsx";
 
 export interface AccordionSection {
   title: ReactNode;
@@ -14,21 +15,35 @@ export function WideBandAccordion({
   sections: AccordionSection[];
   [key: string]: any;
 }) {
+  const [selectedKeys, setSelectedKeys] = useState<Selection>(
+    new Set(
+      sections
+        .map((section, i) => (section.expandedByDefault ? i.toString() : null))
+        .filter((i) => i !== null),
+    ),
+  );
+
+  const expandAllAccordionSections = () => {
+    setSelectedKeys("all");
+  };
+
+  // TODO; restore previously expanded sections
+  useOnPrint(expandAllAccordionSections, () => {});
+
   return (
     <Accordion
+      selectedKeys={selectedKeys}
+      onSelectionChange={setSelectedKeys}
       itemClasses={{
         title:
-          "text-lg sm:text-xl md:text-2xl font-black text-black uppercase text-right whitespace-pre-line ml-16",
+          "text-lg sm:text-xl md:text-2xl font-black text-black uppercase text-right whitespace-pre-line ml-16 print:mr-6",
         trigger:
-          "w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-3 pt-5 mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
+          "w-screen bg-gradient-to-r from-transparent to-primary to-20% print:pb-0 print:pt-0 screen:pb-3 screen:pt-5 screen:mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
         indicator:
-          "text-black text-xl rotate-0 data-[open=true]:rotate-45 pr-4",
+          "text-black text-xl rotate-0 data-[open=true]:rotate-45 mr-4 print:hidden",
         content:
-          "flex flex-col flex-nowrap items-end space-y-6 md:space-y-12 mb-4 overflow-hidden",
+          "flex flex-col flex-nowrap items-end print:space-y-1 screen:space-y-6 screen:md:space-y-12 print:mb-2 screen:mb-4",
       }}
-      defaultExpandedKeys={sections
-        .map((section, i) => (section.expandedByDefault ? i.toString() : null))
-        .filter((i) => i !== null)}
       {...accordionProps}
     >
       {sections.map((section, i) => (

@@ -3,11 +3,11 @@ import { List, ResumeHeading } from "./ResumePrimitives.tsx";
 
 export function OtherExperience() {
   return (
-    <>
+    <div className="flex flex-col flex-nowrap items-end space-y-4">
       <ResumeHeading variant="h2">
         <Link
           isExternal={true}
-          className="text-[length:inherit] text-inherit"
+          className="screen:text-secondary text-right text-lg font-bold uppercase md:text-xl print:text-black"
           href="https://bestmagiccard.com"
         >
           bestmagiccard.com
@@ -18,7 +18,7 @@ export function OtherExperience() {
         }
         <Link
           isExternal={true}
-          className="text-[length:inherit] text-inherit"
+          className="screen:text-secondary text-right text-lg font-bold uppercase md:text-xl print:text-black"
           href="https://bestbasicland.com"
         >
           bestbasicland.com
@@ -34,6 +34,6 @@ export function OtherExperience() {
           "AWS infrastructure deployed via TypeScript CDK v2",
         ]}
       />
-    </>
+    </div>
   );
 }

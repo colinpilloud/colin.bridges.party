@@ -44,8 +44,8 @@ export function BestBasicLandBestMagicCard() {
       </Prose>
       <Carousel
         items={[
-          { src: bmc, alt: "bestmagiccard.com" },
           { src: bbl, alt: "bestbasicland.com" },
+          { src: bmc, alt: "bestmagiccard.com" },
         ]}
       />
       <Prose>

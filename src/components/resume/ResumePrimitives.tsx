@@ -13,7 +13,9 @@ export function ResumeHeading(props: ResumeHeadingProps) {
   switch (variant) {
     case "h2":
       return (
-        <h2 className="text-xl font-extrabold text-secondary">{content}</h2>
+        <h2 className="screen:text-secondary whitespace-pre-line text-xl font-extrabold uppercase">
+          {content}
+        </h2>
       );
     case "h3":
       return <h3 className="text-lg">{content}</h3>;
@@ -34,12 +36,12 @@ export function List(props: ListProps) {
   const { items, classNames } = props;
   return (
     <ul
-      className={`${classNames?.ul || ""} flex flex-col flex-nowrap items-end space-y-4`}
+      className={`${classNames?.ul || ""} flex flex-col flex-nowrap items-end space-y-4 print:space-y-1`}
     >
       {items.map((item, i) => (
         <li
           key={i}
-          className={`${classNames?.li || ""} w-[22rem] list-inside list-disc md:w-[36rem]`}
+          className={`${classNames?.li || ""} w-[22rem] list-inside list-disc md:w-[36rem] print:w-full`}
         >
           {item}
         </li>
@@ -50,10 +52,10 @@ export function List(props: ListProps) {
 
 export function SkillList({ skills }: { skills: string[] }) {
   return skills.map((item, i) => (
-    <span className="font-semibold text-secondary" key={i}>
+    <span className="screen:text-secondary font-semibold" key={i}>
       {item}
       {i < skills.length - 1 && (
-        <span className="font-normal text-primary">
+        <span className="screen:text-primary font-normal">
           {i === skills.length - 2
             ? `${skills.length === 2 ? "" : ","} and `
             : ", "}

@@ -47,7 +47,7 @@ const sections: AccordionSection[] = [
 
 export function Resume() {
   return (
-    <div className="mb-8 flex flex-col items-end gap-8">
+    <div className="mb-8 flex flex-col items-center">
       <Header />
       <WideBandAccordion
         showDivider={false}

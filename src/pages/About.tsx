@@ -29,7 +29,7 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="flex flex-col items-end gap-2 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
+    <section className="ml-4 flex flex-col items-end gap-2 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
       <h4 className="text-lg font-bold">I really like</h4>
       <span>solving problems{"\n"}with software.</span>
       <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
@@ -48,7 +48,7 @@ type Like = string | ReactNode;
 
 function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
   return (
-    <section className="flex flex-col flex-nowrap items-end space-y-6">
+    <section className="flex flex-col flex-nowrap items-end screen:space-y-6">
       <h4 className="text-lg font-bold">{header}</h4>
       <ul className="flex flex-col flex-nowrap items-end space-y-2">
         {likes.map((like, i) => (

@@ -9,6 +9,9 @@ export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
   return (
     <div className="relative left-0">
       <Swiper
+        threshold={5}
+        longSwipesMs={200}
+        longSwipesRatio={0.4}
         effect={"cards"}
         className="w-[300px] md:w-[600px]"
         keyboard={{
@@ -19,11 +22,11 @@ export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
         modules={[EffectCards, Keyboard]}
         cardsEffect={{
           slideShadows: false,
-          perSlideRotate: -5,
-          perSlideOffset: -40,
+          perSlideRotate: 5,
+          perSlideOffset: 40,
         }}
-        loop={true}
         initialSlide={1}
+        slideToClickedSlide={true}
         centeredSlides={true} // This property ensures the slides are centered
       >
         {items.map((item, i) => (

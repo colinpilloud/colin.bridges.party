@@ -1,6 +1,8 @@
 import { List, ResumeHeading } from "./ResumePrimitives.tsx";
-import { Accordion, AccordionItem } from "@heroui/react";
+import { Accordion, AccordionItem, Selection } from "@heroui/react";
 import jobs from "./jobs.json";
+import { useOnPrint } from "../../UseOnPrint.tsx";
+import { useState } from "react";
 
 interface JobProps {
   company: string;
@@ -35,18 +37,32 @@ interface RoleProps {
 }
 
 export function WorkExperience() {
+  const [selectedKeys, setSelectedKeys] = useState<Selection>(
+    new Set([jobs[0].company]),
+  );
+
+  const expandAllAccordionSections = () => {
+    setSelectedKeys("all");
+  };
+
+  // TODO; restore previously expanded sections
+  useOnPrint(expandAllAccordionSections, () => {});
+
   return (
     <Accordion
+      selectedKeys={selectedKeys}
+      onSelectionChange={setSelectedKeys}
       selectionMode="multiple"
-      defaultExpandedKeys={[jobs[0].company]}
       showDivider={false}
       itemClasses={{
         base: "-mr-2 flex flex-col items-end",
         title:
-          "text-lg md:text-xl font-bold uppercase text-right text-secondary",
-        trigger: "w-screen flex flex-row",
-        indicator: "text-secondary text-xl rotate-0 data-[open=true]:rotate-45",
-        content: "flex flex-col flex-nowrap items-end space-y-4 mb-4",
+          "text-lg md:text-xl font-bold uppercase text-right screen:text-secondary",
+        trigger: "w-screen flex flex-row print:py-0",
+        indicator:
+          "text-secondary text-xl rotate-0 data-[open=true]:rotate-45 print:hidden",
+        content:
+          "flex flex-col flex-nowrap items-end print:space-y-2 screen:space-y-4 mb-4",
       }}
     >
       {jobs.map((job, i) => (

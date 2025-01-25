@@ -8,6 +8,8 @@ export function Prose({
   className?: string;
 }) {
   return (
-    <p className={`ml-4 w-64 md:w-[32rem] ${className || ""}`}>{children}</p>
+    <p className={`ml-4 w-64 md:w-[32rem] print:w-full ${className || ""}`}>
+      {children}
+    </p>
   );
 }

@@ -5,7 +5,7 @@ export function AdditionalSkills() {
     <List
       items={[
         <span>
-          <span className="font-semibold text-secondary">
+          <span className="screen:text-secondary font-semibold">
             Management experience
           </span>
           , leading two teams of engineers towards aggressive goals

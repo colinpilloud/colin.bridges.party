@@ -9,7 +9,7 @@
       }
     ],
     "responsibilities": [
-      "Deliver user-facing features, contributing towards Python monorepo and React/Typescript frontend",
+      "Deliver user-facing features against Python monorepo and React/Typescript frontend",
       "Add integrations with LOS platforms and employment/income data providers"
     ]
   },
@@ -29,7 +29,7 @@
     ],
     "responsibilities": [
       "Develop generic platform for building and deploying Scala code to AWS Lambda",
-      "Build data pipeline from scratch, pulling data in real time and at low cost from several data providers",
+      "Build data pipeline from scratch, pulling data in real time and at low cost from data providers",
       "Write backing logic for internal services, enabling bookkeepers to easily manipulate data upstream",
       "Mentor junior engineers on the JVM, Scala, and functional programming concepts from the ground up"
     ]
@@ -63,7 +63,7 @@
       }
     ],
     "responsibilities": [
-      "Harden, refine, and reconstruct monolithic Scala service, responsible for managing over a million IRAs",
+      "Maintain and refactor monolithic Scala service, responsible for managing over 1M IRAs",
       "Create serverless infrastructure to synchronize investment statuses across systems",
       "Lead engineering team of nine, emphasizing individual growth and team achievements",
       "Reinforce adherence to Scrum principles, increasing velocity and productivity"
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "company": "Red Robin Gourmet Burgers, Inc.",
+    "company": "Red Robin",
     "roles": [
       {
         "title": "Enterprise Developer",
@@ -135,7 +135,7 @@
     ]
   },
   {
-    "company": "Recondo Technology, Inc.",
+    "company": "Recondo Technology",
     "roles": [
       {
         "title": "Associate Software Engineer",
@@ -150,7 +150,7 @@
     ]
   },
   {
-    "company": "FullContact, Inc.",
+    "company": "FullContact",
     "roles": [
       {
         "title": "Software Development Intern",

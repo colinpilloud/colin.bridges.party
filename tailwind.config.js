@@ -7,6 +7,9 @@ module.exports = {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      metal: ["Burn The Witch", "sans-serif"],
+    },
     extend: {
       fontFamily: {
         sans: ['"Helvetica Neue"', "Roboto", "sans-serif"],
@@ -25,6 +28,10 @@ module.exports = {
         base: "0.9rem",
         sm: "0.66rem",
         xs: "0.5rem",
+      },
+      screens: {
+        print: { raw: "print" },
+        screen: { raw: "screen" },
       },
     },
   },
