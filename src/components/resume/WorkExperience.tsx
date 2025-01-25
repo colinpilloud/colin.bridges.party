@@ -1,5 +1,5 @@
 import { List, ResumeHeading } from "./ResumePrimitives.tsx";
-import { Accordion, AccordionItem, Divider } from "@heroui/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 import jobs from "./jobs.json";
 
 interface JobProps {
@@ -38,22 +38,20 @@ export function WorkExperience() {
   return (
     <Accordion
       selectionMode="multiple"
-      defaultExpandedKeys={["0", "1", "2"]}
+      defaultExpandedKeys={[jobs[0].company]}
+      showDivider={false}
       itemClasses={{
-        base: "-mr-2",
-        title: "text-xl font-bold uppercase text-right text-secondary",
-        trigger: "w-screen flex flex-row md:pr-[10vw]",
-        indicator:
-          "text-secondary text-xl mr-3 pr-4 rotate-0 data-[open=true]:rotate-45 pr-5",
+        base: "-mr-2 flex flex-col items-end",
+        title:
+          "text-lg md:text-xl font-bold uppercase text-right text-secondary",
+        trigger: "w-screen flex flex-row",
+        indicator: "text-secondary text-xl rotate-0 data-[open=true]:rotate-45",
         content: "flex flex-col flex-nowrap items-end space-y-4 mb-4",
       }}
     >
       {jobs.map((job, i) => (
-        <AccordionItem title={job.company} key={i} indicator="+">
-          <Job key={i} {...job} />
-          {i < jobs.length - 1 && (
-            <Divider key={`divider-${i}`} className="w-64 bg-primary" />
-          )}
+        <AccordionItem title={job.company} key={job.company} indicator="+">
+          <Job {...job} />
         </AccordionItem>
       ))}
     </Accordion>

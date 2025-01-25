@@ -12,7 +12,10 @@ export function OtherExperience() {
         >
           bestmagiccard.com
         </Link>
-        <span className="text-lg"> // </span>
+        {
+          // eslint-disable-next-line react/jsx-no-comment-textnodes
+          <span className="text-lg"> // </span>
+        }
         <Link
           isExternal={true}
           className="text-[length:inherit] text-inherit"

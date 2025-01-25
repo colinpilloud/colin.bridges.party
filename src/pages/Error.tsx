@@ -6,6 +6,7 @@ export function Error() {
     <AppLayout>
       <WideBandCallToAction
         header={<span>You have{"\n"}browsing problems.</span>}
+        secondaryHeader="We can solve them."
         buttonHref="/about"
       />
     </AppLayout>

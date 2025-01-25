@@ -3,7 +3,13 @@ import "./index.css";
 import { App } from "./App.tsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About, Error, IndexContent, Resume } from "./pages/index.ts";
+import {
+  About,
+  Error,
+  IndexContent,
+  Portfolio,
+  Resume,
+} from "./pages/index.ts";
 
 const router = createBrowserRouter(
   [
@@ -19,6 +25,10 @@ const router = createBrowserRouter(
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "portfolio",
+          element: <Portfolio />,
         },
         {
           path: "resume",

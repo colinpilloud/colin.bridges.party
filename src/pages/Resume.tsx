@@ -47,6 +47,7 @@ export function Resume() {
     <div className="mb-8 flex flex-col items-end gap-8">
       <Header />
       <Accordion
+        showDivider={false}
         selectionMode="multiple"
         defaultExpandedKeys={sections
           .filter((section) => section.defaultExpand)
@@ -56,9 +57,9 @@ export function Resume() {
           title:
             "text-xl md:text-2xl font-black text-black uppercase text-right",
           trigger:
-            "w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-3 pt-5 mb-2 items-end md:pr-[10vw] -ml-2",
+            "w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-3 pt-5 mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
           indicator:
-            "text-black text-xl rotate-0 data-[open=true]:rotate-45 pr-4",
+            "text-black text-xl rotate-0 data-[open=true]:rotate-45 pr-2",
           content: "flex flex-col flex-nowrap items-end space-y-4 mb-4",
         }}
       >

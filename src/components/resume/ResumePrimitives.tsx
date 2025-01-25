@@ -39,7 +39,7 @@ export function List(props: ListProps) {
       {items.map((item, i) => (
         <li
           key={i}
-          className={`${classNames?.li || ""} w-[24rem] list-inside list-disc md:w-[36rem]`}
+          className={`${classNames?.li || ""} w-[22rem] list-inside list-disc md:w-[36rem]`}
         >
           {item}
         </li>

@@ -4,7 +4,7 @@ import { Prose } from "../components/Prose.tsx";
 
 function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-16 md:pr-[10vw]">
+    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-10 md:pr-[10vw] md:pt-16">
       <h1 className="whitespace-pre-line text-2xl font-black text-black md:text-4xl">
         {content}
       </h1>
@@ -83,7 +83,7 @@ export function About() {
   return (
     <>
       <BannerHeader content={"Colin\nBridges"} />
-      <div className="space-y-16">
+      <div className="space-y-8 md:space-y-16">
         <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />
