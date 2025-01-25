@@ -29,9 +29,11 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="ml-4 flex flex-col items-end gap-2 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
-      <h4 className="text-lg font-bold">I really like</h4>
-      <span>solving problems{"\n"}with software.</span>
+    <section className="ml-4 flex flex-col items-end gap-4 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
+      <div>
+        <h4 className="mb-1 text-md font-bold">I really like</h4>
+        <span>solving problems{"\n"}with software.</span>
+      </div>
       <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
         <ButtonLink
           href="/portfolio"
