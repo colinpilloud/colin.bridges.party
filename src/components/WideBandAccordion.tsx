@@ -42,7 +42,7 @@ export function WideBandAccordion({
         indicator:
           "text-black text-xl rotate-0 data-[open=true]:rotate-45 mr-4 print:hidden",
         content:
-          "flex flex-col flex-nowrap items-end print:space-y-1 screen:space-y-6 screen:md:space-y-12 print:mb-2 screen:mb-4",
+          "flex flex-col flex-nowrap items-end print:space-y-1 screen:space-y-4 screen:md:space-y-6 print:mb-2 screen:mb-4",
       }}
       {...accordionProps}
     >

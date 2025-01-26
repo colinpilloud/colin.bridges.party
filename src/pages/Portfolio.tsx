@@ -4,6 +4,10 @@ import {
   BestBasicLandBestMagicCardTitle,
 } from "../components/portfolio/BestCards.tsx";
 import { WideBandAccordion } from "../components/WideBandAccordion.tsx";
+import {
+  FutureFlipCity,
+  FutureFlipCityTitle,
+} from "../components/portfolio/FutureFlipCity.tsx";
 
 export function Portfolio() {
   return (
@@ -11,7 +15,7 @@ export function Portfolio() {
       <div className="-mr-4 mb-4 md:-mr-[10vw]">
         <Link
           href="/about"
-          className="font-metal text-md normal-case tracking-[-0.10em]"
+          className="sticky font-metal text-md normal-case tracking-[-0.10em]"
         >
           Colin Bridges
         </Link>
@@ -23,7 +27,13 @@ export function Portfolio() {
             children: <BestBasicLandBestMagicCard />,
             expandedByDefault: true,
           },
+          {
+            title: <FutureFlipCityTitle />,
+            children: <FutureFlipCity />,
+            expandedByDefault: true,
+          },
         ]}
+        selectionMode="multiple"
       />
     </div>
   );

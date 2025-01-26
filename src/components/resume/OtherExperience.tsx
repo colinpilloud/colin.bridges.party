@@ -7,7 +7,7 @@ export function OtherExperience() {
       <ResumeHeading variant="h2">
         <Link
           isExternal={true}
-          className="screen:text-secondary text-right text-lg font-bold uppercase md:text-xl print:text-black"
+          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:text-black"
           href="https://bestmagiccard.com"
         >
           bestmagiccard.com
@@ -18,7 +18,7 @@ export function OtherExperience() {
         }
         <Link
           isExternal={true}
-          className="screen:text-secondary text-right text-lg font-bold uppercase md:text-xl print:text-black"
+          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:text-black"
           href="https://bestbasicland.com"
         >
           bestbasicland.com
@@ -32,6 +32,21 @@ export function OtherExperience() {
           </span>,
           "Monorepo TypeScript / React frontend powering both web applications",
           "AWS infrastructure deployed via TypeScript CDK v2",
+        ]}
+      />
+      <ResumeHeading variant="h2">
+        <Link
+          isExternal={true}
+          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:text-black"
+          href="https://future.flip.city/demo"
+        >
+          future.flip.city
+        </Link>
+      </ResumeHeading>
+      <List
+        items={[
+          "Tournament companion webapp for bespoke pinball events",
+          "Syncs with Firebase updates published from organizer's iOS app in real-time",
         ]}
       />
     </div>
