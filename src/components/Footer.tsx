@@ -1,4 +1,4 @@
-import { Button } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import { useState } from "react";
 
 export function Footer() {
@@ -30,7 +30,17 @@ export function Footer() {
         <p className="hidden md:flex">·</p>
         <Button
           tabIndex={0}
-          className="border-0 bg-inherit px-0 text-[0.666rem] text-primary underline"
+          className="h-3 border-0 bg-inherit px-0 text-[0.666rem] text-primary"
+          as={Link}
+          href="https://github.com/colinpilloud/colin.bridges.party"
+          isExternal
+        >
+          View Source.
+        </Button>
+        <p className="hidden md:flex">·</p>
+        <Button
+          tabIndex={0}
+          className="h-3 border-0 bg-inherit px-0 text-[0.666rem] text-primary"
           onPress={() => toggleMetalMode()}
           as={"span"}
         >
