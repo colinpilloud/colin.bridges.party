@@ -15,7 +15,9 @@ export function Header() {
     <div className="-mr-4 mb-4 md:-mr-[10vw]">
       <div className="flex flex-row flex-nowrap items-center gap-4 screen:hidden">
         <div className="flex flex-col items-end justify-end text-right">
-          <h1 className="font-metal text-md">Colin Bridges</h1>
+          <h1 className="font-metal text-md tracking-[-0.10em]">
+            Colin Bridges
+          </h1>
           <h4 className="-mt-2 font-sans text-sm lowercase">(Colin Bridges)</h4>
         </div>
         <div className="flex flex-col items-start justify-end text-sm">
@@ -24,7 +26,10 @@ export function Header() {
         </div>
       </div>
       <div className="flex flex-row flex-nowrap items-center gap-6 text-center print:hidden">
-        <Link href="/about" className="mt-1 font-metal text-md normal-case">
+        <Link
+          href="/about"
+          className="mt-1 font-metal text-md normal-case tracking-[-0.10em]"
+        >
           Colin Bridges
         </Link>
         <Button onPress={download} variant="ghost" size="md" color="primary">

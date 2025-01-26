@@ -9,7 +9,10 @@ export function Portfolio() {
   return (
     <div className="flex flex-col items-center">
       <div className="-mr-4 mb-4 md:-mr-[10vw]">
-        <Link href="/about" className="font-metal text-md normal-case">
+        <Link
+          href="/about"
+          className="font-metal text-md normal-case tracking-[-0.10em]"
+        >
           Colin Bridges
         </Link>
       </div>
