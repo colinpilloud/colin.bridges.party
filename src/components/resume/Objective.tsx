@@ -1,4 +1,4 @@
-import { Prose } from "../Prose.tsx";
+import { Prose } from "../Prose";
 
 export function Objective() {
   return (

@@ -2,12 +2,12 @@ import { Link } from "@heroui/react";
 import {
   BestBasicLandBestMagicCard,
   BestBasicLandBestMagicCardTitle,
-} from "../components/portfolio/BestCards.tsx";
-import { WideBandAccordion } from "../components/WideBandAccordion.tsx";
+} from "../components/portfolio/BestCards";
+import { WideBandAccordion } from "../components/WideBandAccordion";
 import {
   FutureFlipCity,
   FutureFlipCityTitle,
-} from "../components/portfolio/FutureFlipCity.tsx";
+} from "../components/portfolio/FutureFlipCity";
 
 export function Portfolio() {
   return (

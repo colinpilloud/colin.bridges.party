@@ -1,11 +1,11 @@
-import { List } from "./ResumePrimitives.tsx";
+import { List } from "./ResumePrimitives";
 
 export function AdditionalSkills() {
   return (
     <List
       items={[
         <span>
-          <span className="screen:text-secondary font-semibold">
+          <span className="font-semibold screen:text-secondary">
             Management experience
           </span>
           , leading two teams of engineers towards aggressive goals

@@ -1,5 +1,5 @@
 import { Link } from "@heroui/react";
-import { List, ResumeHeading } from "./ResumePrimitives.tsx";
+import { List, ResumeHeading } from "./ResumePrimitives";
 
 export function OtherExperience() {
   return (

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Footer } from "./Footer.tsx";
+import { Footer } from "./Footer";
 
 interface AppLayoutProps {
   children: ReactNode;

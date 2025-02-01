@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ButtonLink } from "./ButtonLink.tsx";
+import { ButtonLink } from "./ButtonLink";
 
 interface WideBandCallToActionProps {
   header: ReactNode;

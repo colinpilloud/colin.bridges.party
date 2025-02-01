@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { ButtonLink } from "../components/ButtonLink.tsx";
-import { Prose } from "../components/Prose.tsx";
+import { ButtonLink } from "../components/ButtonLink";
+import { Prose } from "../components/Prose";
 
 function BannerHeader({ content }: { content: string }) {
   return (

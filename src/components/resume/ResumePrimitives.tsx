@@ -13,7 +13,7 @@ export function ResumeHeading(props: ResumeHeadingProps) {
   switch (variant) {
     case "h2":
       return (
-        <h2 className="screen:text-secondary whitespace-pre-line text-xl font-extrabold uppercase">
+        <h2 className="whitespace-pre-line text-xl font-extrabold uppercase screen:text-secondary">
           {content}
         </h2>
       );
@@ -51,16 +51,20 @@ export function List(props: ListProps) {
 }
 
 export function SkillList({ skills }: { skills: string[] }) {
-  return skills.map((item, i) => (
-    <span className="screen:text-secondary font-semibold" key={i}>
-      {item}
-      {i < skills.length - 1 && (
-        <span className="screen:text-primary font-normal">
-          {i === skills.length - 2
-            ? `${skills.length === 2 ? "" : ","} and `
-            : ", "}
+  return (
+    <>
+      {skills.map((item, i) => (
+        <span className="font-semibold screen:text-secondary" key={i}>
+          {item}
+          {i < skills.length - 1 && (
+            <span className="font-normal screen:text-primary">
+              {i === skills.length - 2
+                ? `${skills.length === 2 ? "" : ","} and `
+                : ", "}
+            </span>
+          )}
         </span>
-      )}
-    </span>
-  ));
+      ))}
+    </>
+  );
 }

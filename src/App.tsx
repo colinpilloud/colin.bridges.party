@@ -1,6 +1,6 @@
 import { HeroUIProvider } from "@heroui/react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { AppLayout } from "./components/AppLayout.tsx";
+import { AppLayout } from "./components/AppLayout";
 
 export function App() {
   const navigate = useNavigate();

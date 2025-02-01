@@ -4,8 +4,8 @@ import "swiper/css/effect-cards";
 import { Link } from "@heroui/react";
 import bbl from "../../assets/img/bbl.png";
 import bmc from "../../assets/img/bmc.png";
-import { Prose } from "../Prose.tsx";
-import { Carousel } from "./PortfolioPrimitives.tsx";
+import { Prose } from "../Prose";
+import { Carousel } from "./PortfolioPrimitives";
 
 export function BestBasicLandBestMagicCardTitle() {
   return (

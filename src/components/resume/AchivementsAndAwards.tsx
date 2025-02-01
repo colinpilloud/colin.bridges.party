@@ -1,4 +1,4 @@
-import { List } from "./ResumePrimitives.tsx";
+import { List } from "./ResumePrimitives";
 
 export function AchievementsAndAwards() {
   return (

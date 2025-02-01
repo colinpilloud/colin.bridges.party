@@ -1,15 +1,15 @@
-import { AdditionalSkills } from "../components/resume/AdditionalSkills.tsx";
-import { Objective } from "../components/resume/Objective.tsx";
-import { TechnicalSkills } from "../components/resume/TechnicalSkills.tsx";
-import { Education } from "../components/resume/Education.tsx";
-import { OtherExperience } from "../components/resume/OtherExperience.tsx";
-import { WorkExperience } from "../components/resume/WorkExperience.tsx";
-import { AchievementsAndAwards } from "../components/resume/AchivementsAndAwards.tsx";
-import { Header } from "../components/resume/Header.tsx";
+import { AdditionalSkills } from "../components/resume/AdditionalSkills";
+import { Objective } from "../components/resume/Objective";
+import { TechnicalSkills } from "../components/resume/TechnicalSkills";
+import { Education } from "../components/resume/Education";
+import { OtherExperience } from "../components/resume/OtherExperience";
+import { WorkExperience } from "../components/resume/WorkExperience";
+import { AchievementsAndAwards } from "../components/resume/AchivementsAndAwards";
+import { Header } from "../components/resume/Header";
 import {
   AccordionSection,
   WideBandAccordion,
-} from "../components/WideBandAccordion.tsx";
+} from "../components/WideBandAccordion";
 
 const sections: AccordionSection[] = [
   {

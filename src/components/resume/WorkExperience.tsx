@@ -1,7 +1,7 @@
-import { List, ResumeHeading } from "./ResumePrimitives.tsx";
+import { List, ResumeHeading } from "./ResumePrimitives";
 import { Accordion, AccordionItem, Selection } from "@heroui/react";
 import jobs from "./jobs.json";
-import { useOnPrint } from "../../UseOnPrint.tsx";
+import { useOnPrint } from "../../UseOnPrint";
 import { useState } from "react";
 
 interface JobProps {

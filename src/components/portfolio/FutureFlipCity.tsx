@@ -2,7 +2,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 import { Link, Image } from "@heroui/react";
-import { Prose } from "../Prose.tsx";
+import { Prose } from "../Prose";
 import fcfl from "../../assets/img/fcfl.png";
 
 export function FutureFlipCityTitle() {

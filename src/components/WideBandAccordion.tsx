@@ -1,6 +1,6 @@
 import { Accordion, AccordionItem, Selection } from "@heroui/react";
 import { ReactNode, useState } from "react";
-import { useOnPrint } from "../UseOnPrint.tsx";
+import { useOnPrint } from "../UseOnPrint";
 
 export interface AccordionSection {
   title: ReactNode;

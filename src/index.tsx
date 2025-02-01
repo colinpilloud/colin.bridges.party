@@ -1,15 +1,9 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { App } from "./App.tsx";
+import { App } from "./App";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import {
-  About,
-  Error,
-  IndexContent,
-  Portfolio,
-  Resume,
-} from "./pages/index.ts";
+import { About, Error, IndexContent, Portfolio, Resume } from "./pages/index";
 import { StrictMode } from "react";
 
 const router = createBrowserRouter(

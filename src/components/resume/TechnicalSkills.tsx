@@ -1,4 +1,4 @@
-import { List, SkillList } from "./ResumePrimitives.tsx";
+import { List, SkillList } from "./ResumePrimitives";
 
 export function TechnicalSkills() {
   return (
