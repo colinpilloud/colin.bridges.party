@@ -75,7 +75,7 @@ const outsideWorkLikes = [
   "listening to metal.",
   <span>
     playing Magic: The Gathering
-    <span className="align-super text-xs">TM</span>, pinball, and pickleball."
+    <span className="align-super text-xs">TM</span>, pinball, and pickleball.
   </span>,
   "watching sports.",
   "attempting various home improvement projects.",
