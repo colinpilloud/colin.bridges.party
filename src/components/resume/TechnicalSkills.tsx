@@ -4,6 +4,7 @@ export function TechnicalSkills() {
   return (
     <>
       <List
+        classNames={{ ul: "print:ml-4" }}
         items={[
           <span>
             Modern API development (both REST and GraphQL) in{" "}
@@ -19,8 +20,8 @@ export function TechnicalSkills() {
           </span>,
           <span>
             Cloud-based architecture in{" "}
-            <span className="font-semibold text-secondary">AWS</span> including
-            scale-to-zero deploys in{" "}
+            <span className="font-semibold screen:text-secondary">AWS</span>{" "}
+            including scale-to-zero deploys in{" "}
             <SkillList skills={["Lambda", "API Gateway"]} />
           </span>,
           <span>

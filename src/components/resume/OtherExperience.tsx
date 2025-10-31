@@ -3,7 +3,7 @@ import { List, ResumeHeading } from "./ResumePrimitives";
 
 export function OtherExperience() {
   return (
-    <div className="flex flex-col flex-nowrap items-end space-y-4">
+    <div className="flex flex-col flex-nowrap space-y-4 screen:items-end">
       <ResumeHeading variant="h2">
         <span className="text-lg md:text-xl">
           Magic Circle

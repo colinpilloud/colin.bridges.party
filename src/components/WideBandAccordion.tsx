@@ -36,13 +36,13 @@ export function WideBandAccordion({
       onSelectionChange={setSelectedKeys}
       itemClasses={{
         title:
-          "text-lg sm:text-xl md:text-2xl font-black text-black uppercase text-right whitespace-pre-line ml-16 print:mr-6",
+          "text-lg sm:text-xl screen:md:text-2xl font-black text-black uppercase screen:text-right whitespace-pre-line screen:ml-16 print:ml-4",
         trigger:
-          "w-screen bg-gradient-to-r from-transparent to-primary to-20% print:pb-0 print:pt-0 screen:pb-3 screen:pt-5 screen:mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
+          "w-screen screen:bg-gradient-to-r screen:from-transparent screen:to-primary screen:to-20% print:pb-0 print:pt-0 screen:pb-3 screen:pt-5 screen:mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
         indicator:
           "text-black text-xl rotate-0 data-[open=true]:rotate-45 mr-4 print:hidden",
         content:
-          "flex flex-col flex-nowrap items-end print:space-y-1 screen:space-y-4 screen:md:space-y-6 print:mb-2 screen:mb-4",
+          "flex flex-col flex-nowrap screen:items-end print:space-y-1 screen:space-y-4 screen:md:space-y-6 print:mb-2 screen:mb-4",
       }}
       {...accordionProps}
     >
