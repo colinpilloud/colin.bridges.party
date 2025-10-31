@@ -12,21 +12,21 @@ interface JobProps {
 
 function Job(props: JobProps) {
   return (
-    <>
+    <div>
       {props.roles.map((role, i) => (
         <ResumeHeading variant="h3" key={i}>
           <div className="flex items-center justify-end gap-x-2 print:flex-row-reverse">
-            <span className="text-nowrap pt-[0.25rem] align-middle text-xs sm:text-sm">
+            <span className="text-nowrap align-middle text-xs sm:text-sm">
               ({role.startDate} – {role.endDate})
             </span>
-            <span className="text-md font-semibold sm:text-lg">
+            <span className="text-md font-semibold print:text-[0.75rem]">
               {role.title}
             </span>
           </div>
         </ResumeHeading>
       ))}
       <List items={props.responsibilities} />
-    </>
+    </div>
   );
 }
 
@@ -55,14 +55,14 @@ export function WorkExperience() {
       selectionMode="multiple"
       showDivider={false}
       itemClasses={{
-        base: "-mr-2 flex flex-col screen:items-end",
+        base: "screen:-mr-2 flex flex-col screen:items-end",
         title:
-          "text-lg screen:md:text-xl font-bold uppercase screen:text-right screen:text-secondary",
+          "text-lg print:text-md screen:md:text-xl font-bold uppercase screen:text-right screen:text-secondary",
         trigger: "w-screen flex flex-row print:py-0",
         indicator:
           "text-secondary text-xl rotate-0 data-[open=true]:rotate-45 print:hidden",
         content:
-          "flex flex-col flex-nowrap screen:items-end print:space-y-2 screen:space-y-4 mb-4",
+          "flex flex-col flex-nowrap screen:items-end py-0 print:space-y-2 screen:space-y-4 print:mb-2 mb-6",
       }}
     >
       {jobs.map((job, i) => (

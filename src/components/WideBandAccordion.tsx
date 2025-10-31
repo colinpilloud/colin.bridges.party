@@ -36,7 +36,9 @@ export function WideBandAccordion({
       onSelectionChange={setSelectedKeys}
       itemClasses={{
         title:
-          "text-lg sm:text-xl screen:md:text-2xl font-black text-black uppercase screen:text-right whitespace-pre-line screen:ml-16 print:ml-4",
+          "text-lg screen:md:text-2xl print:text-md font-black text-black screen:uppercase print:font-metal screen:text-right whitespace-pre-line screen:ml-16 print:ml-4",
+        subtitle: "screen:hidden print:ml-4 text-black lowercase",
+        titleWrapper: "print:flex print:flex-row print:items-center space-x-1",
         trigger:
           "w-screen screen:bg-gradient-to-r screen:from-transparent screen:to-primary screen:to-20% print:pb-0 print:pt-0 screen:pb-3 screen:pt-5 screen:mb-2 md:pr-[10vw] -ml-2 overflow-hidden",
         indicator:
@@ -47,7 +49,12 @@ export function WideBandAccordion({
       {...accordionProps}
     >
       {sections.map((section, i) => (
-        <AccordionItem title={section.title} key={i} indicator="+">
+        <AccordionItem
+          title={section.title}
+          key={i}
+          indicator="+"
+          subtitle={`(${section.title})`}
+        >
           {section.children}
         </AccordionItem>
       ))}
