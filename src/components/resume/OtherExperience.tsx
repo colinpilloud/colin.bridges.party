@@ -5,32 +5,40 @@ export function OtherExperience() {
   return (
     <div className="flex flex-col flex-nowrap items-end space-y-4">
       <ResumeHeading variant="h2">
-        <Link
-          isExternal={true}
-          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:text-black"
-          href="https://bestmagiccard.com"
-        >
-          bestmagiccard.com
-        </Link>
-        {
-          // eslint-disable-next-line react/jsx-no-comment-textnodes
-          <span className="text-lg"> // </span>
-        }
-        <Link
-          isExternal={true}
-          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:text-black"
-          href="https://bestbasicland.com"
-        >
-          bestbasicland.com
-        </Link>
+        <span className="text-lg md:text-xl">
+          Magic Circle
+          <span className="pl-[1px] align-super text-[0.66rem]">Ⓜ️</span>{" "}
+          Webring
+        </span>
       </ResumeHeading>
       <List
         items={[
           <span>
-            Sister sites that crowdsource rankings for Magic: the Gathering
+            <Link
+              isExternal={true}
+              className="underline screen:text-secondary print:text-black print:no-underline"
+              href="https://bestmagiccard.com"
+            >
+              Triplicate
+            </Link>{" "}
+            <Link
+              isExternal={true}
+              className="underline screen:text-secondary print:text-black print:no-underline"
+              href="https://bestbasicland.com"
+            >
+              sister
+            </Link>{" "}
+            <Link
+              isExternal={true}
+              className="underline screen:text-secondary print:text-black print:no-underline"
+              href="https://bestmagicart.com"
+            >
+              sites
+            </Link>{" "}
+            that crowdsource rankings for Magic: the Gathering
             <span className="align-super text-xs">TM</span> cards
           </span>,
-          "Monorepo TypeScript / React frontend powering both web applications",
+          "Monorepo TypeScript / React frontend powering all three web applications",
           "AWS infrastructure deployed via TypeScript CDK v2",
         ]}
       />

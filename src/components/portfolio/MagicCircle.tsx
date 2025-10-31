@@ -3,36 +3,21 @@ import "swiper/css/effect-cards";
 
 import { Link } from "@heroui/react";
 import bbl from "../../assets/img/bbl.png";
+import bma from "../../assets/img/bma.png";
 import bmc from "../../assets/img/bmc.png";
 import { Prose } from "../Prose";
 import { Carousel } from "./PortfolioPrimitives";
 
-export function BestBasicLandBestMagicCardTitle() {
+export function MagicCircleTitle() {
   return (
-    <div className="flex flex-row flex-wrap justify-end gap-x-2 md:gap-x-4">
-      <Link
-        isExternal={true}
-        className="text-[length:inherit] text-inherit"
-        href="https://bestmagiccard.com"
-      >
-        bestmagiccard.com
-      </Link>
-      {
-        // eslint-disable-next-line react/jsx-no-comment-textnodes
-        <span> // </span>
-      }
-      <Link
-        isExternal={true}
-        className="text-[length:inherit] text-inherit"
-        href="https://bestbasicland.com"
-      >
-        bestbasicland.com
-      </Link>
-    </div>
+    <span>
+      Magic Circle
+      <span className="pl-[1px] align-super text-[0.66rem]">Ⓜ️</span> Webring
+    </span>
   );
 }
 
-export function BestBasicLandBestMagicCard() {
+export function MagicCircle() {
   return (
     <>
       <Prose>
@@ -46,21 +31,29 @@ export function BestBasicLandBestMagicCard() {
         items={[
           { src: bbl, alt: "bestbasicland.com" },
           { src: bmc, alt: "bestmagiccard.com" },
+          { src: bma, alt: "bestmagicart.com" },
         ]}
       />
       <Prose>
-        I built these two{" "}
+        I built these{" "}
         <Link
           isExternal={true}
           className="text-secondary underline"
           href="https://bestmagiccard.com"
+        >
+          three
+        </Link>{" "}
+        <Link
+          isExternal={true}
+          className="text-secondary underline"
+          href="https://bestbasicland.com"
         >
           sister
         </Link>{" "}
         <Link
           isExternal={true}
           className="text-secondary underline"
-          href="https://bestbasicland.com"
+          href="https://bestmagicart.com"
         >
           sites
         </Link>{" "}
@@ -69,7 +62,7 @@ export function BestBasicLandBestMagicCard() {
         winner is recorded and scores are aggregated over time.
       </Prose>
       <Prose>
-        The frontend is two{" "}
+        The frontend is three{" "}
         <span className="font-semibold text-secondary">
           TypeScript / React SPA
         </span>

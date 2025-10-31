@@ -1,8 +1,8 @@
 import { Link } from "@heroui/react";
 import {
-  BestBasicLandBestMagicCard,
-  BestBasicLandBestMagicCardTitle,
-} from "../components/portfolio/BestCards";
+  MagicCircle,
+  MagicCircleTitle,
+} from "../components/portfolio/MagicCircle";
 import { WideBandAccordion } from "../components/WideBandAccordion";
 import {
   FutureFlipCity,
@@ -23,8 +23,8 @@ export function Portfolio() {
       <WideBandAccordion
         sections={[
           {
-            title: <BestBasicLandBestMagicCardTitle />,
-            children: <BestBasicLandBestMagicCard />,
+            title: <MagicCircleTitle />,
+            children: <MagicCircle />,
             expandedByDefault: true,
           },
           {
