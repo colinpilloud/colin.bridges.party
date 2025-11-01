@@ -3,7 +3,6 @@ import { List } from "./ResumePrimitives";
 export function AdditionalSkills() {
   return (
     <List
-      classNames={{ ul: "print:ml-4" }}
       items={[
         <span>
           <span className="font-semibold screen:text-secondary">

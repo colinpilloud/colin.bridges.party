@@ -10,50 +10,75 @@ import {
   AccordionSection,
   WideBandAccordion,
 } from "../components/WideBandAccordion";
+import { useMediaQuery } from "../UseMediaQuery";
+import { GridResume } from "../components/resume/GridResume";
 
-const sections: AccordionSection[] = [
+export enum ResumeSection {
+  Objective,
+  TechnicalSkills,
+  AdditionalSkills,
+  WorkExperience,
+  OtherExperience,
+  Education,
+  AchievementsAndAwards,
+}
+
+export const sections: (AccordionSection & { section: ResumeSection })[] = [
   {
+    section: ResumeSection.Objective,
     title: "Objective",
     children: <Objective />,
     expandedByDefault: true,
   },
   {
+    section: ResumeSection.TechnicalSkills,
     title: "Technical Skills",
     children: <TechnicalSkills />,
     expandedByDefault: true,
   },
   {
+    section: ResumeSection.AdditionalSkills,
     title: "Additional Skills",
     children: <AdditionalSkills />,
   },
   {
+    section: ResumeSection.WorkExperience,
     title: "Work Experience",
     children: <WorkExperience />,
     expandedByDefault: true,
   },
   {
+    section: ResumeSection.OtherExperience,
     title: "Other Experience",
     children: <OtherExperience />,
   },
   {
+    section: ResumeSection.Education,
     title: "Education",
     children: <Education />,
   },
   {
+    section: ResumeSection.AchievementsAndAwards,
     title: "Achievements // Awards",
     children: <AchievementsAndAwards />,
   },
 ];
 
 export function Resume() {
+  const printMedia = useMediaQuery("print");
+
   return (
     <div className="mb-8 flex flex-col items-center">
       <Header />
-      <WideBandAccordion
-        showDivider={false}
-        selectionMode="multiple"
-        sections={sections}
-      />
+      {printMedia ? (
+        <GridResume />
+      ) : (
+        <WideBandAccordion
+          showDivider={false}
+          selectionMode="multiple"
+          sections={sections}
+        />
+      )}
     </div>
   );
 }

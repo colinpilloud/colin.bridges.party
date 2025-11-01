@@ -13,7 +13,7 @@ export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
         longSwipesMs={200}
         longSwipesRatio={0.4}
         effect={"cards"}
-        className="w-[70vw] md:w-[600px]"
+        className="w-[70vw] sm:w-[400px]"
         keyboard={{
           enabled: true,
           onlyInViewport: false,

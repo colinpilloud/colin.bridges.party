@@ -38,11 +38,13 @@ export function FutureFlipCity() {
         </span>{" "}
         events.
       </Prose>
-      <Image
-        src={fcfl}
-        alt={"Flip City Future League"}
-        className="w-[80vw] md:w-[40rem]"
-      />
+      <Link href="https://future.flip.city/demo" isExternal={true}>
+        <Image
+          src={fcfl}
+          alt={"Flip City Future League"}
+          className="w-[80vw] md:w-[400px]"
+        />
+      </Link>
       <Prose>
         The tournament organizer uses an iOS app to manage the event, and
         updates are pushed into{" "}

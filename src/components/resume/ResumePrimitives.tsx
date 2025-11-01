@@ -13,7 +13,7 @@ export function ResumeHeading(props: ResumeHeadingProps) {
   switch (variant) {
     case "h2":
       return (
-        <h2 className="whitespace-pre-line text-xl font-extrabold uppercase screen:text-secondary print:ml-2">
+        <h2 className="whitespace-pre-line text-xl font-extrabold uppercase screen:text-secondary print:-mt-4">
           {content}
         </h2>
       );
@@ -36,12 +36,12 @@ export function List(props: ListProps) {
   const { items, classNames } = props;
   return (
     <ul
-      className={`${classNames?.ul || ""} flex flex-col flex-nowrap items-end space-y-4 print:space-y-0`}
+      className={`${classNames?.ul || ""} flex list-outside flex-col flex-nowrap items-end space-y-4 print:ml-4 print:space-y-0`}
     >
       {items.map((item, i) => (
         <li
           key={i}
-          className={`${classNames?.li || ""} w-[22rem] list-inside list-disc md:w-[36rem] print:w-full`}
+          className={`${classNames?.li || ""} w-[22rem] list-disc md:w-[36rem] screen:list-inside print:w-full`}
         >
           {item}
         </li>

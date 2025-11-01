@@ -38,6 +38,7 @@ interface RoleProps {
 
 export function WorkExperience() {
   const [selectedKeys, setSelectedKeys] = useState<Selection>(
+    // "all",
     new Set([jobs[0].company]),
   );
 
@@ -54,15 +55,16 @@ export function WorkExperience() {
       onSelectionChange={setSelectedKeys}
       selectionMode="multiple"
       showDivider={false}
+      className="px-0"
       itemClasses={{
-        base: "screen:-mr-2 flex flex-col screen:items-end",
+        base: "screen:-mr-2 flex flex-col screen:items-end px-0 break-inside-avoid",
         title:
           "text-lg print:text-md screen:md:text-xl font-bold uppercase screen:text-right screen:text-secondary",
         trigger: "w-screen flex flex-row print:py-0",
         indicator:
           "text-secondary text-xl rotate-0 data-[open=true]:rotate-45 print:hidden",
         content:
-          "flex flex-col flex-nowrap screen:items-end py-0 print:space-y-2 screen:space-y-4 print:mb-2 mb-6",
+          "flex flex-col flex-nowrap screen:items-end py-0 print:space-y-2 screen:space-y-4 print:mb-3 mb-6",
       }}
     >
       {jobs.map((job, i) => (

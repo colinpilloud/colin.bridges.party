@@ -83,17 +83,15 @@ const outsideWorkLikes = [
 
 export function About() {
   return (
-    <>
+    <div className="my-16 flex flex-col space-y-8 md:space-y-16">
       <BannerHeader content={"Colin\nBridges"} />
-      <div className="space-y-8 md:space-y-16">
-        <Blurb />
-        <HighlightedLike />
-        <LikesSection header="When I'm at work, I like..." likes={workLikes} />
-        <LikesSection
-          header="When I'm not at work, I like..."
-          likes={outsideWorkLikes}
-        />
-      </div>
-    </>
+      <Blurb />
+      <HighlightedLike />
+      <LikesSection header="When I'm at work, I like..." likes={workLikes} />
+      <LikesSection
+        header="When I'm not at work, I like..."
+        likes={outsideWorkLikes}
+      />
+    </div>
   );
 }
