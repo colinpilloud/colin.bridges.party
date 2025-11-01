@@ -1,5 +1,5 @@
 import { Link } from "@heroui/react";
-import { List, ResumeHeading } from "./ResumePrimitives";
+import { List } from "./ResumePrimitives";
 
 function OtherExperienceHeader({ children }: { children: React.ReactNode }) {
   return (
