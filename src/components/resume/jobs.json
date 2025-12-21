@@ -29,10 +29,10 @@
       }
     ],
     "responsibilities": [
-      "Develop generic platform for building and deploying Scala code to AWS Lambda",
-      "Build data pipeline from scratch, pulling data in real time and at low cost from data providers",
-      "Write backing logic for internal services, enabling bookkeepers to easily manipulate data upstream",
-      "Mentor junior engineers on the JVM, Scala, and functional programming concepts from the ground up"
+      "Developed generic platform for building and deploying Scala code to AWS Lambda",
+      "Built data pipeline from scratch, pulling data in real time and at low cost from data providers",
+      "Wrote backing logic for internal services, enabling bookkeepers to easily manipulate data upstream",
+      "Mentored junior engineers on the JVM, Scala, and functional programming concepts from the ground up"
     ]
   },
   {
@@ -45,8 +45,8 @@
       }
     ],
     "responsibilities": [
-      "Maintain integration with Salesforce, empowering Cash App's customer support team",
-      "Discovery and solution work for handling official customer complaints via multiple input sources"
+      "Maintained integration with Salesforce, empowering Cash App's customer support team",
+      "Conducted discovery and solution work for handling official customer complaints via multiple input sources"
     ]
   },
   {
@@ -64,10 +64,10 @@
       }
     ],
     "responsibilities": [
-      "Maintain and refactor monolithic Scala service, responsible for managing over 1M IRAs",
-      "Create serverless infrastructure to synchronize investment statuses across systems",
-      "Lead engineering team of nine, emphasizing individual growth and team achievements",
-      "Reinforce adherence to Scrum principles, increasing velocity and productivity"
+      "Maintained and refactored monolithic Scala service, responsible for managing over 1M IRAs",
+      "Created serverless infrastructure to synchronize investment statuses across systems",
+      "Led engineering team of nine, emphasizing individual growth and team achievements",
+      "Reinforced adherence to Scrum principles, increasing velocity and productivity"
     ]
   },
   {
@@ -80,9 +80,9 @@
       }
     ],
     "responsibilities": [
-      "Devise and implement architecture for promoting search results on store.nike.com",
-      "Craft Elasticsearch solutions for multi-tenant needs",
-      "Implement and tune search engine scoring mechanism via Apache Spark/Hive"
+      "Devised and implemented architecture for promoting search results on store.nike.com",
+      "Crafted Elasticsearch solutions for multi-tenant needs",
+      "Implemented and tuned search engine scoring mechanism via Apache Spark/Hive"
     ]
   },
   {
@@ -100,10 +100,10 @@
       }
     ],
     "responsibilities": [
-      "Overhaul Spring REST API servicing the college sports domain",
-      "Devise new build/deployment mechanisms for AWS Elastic Beanstalk, driven through Bamboo",
-      "Diagnose and fix MongoDB performance problems",
-      "Mentor junior engineers to improve technical knowledge and performance"
+      "Overhauled Spring REST API servicing the college sports domain",
+      "Devised new build/deployment mechanisms for AWS Elastic Beanstalk, driven through Bamboo",
+      "Diagnosed and fixed MongoDB performance problems",
+      "Mentored junior engineers to improve technical knowledge and performance"
     ]
   },
   {
@@ -116,8 +116,8 @@
       }
     ],
     "responsibilities": [
-      "Maintain and upgrade fleet of Java EE applications",
-      "Refactor legacy code, bringing it under test and making it EE container agnostic"
+      "Maintained and upgraded fleet of Java EE applications",
+      "Refactored legacy code, bringing it under test and making it EE container agnostic"
     ]
   },
   {
@@ -130,9 +130,9 @@
       }
     ],
     "responsibilities": [
-      "Port existing Rails application for customer loyalty program into Spring MVC",
-      "Design and develop backing RESTful service, written with Spring, CXF, and Hibernate",
-      "Draft and implement Postgres schema for customer information"
+      "Ported existing Rails application for customer loyalty program into Spring MVC",
+      "Designed and developed backing RESTful service, written with Spring, CXF, and Hibernate",
+      "Drafted and implemented Postgres schema for customer information"
     ]
   },
   {
@@ -145,9 +145,9 @@
       }
     ],
     "responsibilities": [
-      "Parse, normalize, and persist customer input in a Spring/Camel based service",
-      "Persist medical encounter information to Postgres using Hibernate",
-      "Develop and maintain standalone Java-based web services"
+      "Parsed, normalized, and persisted customer input in a Spring/Camel based service",
+      "Persisted medical encounter information to Postgres using Hibernate",
+      "Developed and maintained standalone Java-based web services"
     ]
   },
   {
@@ -160,9 +160,9 @@
       }
     ],
     "responsibilities": [
-      "Develop RESTful API for obtaining contact information in Grails",
-      "Integrate Twitter and Foursquare APIs with contact management system",
-      "Script exports of seeded contact data in Hadoop"
+      "Developed RESTful API for obtaining contact information in Grails",
+      "Integrated Twitter and Foursquare APIs with contact management system",
+      "Scripted exports of seeded contact data in Hadoop"
     ]
   }
 ]
