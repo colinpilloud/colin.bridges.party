@@ -54,12 +54,12 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Remove source maps
-        run: rm -rf build/**/*.map
+        run: rm -rf dist/**/*.map
 
       - name: Sync files to S3
         run: |
-          aws s3 cp build s3://${{ env.AWS_S3_BUCKET }} --recursive --exclude "index.html" --cache-control max-age=31536000
-          aws s3 cp build/index.html s3://${{ env.AWS_S3_BUCKET }} --cache-control no-cache
+          aws s3 cp dist s3://${{ env.AWS_S3_BUCKET }} --recursive --exclude "index.html" --cache-control max-age=31536000
+          aws s3 cp dist/index.html s3://${{ env.AWS_S3_BUCKET }} --cache-control no-cache
 
       - name: Invalidate CloudFront cache
         run: |
