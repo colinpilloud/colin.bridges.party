@@ -1,4 +1,4 @@
-import { Button, Link } from "@heroui/react";
+import { Button, Link, Switch } from "@heroui/react";
 import { Fragment } from "react";
 import { useState } from "react";
 
@@ -40,19 +40,21 @@ export function Footer() {
           >
             View Source.
           </Button>,
-          <Button
+          <Switch
+            size="sm"
             key="metalMode"
-            tabIndex={0}
-            className="h-3 border-0 bg-inherit px-0 text-[0.666rem] text-primary"
-            onPress={() => toggleMetalMode()}
-            as={"span"}
+            isSelected={metalMode}
+            onChange={() => toggleMetalMode()}
+            classNames={{
+              wrapper: "bg-gray-800",
+            }}
           >
-            {metalMode ? "Deactivate" : "Activate"} metal mode.
-          </Button>,
+            🤘
+          </Switch>,
         ].map((item, index) => (
           <Fragment key={index}>
             {index > 0 && <p className="hidden md:flex">·</p>}
-            <p>{item}</p>
+            <div className="block">{item}</div>
           </Fragment>
         ))}
       </div>

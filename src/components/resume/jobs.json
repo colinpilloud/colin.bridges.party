@@ -9,8 +9,9 @@
       }
     ],
     "responsibilities": [
-      "Deliver user-facing features against Python monorepo and React/Typescript frontend",
-      "Add integrations with LOS platforms and employment/income data providers"
+      "Deliver new product features against Python monorepo and React/Typescript frontend",
+      "Consider multiple user personas when designing and implementing features",
+      "Add integrations with LOS platforms, employment/income data providers, and property management systems"
     ]
   },
   {

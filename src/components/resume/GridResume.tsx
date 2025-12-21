@@ -54,7 +54,7 @@ export function GridResume() {
 function GridResumeHeader({ title }: { title: React.ReactNode }) {
   return (
     <div className="flex flex-col -space-y-2">
-      <h2 className="mb-2 font-metal text-lg font-semibold">{title}</h2>
+      <h2 className="mb-1 font-metal text-lg tracking-[0.02em]">{title}</h2>
       <h3 className="lowercase">({title})</h3>
     </div>
   );

@@ -8,6 +8,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
 @font-face {
   font-family: "Burn The Witch";
   src: url("assets/fonts/BurnTheWitch.ttf") format("truetype");

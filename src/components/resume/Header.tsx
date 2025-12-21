@@ -13,14 +13,16 @@ export function Header() {
 
   return (
     <div className="-mr-4 mb-4 screen:md:-mr-[10vw]">
-      <div className="flex flex-row flex-nowrap items-center gap-4 screen:hidden">
+      <div className="grid grid-cols-2 items-center gap-4 screen:hidden">
         <div className="flex flex-col items-end justify-end text-right">
-          <h1 className="font-metal text-md tracking-[-0.10em]">
+          <h1 className="font-metal text-xl tracking-[0.05em]">
             Colin Bridges
           </h1>
-          <h4 className="-mt-2 font-sans text-sm lowercase">(Colin Bridges)</h4>
+          <h4 className="-mt-[0.6rem] font-sans text-[0.8rem] lowercase">
+            (Colin Bridges)
+          </h4>
         </div>
-        <div className="flex flex-col items-start justify-end text-sm">
+        <div className="flex flex-col items-start justify-end text-[0.8rem]">
           <h2 className="font-semibold">colin.bridges.party</h2>
           <h2 className="font-semibold">colin@bridges.party</h2>
         </div>

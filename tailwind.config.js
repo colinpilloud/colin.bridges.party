@@ -16,8 +16,8 @@ module.exports = {
       },
       colors: {
         primary: "#e84828",
-        secondary: "#cfa6be",
-        focus: "#cfa6be",
+        secondary: "#ffffff",
+        focus: "#f0f0f0",
       },
       fontSize: {
         "4xl": "3.33rem",

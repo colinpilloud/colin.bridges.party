@@ -1,8 +1,8 @@
 import { List, ResumeHeading } from "./ResumePrimitives";
 import { Accordion, AccordionItem, Selection } from "@heroui/react";
 import jobs from "./jobs.json";
-import { useOnPrint } from "../../UseOnPrint";
 import { useState } from "react";
+import { useMediaQuery } from "../../UseMediaQuery";
 
 interface JobProps {
   company: string;
@@ -12,7 +12,7 @@ interface JobProps {
 
 function Job(props: JobProps) {
   return (
-    <div>
+    <div className="break-inside-avoid">
       {props.roles.map((role, i) => (
         <ResumeHeading variant="h3" key={i}>
           <div className="flex items-center justify-end gap-x-2 print:flex-row-reverse">
@@ -37,17 +37,15 @@ interface RoleProps {
 }
 
 export function WorkExperience() {
+  const printMedia = useMediaQuery("print");
+
+  return printMedia ? <ListWorkExperience /> : <AccordionWorkExperience />;
+}
+
+function AccordionWorkExperience() {
   const [selectedKeys, setSelectedKeys] = useState<Selection>(
-    // "all",
     new Set([jobs[0].company]),
   );
-
-  const expandAllAccordionSections = () => {
-    setSelectedKeys("all");
-  };
-
-  // TODO; restore previously expanded sections
-  useOnPrint(expandAllAccordionSections, () => {});
 
   return (
     <Accordion
@@ -57,7 +55,7 @@ export function WorkExperience() {
       showDivider={false}
       className="px-0"
       itemClasses={{
-        base: "screen:-mr-2 flex flex-col screen:items-end px-0 break-inside-avoid",
+        base: "screen:-mr-2 flex flex-col screen:items-end px-0",
         title:
           "text-lg print:text-md screen:md:text-xl font-bold uppercase screen:text-right screen:text-secondary",
         trigger: "w-screen flex flex-row print:py-0",
@@ -73,5 +71,18 @@ export function WorkExperience() {
         </AccordionItem>
       ))}
     </Accordion>
+  );
+}
+
+function ListWorkExperience() {
+  return (
+    <div className="flex flex-col flex-nowrap space-y-2">
+      {jobs.map((job, i) => (
+        <div key={job.company} className="break-inside-avoid">
+          <h2 className="text-md font-bold uppercase">{job.company}</h2>
+          <Job {...job} />
+        </div>
+      ))}
+    </div>
   );
 }
