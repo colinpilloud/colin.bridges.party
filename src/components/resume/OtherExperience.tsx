@@ -61,6 +61,21 @@ export function OtherExperience() {
           "Syncs with Firebase updates published from organizer's iOS app in real-time",
         ]}
       />
+      <OtherExperienceHeader>
+        <Link
+          isExternal={true}
+          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:mb-2 print:text-md print:text-black"
+          href="https://ogr4u.com"
+        >
+          ogr4u.com
+        </Link>
+      </OtherExperienceHeader>
+      <List
+        items={[
+          "At-hand scouting reference for Pinball League matches",
+          "Interactive filters allow rapid querying of machine and player data",
+        ]}
+      />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   FutureFlipCity,
   FutureFlipCityTitle,
 } from "../components/portfolio/FutureFlipCity";
+import { Ogr4u, Ogr4uTitle } from "../components/portfolio/Ogr4u";
 
 export function Portfolio() {
   return (
@@ -23,13 +24,18 @@ export function Portfolio() {
       <WideBandAccordion
         sections={[
           {
-            title: <MagicCircleTitle />,
-            children: <MagicCircle />,
-            expandedByDefault: true,
+            title: <Ogr4uTitle />,
+            children: <Ogr4u />,
+            expandedByDefault: false,
           },
           {
             title: <FutureFlipCityTitle />,
             children: <FutureFlipCity />,
+            expandedByDefault: false,
+          },
+          {
+            title: <MagicCircleTitle />,
+            children: <MagicCircle />,
             expandedByDefault: true,
           },
         ]}
