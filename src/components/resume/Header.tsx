@@ -12,8 +12,8 @@ export function Header() {
   }
 
   return (
-    <div className="-mr-4 mb-4 screen:md:-mr-[10vw]">
-      <div className="grid grid-cols-2 items-center gap-4 screen:hidden">
+    <div className="screen:md:-mr-[10vw] -mr-4 mb-4">
+      <div className="screen:hidden grid grid-cols-2 items-center gap-4">
         <div className="flex flex-col items-end justify-end text-right">
           <h1 className="font-metal text-xl tracking-[0.05em]">
             Colin Bridges
@@ -30,7 +30,7 @@ export function Header() {
       <div className="flex flex-row flex-nowrap items-center gap-6 text-center print:hidden">
         <Link
           href="/about"
-          className="mt-1 font-metal text-md normal-case tracking-[-0.10em]"
+          className="font-metal text-md mt-1 tracking-[-0.10em] normal-case"
         >
           Colin Bridges
         </Link>

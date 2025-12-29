@@ -4,8 +4,8 @@ import { Prose } from "../components/Prose";
 
 function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="w-screen bg-gradient-to-r from-transparent to-primary to-20% pb-4 pr-4 pt-10 leading-[0.9] md:pr-[10vw] md:pt-16">
-      <h1 className="whitespace-pre-line text-2xl font-black text-black md:text-4xl">
+    <div className="to-primary w-screen bg-linear-to-r from-transparent to-20% pt-10 pr-4 pb-4 leading-[0.9] md:pt-16 md:pr-[10vw]">
+      <h1 className="text-2xl leading-10 font-black whitespace-pre-line text-black md:text-4xl md:leading-14">
         {content}
       </h1>
     </div>
@@ -29,9 +29,9 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="ml-4 flex flex-col items-end gap-4 whitespace-pre-line text-2xl font-bold leading-[0.9] text-secondary md:text-4xl">
+    <section className="text-secondary ml-4 flex flex-col items-end gap-4 text-2xl leading-[0.9] font-bold whitespace-pre-line md:text-4xl">
       <div>
-        <h4 className="mb-1 text-md font-bold">I really like</h4>
+        <h4 className="text-md mb-1 font-bold">I really like</h4>
         <span>solving problems{"\n"}with software.</span>
       </div>
       <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
@@ -50,7 +50,7 @@ type Like = string | ReactNode;
 
 function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
   return (
-    <section className="flex flex-col flex-nowrap items-end screen:space-y-6">
+    <section className="screen:space-y-6 flex flex-col flex-nowrap items-end">
       <h4 className="text-lg font-bold">{header}</h4>
       <ul className="flex flex-col flex-nowrap items-end space-y-2">
         {likes.map((like, i) => (
