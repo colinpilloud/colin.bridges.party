@@ -76,7 +76,7 @@ function AccordionWorkExperience() {
 
 function ListWorkExperience() {
   return (
-    <div className="flex flex-col flex-nowrap space-y-2">
+    <div className="flex flex-col flex-nowrap space-y-1.75">
       {jobs.map((job, i) => (
         <div key={job.company} className="break-inside-avoid">
           <h2 className="text-md font-bold uppercase">{job.company}</h2>

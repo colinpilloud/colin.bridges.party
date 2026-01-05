@@ -35,7 +35,7 @@ export function Header() {
           Colin Bridges
         </Link>
         <Button onPress={download} variant="ghost" size="md" color="primary">
-          Download PDF
+          Download Printable PDF
         </Button>
       </div>
     </div>

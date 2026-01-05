@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { ButtonLink } from "../components/ButtonLink";
 import { Prose } from "../components/Prose";
+import { Link } from "react-router-dom";
 
 function BannerHeader({ content }: { content: string }) {
   return (
@@ -22,6 +23,12 @@ function Blurb() {
       </Prose>
       <Prose>
         I like programming on the JVM and writing React / TypeScript webapps.
+      </Prose>
+      <Prose className="text-primary font-extrabold">
+        I am ready for my next role;{" "}
+        <Link to="mailto:colin@bridges.party" className="underline">
+          let's connect!
+        </Link>
       </Prose>
     </section>
   );
