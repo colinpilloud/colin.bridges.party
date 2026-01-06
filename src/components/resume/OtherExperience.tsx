@@ -3,7 +3,7 @@ import { List } from "./ResumePrimitives";
 
 function OtherExperienceHeader({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="whitespace-pre-line text-xl font-extrabold uppercase screen:text-secondary print:leading-none">
+    <h2 className="screen:text-secondary text-xl font-extrabold whitespace-pre-line uppercase print:leading-none">
       {children}
     </h2>
   );
@@ -17,12 +17,11 @@ export function OtherExperience() {
   ];
 
   return (
-    <div className="flex flex-col flex-nowrap screen:items-end screen:space-y-4 print:space-y-0">
+    <div className="screen:items-end screen:space-y-4 flex flex-col flex-nowrap print:space-y-0">
       <OtherExperienceHeader>
-        <span className="text-lg md:text-xl print:text-md">
+        <span className="print:text-md text-lg md:text-xl">
           Magic Circle
-          <span className="pl-[1px] align-super text-[0.66rem]">Ⓜ️</span>{" "}
-          Webring
+          <span className="pl-px align-super text-[0.66rem]">Ⓜ️</span> Webring
         </span>
       </OtherExperienceHeader>
       <List
@@ -32,7 +31,7 @@ export function OtherExperience() {
               <span key={l.href}>
                 <Link
                   isExternal={true}
-                  className="underline screen:text-secondary print:text-sm print:text-black print:no-underline"
+                  className="screen:text-secondary underline print:text-sm print:text-black print:no-underline"
                   href={l.href}
                 >
                   {l.text}
@@ -49,7 +48,7 @@ export function OtherExperience() {
       <OtherExperienceHeader>
         <Link
           isExternal={true}
-          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:mb-2 print:text-md print:text-black"
+          className="screen:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
           href="https://future.flip.city/demo"
         >
           future.flip.city
@@ -64,7 +63,7 @@ export function OtherExperience() {
       <OtherExperienceHeader>
         <Link
           isExternal={true}
-          className="text-right text-lg font-bold uppercase md:text-xl screen:text-secondary print:mb-2 print:text-md print:text-black"
+          className="screen:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
           href="https://ogr4u.com"
         >
           ogr4u.com

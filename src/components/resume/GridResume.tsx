@@ -53,8 +53,8 @@ export function GridResume() {
 
 function GridResumeHeader({ title }: { title: React.ReactNode }) {
   return (
-    <div className="flex flex-col -space-y-2">
-      <h2 className="mb-1 font-metal text-lg tracking-[0.02em]">{title}</h2>
+    <div className="flex flex-col">
+      <h2 className="font-metal -mb-0.5 text-lg tracking-[0.02em]">{title}</h2>
       <h3 className="lowercase">({title})</h3>
     </div>
   );
@@ -71,10 +71,7 @@ function GridSectionWithHeader({
 }) {
   return (
     <div
-      className={cn(
-        "mb-2 flex break-inside-avoid flex-col space-y-2",
-        className,
-      )}
+      className={cn("flex break-inside-avoid flex-col space-y-2", className)}
     >
       <GridResumeHeader title={title} />
       {children}
