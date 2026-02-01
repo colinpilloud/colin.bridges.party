@@ -10,11 +10,8 @@ export interface AccordionSection {
 
 export function WideBandAccordion({
   sections,
-  ...accordionProps
 }: {
   sections: AccordionSection[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
 }) {
   // selectedKeys is a Set of string indices of open dropdowns, or "all" for all open
   const [selectedKeys, setSelectedKeys] = useState<Set<string> | "all">(
@@ -53,15 +50,15 @@ export function WideBandAccordion({
   };
 
   return (
-    <div {...accordionProps}>
+    <div>
       {sections.map((section, i) => (
         <div className="mb-2" key={i}>
           <div
-            className={`dropdown w-full ${isOpen(i) ? "dropdown-open" : ""}`}
+            className={`collapse w-full ${isOpen(i) ? "collapse-open" : ""}`}
           >
             <div
               tabIndex={0}
-              className="dropdown-title to-primary/20 print:text-md print:font-metal flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 text-lg font-black text-black uppercase md:text-2xl print:ml-4 print:text-left"
+              className="collapse-title to-primary/20 print:text-md print:font-metal flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 text-lg font-black text-black uppercase md:text-2xl print:ml-4 print:text-left"
               onClick={() => handleToggle(i)}
             >
               <span>{section.title}</span>
@@ -71,7 +68,7 @@ export function WideBandAccordion({
             </div>
             <div
               tabIndex={0}
-              className={`dropdown-content bg-base-100 mt-1 w-full p-4 shadow transition-all duration-200 ${isOpen(i) ? "block" : "hidden"} mb-4 flex flex-col items-end space-y-4 md:space-y-6 print:mb-2 print:space-y-1`}
+              className={`collapse-content bg-base-100 mt-1 w-full p-4 shadow transition-all duration-200 ${isOpen(i) ? "block" : "hidden"} mb-4 flex flex-col items-end space-y-4 md:space-y-6 print:mb-2 print:space-y-1`}
             >
               {section.children}
             </div>
