@@ -20,7 +20,7 @@ export function TechnicalSkills() {
           </span>,
           <span>
             Cloud-based architecture in{" "}
-            <span className="font-semibold screen:text-secondary">AWS</span>{" "}
+            <span className="screen:text-secondary font-semibold">AWS</span>{" "}
             including scale-to-zero deploys in{" "}
             <SkillList skills={["Lambda", "API Gateway"]} />
           </span>,

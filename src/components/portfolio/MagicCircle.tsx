@@ -63,14 +63,14 @@ export function MagicCircle() {
       </Prose>
       <Prose>
         The frontend is three{" "}
-        <span className="font-semibold text-secondary">
+        <span className="text-secondary font-semibold">
           TypeScript / React SPA
         </span>
         s, managed in one monorepo with a shared components library, and the
         backend is written in{" "}
-        <span className="font-semibold text-secondary">Scala</span>, talks to
+        <span className="text-secondary font-semibold">Scala</span>, talks to
         Postgres, gets packaged as a native image, and deploys into{" "}
-        <span className="font-semibold text-secondary">AWS Lambda</span> as a
+        <span className="text-secondary font-semibold">AWS Lambda</span> as a
         custom runtime. Data is synchronized from{" "}
         <Link
           className="text-secondary underline"

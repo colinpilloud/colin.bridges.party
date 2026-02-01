@@ -16,7 +16,7 @@ function Job(props: JobProps) {
       {props.roles.map((role, i) => (
         <ResumeHeading variant="h3" key={i}>
           <div className="flex items-center justify-end gap-x-2 print:flex-row-reverse">
-            <span className="text-nowrap align-middle text-xs sm:text-sm">
+            <span className="align-middle text-xs text-nowrap sm:text-sm">
               ({role.startDate} – {role.endDate})
             </span>
             <span className="text-md font-semibold print:text-[0.75rem]">

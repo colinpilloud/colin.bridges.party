@@ -16,7 +16,7 @@ export function Portfolio() {
       <div className="-mr-4 mb-4 md:-mr-[10vw]">
         <Link
           href="/about"
-          className="sticky font-metal text-md normal-case tracking-[-0.10em]"
+          className="font-metal text-md sticky tracking-[-0.10em] normal-case"
         >
           Colin Bridges
         </Link>

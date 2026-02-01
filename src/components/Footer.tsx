@@ -25,7 +25,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bottom-0 left-0 mx-0 flex w-full justify-center border-t-2 border-primary/70 bg-black px-4 pb-4 pt-4 text-left font-['Helvetica_Neue',Roboto,sans] text-[0.666rem] lowercase leading-[0.9] tracking-normal text-primary/70 print:hidden">
+    <footer className="border-primary/70 text-primary/70 bottom-0 left-0 mx-0 flex w-full justify-center border-t-2 bg-black px-4 pt-4 pb-4 text-left font-['Helvetica_Neue',Roboto,sans] text-[0.666rem] leading-[0.9] tracking-normal lowercase print:hidden">
       <div className="flex max-w-[calc(min(100%,1240px))] flex-col place-items-center gap-2 md:flex-row">
         {[
           `©${new Date().getFullYear()} Colin Bridges.`,
@@ -33,7 +33,7 @@ export function Footer() {
           <Button
             key="source"
             tabIndex={0}
-            className="h-3 border-0 bg-inherit px-0 text-[0.666rem] text-primary"
+            className="text-primary h-3 border-0 bg-inherit px-0 text-[0.666rem]"
             as={Link}
             href="https://github.com/colinpilloud/colin.bridges.party"
             isExternal
