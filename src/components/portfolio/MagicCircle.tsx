@@ -1,9 +1,6 @@
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import bbl from "../../assets/img/bbl.png";
-import bma from "../../assets/img/bma.png";
-import bmc from "../../assets/img/bmc.png";
 import { Prose } from "../Prose";
 import { Carousel } from "./PortfolioPrimitives";
 import { Link } from "react-router-dom";
@@ -29,9 +26,9 @@ export function MagicCircle() {
       </Prose>
       <Carousel
         items={[
-          { src: bbl, alt: "bestbasicland.com" },
-          { src: bmc, alt: "bestmagiccard.com" },
-          { src: bma, alt: "bestmagicart.com" },
+          { src: "/img/bbl.png", alt: "bestbasicland.com" },
+          { src: "/img/bmc.png", alt: "bestmagiccard.com" },
+          { src: "/img/bma.png", alt: "bestmagicart.com" },
         ]}
       />
       <Prose>

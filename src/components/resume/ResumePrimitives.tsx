@@ -14,7 +14,7 @@ export function ResumeHeading(props: ResumeHeadingProps) {
   switch (variant) {
     case "h2":
       return (
-        <h2 className="screen:text-secondary text-xl font-extrabold whitespace-pre-line uppercase print:-mt-4">
+        <h2 className="not-print:text-secondary text-xl font-extrabold whitespace-pre-line uppercase print:-mt-4">
           {content}
         </h2>
       );
@@ -44,7 +44,7 @@ export function List(props: ListProps) {
           return (
             <li
               key={item}
-              className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+              className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
             >
               {item}
             </li>
@@ -54,7 +54,7 @@ export function List(props: ListProps) {
           return (
             <li
               key={i}
-              className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+              className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
             >
               {item}
             </li>
@@ -63,7 +63,7 @@ export function List(props: ListProps) {
         return (
           <li
             key={undefined}
-            className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+            className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
           >
             {item}
           </li>
@@ -77,10 +77,10 @@ export function SkillList({ skills }: { skills: string[] }) {
   return (
     <>
       {skills.map((item, i) => (
-        <span className="screen:text-secondary font-semibold" key={i}>
+        <span className="not-print:text-secondary font-semibold" key={i}>
           {item}
           {i < skills.length - 1 && (
-            <span className="screen:text-primary font-normal">
+            <span className="not-print:text-primary font-normal">
               {i === skills.length - 2
                 ? `${skills.length === 2 ? "" : ","} and `
                 : ", "}

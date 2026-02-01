@@ -58,7 +58,7 @@ type Like = string | ReactNode;
 
 function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
   return (
-    <section className="screen:space-y-6 flex flex-col flex-nowrap items-end">
+    <section className="flex flex-col flex-nowrap items-end not-print:space-y-6">
       <h4 className="text-lg font-bold">{header}</h4>
       <ul className="flex flex-col flex-nowrap items-end space-y-2">
         {likes.map((like) => (

@@ -2,7 +2,6 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 import { Prose } from "../Prose";
-import fcfl from "../../assets/img/fcfl.png";
 import { Link } from "react-router-dom";
 
 export function FutureFlipCityTitle() {
@@ -45,7 +44,7 @@ export function FutureFlipCity() {
         rel="noopener noreferrer"
       >
         <img
-          src={fcfl}
+          src="/img/fcfl.png"
           alt={"Flip City Future League"}
           className="w-[80vw] md:w-[400px]"
         />

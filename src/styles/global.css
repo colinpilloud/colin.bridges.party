@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin 'daisyui';
 
+@theme {
+  --font-metal: "Burn The Witch", sans-serif;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -18,5 +22,5 @@ body {
 
 @font-face {
   font-family: "Burn The Witch";
-  src: url("assets/fonts/BurnTheWitch.ttf") format("truetype");
+  src: url("/assets/fonts/BurnTheWitch.ttf") format("truetype");
 }

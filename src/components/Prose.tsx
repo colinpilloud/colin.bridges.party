@@ -8,7 +8,7 @@ export function Prose({
   className?: string;
 }) {
   return (
-    <p className={`screen:w-64 screen:md:w-[32rem] ${className || ""}`}>
+    <p className={`not-print:w-64 not-print:md:w-[32rem] ${className || ""}`}>
       {children}
     </p>
   );
