@@ -1,4 +1,4 @@
-import { Link } from "@heroui/react";
+import { Link } from "react-router-dom";
 import { List } from "./ResumePrimitives";
 
 function OtherExperienceHeader({ children }: { children: React.ReactNode }) {
@@ -26,13 +26,14 @@ export function OtherExperience() {
       </OtherExperienceHeader>
       <List
         items={[
-          <span>
+          <span key="magic-circle-intro">
             {magicCircle.map((l) => (
               <span key={l.href}>
                 <Link
-                  isExternal={true}
                   className="screen:text-secondary underline print:text-sm print:text-black print:no-underline"
-                  href={l.href}
+                  to={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {l.text}
                 </Link>{" "}
@@ -47,9 +48,10 @@ export function OtherExperience() {
       />
       <OtherExperienceHeader>
         <Link
-          isExternal={true}
           className="screen:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
-          href="https://future.flip.city/demo"
+          to="https://future.flip.city/demo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           future.flip.city
         </Link>
@@ -62,9 +64,10 @@ export function OtherExperience() {
       />
       <OtherExperienceHeader>
         <Link
-          isExternal={true}
           className="screen:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
-          href="https://ogr4u.com"
+          to="https://ogr4u.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           ogr4u.com
         </Link>

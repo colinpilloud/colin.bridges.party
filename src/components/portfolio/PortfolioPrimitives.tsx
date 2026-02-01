@@ -2,7 +2,6 @@ import { EffectCards, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { Image } from "@heroui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
@@ -31,7 +30,7 @@ export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>
-            <Image src={item.src} alt={item.alt} />
+            <img src={item.src} alt={item.alt} />
           </SwiperSlide>
         ))}
       </Swiper>

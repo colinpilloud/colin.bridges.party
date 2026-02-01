@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import React from "react";
+import { type ReactNode } from "react";
 
 type ResumeHeadingVariant = "h2" | "h3";
 
@@ -38,14 +39,36 @@ export function List(props: ListProps) {
     <ul
       className={`${classNames?.ul || ""} flex list-outside flex-col flex-nowrap items-end space-y-4 print:ml-4 print:space-y-0`}
     >
-      {items.map((item, i) => (
-        <li
-          key={i}
-          className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
-        >
-          {item}
-        </li>
-      ))}
+      {items.map((item) => {
+        if (typeof item === "string") {
+          return (
+            <li
+              key={item}
+              className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+            >
+              {item}
+            </li>
+          );
+        } else if (React.isValidElement(item)) {
+          const i = item.key ?? Math.random().toString(36).substring(2, 9);
+          return (
+            <li
+              key={i}
+              className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+            >
+              {item}
+            </li>
+          );
+        }
+        return (
+          <li
+            key={undefined}
+            className={`${classNames?.li || ""} screen:list-inside w-[22rem] list-disc md:w-[36rem] print:w-full`}
+          >
+            {item}
+          </li>
+        );
+      })}
     </ul>
   );
 }

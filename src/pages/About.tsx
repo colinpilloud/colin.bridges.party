@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { ButtonLink } from "../components/ButtonLink";
 import { Prose } from "../components/Prose";
 import { Link } from "react-router-dom";
+import React from "react";
 
 function BannerHeader({ content }: { content: string }) {
   return (
@@ -60,8 +61,17 @@ function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
     <section className="screen:space-y-6 flex flex-col flex-nowrap items-end">
       <h4 className="text-lg font-bold">{header}</h4>
       <ul className="flex flex-col flex-nowrap items-end space-y-2">
-        {likes.map((like, i) => (
-          <li key={i} className="w-64 list-inside list-disc md:w-96">
+        {likes.map((like) => (
+          <li
+            key={
+              typeof like === "string"
+                ? like
+                : React.isValidElement(like)
+                  ? like.key
+                  : undefined
+            }
+            className="w-64 list-inside list-disc md:w-96"
+          >
             {like}
           </li>
         ))}
@@ -80,7 +90,7 @@ const workLikes = [
 
 const outsideWorkLikes = [
   "listening to metal.",
-  <span>
+  <span key="gaming-hobbies">
     playing Magic: The Gathering
     <span className="align-super text-xs">TM</span>, pinball, and pickleball.
   </span>,

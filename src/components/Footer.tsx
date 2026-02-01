@@ -1,6 +1,5 @@
-import { Button, Link, Switch } from "@heroui/react";
-import { Fragment } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const [metalMode, setMetalMode] = useState(false);
@@ -27,36 +26,27 @@ export function Footer() {
   return (
     <footer className="border-primary/70 text-primary/70 bottom-0 left-0 mx-0 flex w-full justify-center border-t-2 bg-black px-4 pt-4 pb-4 text-left font-['Helvetica_Neue',Roboto,sans] text-[0.666rem] leading-[0.9] tracking-normal lowercase print:hidden">
       <div className="flex max-w-[calc(min(100%,1240px))] flex-col place-items-center gap-2 md:flex-row">
-        {[
-          `©${new Date().getFullYear()} Colin Bridges.`,
-          "Thank you for visiting my website.",
-          <Button
-            key="source"
-            tabIndex={0}
-            className="text-primary h-3 border-0 bg-inherit px-0 text-[0.666rem]"
-            as={Link}
-            href="https://github.com/colinpilloud/colin.bridges.party"
-            isExternal
-          >
-            View Source.
-          </Button>,
-          <Switch
-            size="sm"
-            key="metalMode"
-            isSelected={metalMode}
-            onChange={() => toggleMetalMode()}
-            classNames={{
-              wrapper: "bg-gray-800",
-            }}
-          >
-            🤘
-          </Switch>,
-        ].map((item, index) => (
-          <Fragment key={index}>
-            {index > 0 && <p className="hidden md:flex">·</p>}
-            <div className="block">{item}</div>
-          </Fragment>
-        ))}
+        <span>©{new Date().getFullYear()} Colin Bridges.</span>
+        <span className="hidden md:flex">·</span>
+        <span>Thank you for visiting my website.</span>
+        <span className="hidden md:flex">·</span>
+        <Link
+          tabIndex={0}
+          className="text-primary h-3 border-0 bg-inherit px-0 text-[0.666rem]"
+          to="https://github.com/colinpilloud/colin.bridges.party"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Source.
+        </Link>
+        <span className="hidden md:flex">·</span>
+        <input
+          type="checkbox"
+          checked={metalMode}
+          onChange={toggleMetalMode}
+          className="toggle"
+        />
+        <span>🤘</span>
       </div>
     </footer>
   );

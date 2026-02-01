@@ -1,4 +1,3 @@
-import { Link } from "@heroui/react";
 import {
   MagicCircle,
   MagicCircleTitle,
@@ -9,13 +8,14 @@ import {
   FutureFlipCityTitle,
 } from "../components/portfolio/FutureFlipCity";
 import { Ogr4u, Ogr4uTitle } from "../components/portfolio/Ogr4u";
+import { Link } from "react-router-dom";
 
 export function Portfolio() {
   return (
     <div className="flex flex-col items-center">
       <div className="-mr-4 mb-4 md:-mr-[10vw]">
         <Link
-          href="/about"
+          to="/about"
           className="font-metal text-md sticky tracking-[-0.10em] normal-case"
         >
           Colin Bridges

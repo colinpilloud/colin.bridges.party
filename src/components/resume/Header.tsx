@@ -1,4 +1,4 @@
-import { Button, Link } from "@heroui/react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   function download() {
@@ -29,14 +29,14 @@ export function Header() {
       </div>
       <div className="flex flex-row flex-nowrap items-center gap-6 text-center print:hidden">
         <Link
-          href="/about"
+          to="/about"
           className="font-metal text-md mt-1 tracking-[-0.10em] normal-case"
         >
           Colin Bridges
         </Link>
-        <Button onPress={download} variant="ghost" size="md" color="primary">
+        <button onClick={download} className="btn-ghost btn-md btn-primary btn">
           Download Printable PDF
-        </Button>
+        </button>
       </div>
     </div>
   );

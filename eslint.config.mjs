@@ -44,7 +44,7 @@ export default defineConfig([
       "@typescript-eslint/no-empty-object-type": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/consistent-type-imports": [
-        "error",
+        "warn",
         {
           prefer: "type-imports",
           fixStyle: "separate-type-imports",

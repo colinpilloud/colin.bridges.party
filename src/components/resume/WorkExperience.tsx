@@ -1,5 +1,4 @@
 import { List, ResumeHeading } from "./ResumePrimitives";
-import { Accordion, AccordionItem, Selection } from "@heroui/react";
 import jobs from "./jobs.json";
 import { useState } from "react";
 import { useMediaQuery } from "../../UseMediaQuery";
@@ -13,8 +12,8 @@ interface JobProps {
 function Job(props: JobProps) {
   return (
     <div className="break-inside-avoid">
-      {props.roles.map((role, i) => (
-        <ResumeHeading variant="h3" key={i}>
+      {props.roles.map((role) => (
+        <ResumeHeading variant="h3" key={role.title}>
           <div className="flex items-center justify-end gap-x-2 print:flex-row-reverse">
             <span className="align-middle text-xs text-nowrap sm:text-sm">
               ({role.startDate} – {role.endDate})
@@ -43,41 +42,59 @@ export function WorkExperience() {
 }
 
 function AccordionWorkExperience() {
-  const [selectedKeys, setSelectedKeys] = useState<Selection>(
+  const [selectedKeys, setSelectedKeys] = useState<Set<string>>(
     new Set([jobs[0].company]),
   );
 
+  const isOpen = (company: string) => selectedKeys.has(company);
+
+  // Toggle open/close for a job
+  const handleToggle = (company: string) => {
+    setSelectedKeys((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(company)) {
+        newSet.delete(company);
+      } else {
+        newSet.add(company);
+      }
+      return newSet;
+    });
+  };
+
   return (
-    <Accordion
-      selectedKeys={selectedKeys}
-      onSelectionChange={setSelectedKeys}
-      selectionMode="multiple"
-      showDivider={false}
-      className="px-0"
-      itemClasses={{
-        base: "screen:-mr-2 flex flex-col screen:items-end px-0",
-        title:
-          "text-lg print:text-md screen:md:text-xl font-bold uppercase screen:text-right screen:text-secondary",
-        trigger: "w-screen flex flex-row print:py-0",
-        indicator:
-          "text-secondary text-xl rotate-0 data-[open=true]:rotate-45 print:hidden",
-        content:
-          "flex flex-col flex-nowrap screen:items-end py-0 print:space-y-2 screen:space-y-4 print:mb-3 mb-6",
-      }}
-    >
-      {jobs.map((job, i) => (
-        <AccordionItem title={job.company} key={job.company} indicator="+">
-          <Job {...job} />
-        </AccordionItem>
+    <div className="px-0">
+      {jobs.map((job) => (
+        <div className="mb-2" key={job.company}>
+          <div
+            className={`dropdown w-full ${isOpen(job.company) ? "dropdown-open" : ""}`}
+          >
+            <div
+              tabIndex={0}
+              className="dropdown-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
+              onClick={() => handleToggle(job.company)}
+            >
+              <span>{job.company}</span>
+              <span className="text-secondary ml-2 text-xl print:hidden">
+                {isOpen(job.company) ? "−" : "+"}
+              </span>
+            </div>
+            <div
+              tabIndex={0}
+              className={`dropdown-content bg-base-100 mt-1 w-full p-4 shadow transition-all duration-200 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col items-end space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
+            >
+              <Job {...job} />
+            </div>
+          </div>
+        </div>
       ))}
-    </Accordion>
+    </div>
   );
 }
 
 function ListWorkExperience() {
   return (
     <div className="flex flex-col flex-nowrap space-y-1.75">
-      {jobs.map((job, i) => (
+      {jobs.map((job) => (
         <div key={job.company} className="break-inside-avoid">
           <h2 className="text-md font-bold uppercase">{job.company}</h2>
           <Job {...job} />

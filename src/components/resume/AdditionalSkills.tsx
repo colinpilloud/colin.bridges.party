@@ -4,7 +4,7 @@ export function AdditionalSkills() {
   return (
     <List
       items={[
-        <span>
+        <span key="management-experience">
           <span className="screen:text-secondary font-semibold">
             Management experience
           </span>

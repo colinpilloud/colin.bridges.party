@@ -1,13 +1,14 @@
-import { Link } from "@heroui/react";
+import { Link } from "react-router-dom";
 import { Prose } from "../Prose";
 
 export function Ogr4uTitle() {
   return (
     <div className="flex flex-row flex-wrap justify-end gap-x-2 md:gap-x-4">
       <Link
-        isExternal={true}
         className="text-[length:inherit] text-inherit"
-        href="https://ogr4u.com"
+        to="https://ogr4u.com"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         ogr4u.com
       </Link>
@@ -21,17 +22,19 @@ export function Ogr4u() {
       <Prose>
         After scrambling to find the data we needed in the middle of our{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://pinballpdx.org"
+          to="https://pinballpdx.org"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Portland Pinball League
         </Link>{" "}
         matches, I wrote{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://ogr4u.com"
+          to="https://ogr4u.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           this site
         </Link>{" "}

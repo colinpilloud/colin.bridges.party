@@ -1,8 +1,8 @@
 import React from "react";
-import { ResumeSection, sections } from "../../pages/Resume";
 import { Objective } from "./Objective";
 import { WorkExperience } from "./WorkExperience";
-import { cn } from "@heroui/react";
+import sections from "./ResumeSections";
+import { ResumeSection } from "@/types";
 
 export function GridResume() {
   return (
@@ -21,10 +21,12 @@ export function GridResume() {
           {sections
             .filter(
               (s) =>
-                ![
-                  ResumeSection.WorkExperience,
-                  ResumeSection.Objective,
-                ].includes(s.section),
+                !(
+                  [
+                    ResumeSection.WorkExperience,
+                    ResumeSection.Objective,
+                  ] as ResumeSection[]
+                ).includes(s.section),
             )
             .map((section) => {
               const { title, children } = section;
@@ -33,10 +35,12 @@ export function GridResume() {
                   key={section.section}
                   title={title}
                   className={
-                    [
-                      ResumeSection.Objective,
-                      ResumeSection.WorkExperience,
-                    ].includes(section.section)
+                    (
+                      [
+                        ResumeSection.Objective,
+                        ResumeSection.WorkExperience,
+                      ] as ResumeSection[]
+                    ).includes(section.section)
                       ? "col-span-2"
                       : ""
                   }
@@ -71,7 +75,10 @@ function GridSectionWithHeader({
 }) {
   return (
     <div
-      className={cn("flex break-inside-avoid flex-col space-y-2", className)}
+      className={
+        "flex break-inside-avoid flex-col space-y-2" +
+        (className ? " " + className : "")
+      }
     >
       <GridResumeHeader title={title} />
       {children}

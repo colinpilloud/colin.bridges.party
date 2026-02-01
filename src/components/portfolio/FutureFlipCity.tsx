@@ -1,17 +1,18 @@
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { Link, Image } from "@heroui/react";
 import { Prose } from "../Prose";
 import fcfl from "../../assets/img/fcfl.png";
+import { Link } from "react-router-dom";
 
 export function FutureFlipCityTitle() {
   return (
     <div className="flex flex-row flex-wrap justify-end gap-x-2 md:gap-x-4">
       <Link
-        isExternal={true}
         className="text-[length:inherit] text-inherit"
-        href="https://future.flip.city/demo"
+        to="https://future.flip.city/demo"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         future.flip.city
       </Link>
@@ -25,9 +26,10 @@ export function FutureFlipCity() {
       <Prose>
         Powering bespoke pinball tournament formats in Portland,{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://future.flip.city/demo"
+          to="https://future.flip.city/demo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           this site
         </Link>{" "}
@@ -37,8 +39,12 @@ export function FutureFlipCity() {
         </span>{" "}
         events.
       </Prose>
-      <Link href="https://future.flip.city/demo" isExternal={true}>
-        <Image
+      <Link
+        to="https://future.flip.city/demo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
           src={fcfl}
           alt={"Flip City Future League"}
           className="w-[80vw] md:w-[400px]"

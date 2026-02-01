@@ -1,12 +1,12 @@
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { Link } from "@heroui/react";
 import bbl from "../../assets/img/bbl.png";
 import bma from "../../assets/img/bma.png";
 import bmc from "../../assets/img/bmc.png";
 import { Prose } from "../Prose";
 import { Carousel } from "./PortfolioPrimitives";
+import { Link } from "react-router-dom";
 
 export function MagicCircleTitle() {
   return (
@@ -37,23 +37,26 @@ export function MagicCircle() {
       <Prose>
         I built these{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://bestmagiccard.com"
+          to="https://bestmagiccard.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           three
         </Link>{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://bestbasicland.com"
+          to="https://bestbasicland.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           sister
         </Link>{" "}
         <Link
-          isExternal={true}
           className="text-secondary underline"
-          href="https://bestmagicart.com"
+          to="https://bestmagicart.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           sites
         </Link>{" "}
@@ -74,8 +77,9 @@ export function MagicCircle() {
         custom runtime. Data is synchronized from{" "}
         <Link
           className="text-secondary underline"
-          href="https://scryfall.com"
-          isExternal={true}
+          to="https://scryfall.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Scryfall's
         </Link>{" "}

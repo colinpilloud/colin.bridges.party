@@ -1,4 +1,4 @@
-import { Button, Link } from "@heroui/react";
+import { Link } from "react-router-dom";
 
 interface ButtonLinkProps {
   href: string;
@@ -15,14 +15,11 @@ export function ButtonLink(props: ButtonLinkProps) {
       : "bg-black text-secondary";
 
   return (
-    <Button
-      size="sm"
-      radius="lg"
+    <Link
+      to={href}
       className={`w-48 p-6 text-lg font-black uppercase md:p-8 ${buttonStyle}`}
-      as={Link}
-      href={href}
     >
       {text}
-    </Button>
+    </Link>
   );
 }
