@@ -61,7 +61,7 @@ export function WideBandAccordion({
               className="collapse-title to-primary/20 print:text-md print:font-metal flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 text-lg font-black text-black uppercase md:text-2xl print:ml-4 print:text-left"
               onClick={() => handleToggle(i)}
             >
-              <span>{section.title}</span>
+              <span className="flex-1 text-right">{section.title}</span>
               <span className="ml-2 text-xl text-black print:hidden">
                 {isOpen(i) ? "−" : "+"}
               </span>

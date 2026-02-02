@@ -66,17 +66,14 @@ function AccordionWorkExperience() {
       {jobs.map((job) => (
         <div className="mb-2" key={job.company}>
           <div
-            className={`collapse w-full ${isOpen(job.company) ? "collapse-open" : ""}`}
+            className={`collapse-plus collapse w-full ${isOpen(job.company) ? "collapse-open" : ""}`}
           >
             <div
               tabIndex={0}
-              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
+              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
               onClick={() => handleToggle(job.company)}
             >
-              <span>{job.company}</span>
-              <span className="text-secondary ml-2 text-xl print:hidden">
-                {isOpen(job.company) ? "−" : "+"}
-              </span>
+              <span className="flex-1 text-right">{job.company}</span>
             </div>
             <div
               tabIndex={0}
