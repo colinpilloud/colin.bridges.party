@@ -26,9 +26,9 @@ export function MagicCircle() {
       </Prose>
       <Carousel
         items={[
-          { src: "/img/bbl.png", alt: "bestbasicland.com" },
-          { src: "/img/bmc.png", alt: "bestmagiccard.com" },
-          { src: "/img/bma.png", alt: "bestmagicart.com" },
+          { src: "/assets/img/bbl.png", alt: "bestbasicland.com" },
+          { src: "/assets/img/bmc.png", alt: "bestmagiccard.com" },
+          { src: "/assets/img/bma.png", alt: "bestmagicart.com" },
         ]}
       />
       <Prose>

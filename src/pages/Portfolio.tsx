@@ -39,7 +39,6 @@ export function Portfolio() {
             expandedByDefault: true,
           },
         ]}
-        selectionMode="multiple"
       />
     </div>
   );

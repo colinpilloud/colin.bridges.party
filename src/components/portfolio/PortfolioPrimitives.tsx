@@ -30,7 +30,7 @@ export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>
-            <img src={item.src} alt={item.alt} />
+            <img src={item.src} alt={item.alt} className="rounded-lg" />
           </SwiperSlide>
         ))}
       </Swiper>

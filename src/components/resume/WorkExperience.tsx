@@ -2,6 +2,7 @@ import { List, ResumeHeading } from "./ResumePrimitives";
 import jobs from "./jobs.json";
 import { useState } from "react";
 import { useMediaQuery } from "../../UseMediaQuery";
+import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 
 interface JobProps {
   company: string;
@@ -66,18 +67,33 @@ function AccordionWorkExperience() {
       {jobs.map((job) => (
         <div className="mb-2" key={job.company}>
           <div
-            className={`collapse-plus collapse w-full ${isOpen(job.company) ? "collapse-open" : ""}`}
+            className={`collapse -mr-[10vw] w-screen rounded-none ${isOpen(job.company) ? "collapse-open" : ""}`}
           >
             <div
               tabIndex={0}
-              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
+              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent pr-[10vw] text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
               onClick={() => handleToggle(job.company)}
             >
               <span className="flex-1 text-right">{job.company}</span>
+              <span className="ml-2 text-xl text-black print:hidden">
+                {isOpen(job.company) ? (
+                  <FeatherIcon
+                    size="16"
+                    icon="minus"
+                    className="text-secondary"
+                  />
+                ) : (
+                  <FeatherIcon
+                    size="16"
+                    icon="plus"
+                    className="text-secondary"
+                  />
+                )}
+              </span>
             </div>
             <div
               tabIndex={0}
-              className={`collapse-content bg-base-100 mt-1 w-full p-4 shadow transition-all duration-200 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col items-end space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
+              className={`collapse-content mt-1 w-full p-4 pr-[10vw] shadow transition-all duration-200 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col items-end space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
             >
               <Job {...job} />
             </div>

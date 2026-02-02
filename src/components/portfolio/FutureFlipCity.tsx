@@ -44,9 +44,9 @@ export function FutureFlipCity() {
         rel="noopener noreferrer"
       >
         <img
-          src="/img/fcfl.png"
+          src="/assets/img/fcfl.png"
           alt={"Flip City Future League"}
-          className="w-[80vw] md:w-[400px]"
+          className="w-[80vw] rounded-lg md:w-[400px]"
         />
       </Link>
       <Prose>
