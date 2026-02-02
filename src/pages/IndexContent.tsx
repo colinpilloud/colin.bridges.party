@@ -4,7 +4,7 @@ export function IndexContent() {
   return (
     <WideBandCallToAction
       header={
-        <span className="whitespace-pre-line">
+        <span className="text-6xl leading-[0.8] whitespace-pre-line">
           You have{"\n"}software problems.
         </span>
       }

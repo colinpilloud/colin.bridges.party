@@ -17,7 +17,7 @@ export function ButtonLink(props: ButtonLinkProps) {
   return (
     <Link
       to={href}
-      className={`w-48 p-6 text-lg font-black uppercase md:p-8 ${buttonStyle}`}
+      className={`btn btn-lg w-48 rounded-2xl py-8 text-xl font-bold ${buttonStyle}`}
     >
       {text}
     </Link>

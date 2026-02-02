@@ -7,7 +7,7 @@ import React from "react";
 function BannerHeader({ content }: { content: string }) {
   return (
     <div className="to-primary w-screen bg-linear-to-r from-transparent to-20% pt-10 pr-4 pb-4 leading-[0.9] md:pt-16 md:pr-[10vw]">
-      <h1 className="text-2xl leading-10 font-black whitespace-pre-line text-black md:text-4xl md:leading-14">
+      <h1 className="text-4xl leading-10 font-bold whitespace-pre-line text-black md:text-6xl md:leading-14">
         {content}
       </h1>
     </div>
@@ -37,10 +37,12 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="text-secondary ml-4 flex flex-col items-end gap-4 text-2xl leading-[0.9] font-bold whitespace-pre-line md:text-4xl">
+    <section className="text-secondary ml-4 flex flex-col items-end gap-4 text-2xl font-bold whitespace-pre-line md:text-4xl">
       <div>
-        <h4 className="text-md mb-1 font-bold">I really like</h4>
-        <span>solving problems{"\n"}with software.</span>
+        <h4 className="text-sm font-bold">I really like</h4>
+        <span className="text-6xl leading-[0.8]">
+          solving problems{"\n"}with software.
+        </span>
       </div>
       <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
         <ButtonLink
