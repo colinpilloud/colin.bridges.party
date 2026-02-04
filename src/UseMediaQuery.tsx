@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useMediaQuery(query) {
+export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ export function useMediaQuery(query) {
     setMatches(mediaQueryList.matches);
 
     // Add listener for changes
-    const handler = (e) => setMatches(e.matches);
+    const handler = (e: MediaQueryListEvent) => setMatches(e.matches);
     mediaQueryList.addEventListener("change", handler);
 
     // Clean up listener on unmount

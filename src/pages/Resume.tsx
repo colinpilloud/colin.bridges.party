@@ -10,15 +10,7 @@ export function Resume() {
   return (
     <div className="mb-8 flex flex-col items-center">
       <Header />
-      {printMedia ? (
-        <GridResume />
-      ) : (
-        <WideBandAccordion
-          showDivider={false}
-          selectionMode="multiple"
-          sections={sections}
-        />
-      )}
+      {printMedia ? <GridResume /> : <WideBandAccordion sections={sections} />}
     </div>
   );
 }
