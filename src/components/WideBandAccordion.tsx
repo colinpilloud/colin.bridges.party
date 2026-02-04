@@ -4,6 +4,7 @@ import { useOnPrint } from "../UseOnPrint";
 import FeatherIcon from "feather-icons-react";
 
 export interface AccordionSection {
+  section: string;
   title: React.ReactNode;
   children: React.ReactNode;
   expandedByDefault?: boolean;
@@ -20,7 +21,7 @@ export function WideBandAccordion({
       new Set(
         sections
           .map((section, i) =>
-            section.expandedByDefault ? i.toString() : null,
+            section.expandedByDefault ? section.section : null,
           )
           .filter((i) => i !== null) as string[],
       ),
@@ -35,19 +36,19 @@ export function WideBandAccordion({
 
   const isOpen = (i: number) =>
     selectedKeys === "all" ||
-    (selectedKeys instanceof Set && selectedKeys.has(i.toString()));
+    (selectedKeys instanceof Set && selectedKeys.has(sections[i].section));
 
   const handleToggle = (i: number) => {
     setSelectedKeys((prev) => {
       if (prev === "all") {
         // If all are open, close all except this one
-        return new Set([i.toString()]);
+        return new Set([sections[i].section]);
       }
       const newSet = new Set(prev);
-      if (newSet.has(i.toString())) {
-        newSet.delete(i.toString());
+      if (newSet.has(sections[i].section)) {
+        newSet.delete(sections[i].section);
       } else {
-        newSet.add(i.toString());
+        newSet.add(sections[i].section);
       }
       return newSet;
     });
@@ -57,7 +58,7 @@ export function WideBandAccordion({
     <div>
       {sections.map((section, i) => (
         <WideBandAccordionSection
-          key={section.title as string}
+          key={section.section}
           section={section}
           i={i}
           isOpen={isOpen}
@@ -86,7 +87,7 @@ function WideBandAccordionSection({
       >
         <div
           tabIndex={0}
-          className="collapse-title to-primary print:text-md print:font-metal flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent px-4 py-3 pr-[10vw] text-lg font-bold tracking-tight text-black uppercase md:text-2xl print:ml-4 print:text-left"
+          className="collapse-title to-primary print:text-md print:font-metal via-primary/60 flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent via-25% px-4 py-3 pr-[10vw] text-lg font-bold tracking-tight text-black uppercase md:text-2xl print:ml-4 print:text-left"
           onClick={() => handleToggle(i)}
         >
           <span className="flex-1 text-right">{section.title}</span>

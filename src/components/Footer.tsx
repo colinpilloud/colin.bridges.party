@@ -44,7 +44,7 @@ export function Footer() {
           type="checkbox"
           checked={metalMode}
           onChange={toggleMetalMode}
-          className="toggle"
+          className="toggle checked:bg-primary/70"
         />
         <span>🤘</span>
       </div>
