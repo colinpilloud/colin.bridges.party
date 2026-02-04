@@ -32,7 +32,7 @@ export function GridResume() {
               const { title, children } = section;
               return (
                 <GridSectionWithHeader
-                  key={section.section}
+                  key={section.key}
                   title={title}
                   className={
                     (

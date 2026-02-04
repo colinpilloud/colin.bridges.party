@@ -5,7 +5,7 @@ import FeatherIcon from "feather-icons-react";
 import { ResumeSection } from "@/types";
 
 export interface AccordionSection {
-  section: ResumeSection;
+  key: string;
   title: React.ReactNode;
   children: React.ReactNode;
   expandedByDefault?: boolean;
@@ -17,14 +17,12 @@ export function WideBandAccordion({
   sections: AccordionSection[];
 }) {
   // selectedKeys is a Set of string indices of open dropdowns, or "all" for all open
-  const [selectedKeys, setSelectedKeys] = useState<Set<ResumeSection> | "all">(
+  const [selectedKeys, setSelectedKeys] = useState<Set<string> | "all">(
     () =>
       new Set(
         sections
-          .map((section, i) =>
-            section.expandedByDefault ? section.section : null,
-          )
-          .filter((i) => i !== null) as ResumeSection[],
+          .map((section) => (section.expandedByDefault ? section.key : null))
+          .filter((i) => i !== null),
       ),
   );
 
@@ -37,19 +35,19 @@ export function WideBandAccordion({
 
   const isSectionOpen = (section: AccordionSection) =>
     selectedKeys === "all" ||
-    (selectedKeys instanceof Set && selectedKeys.has(section.section));
+    (selectedKeys instanceof Set && selectedKeys.has(section.key));
 
   const handleSectionToggle = (section: AccordionSection) => {
     setSelectedKeys((prev) => {
       if (prev === "all") {
         // If all are open, close all except this one
-        return new Set([section.section]);
+        return new Set([section.key]);
       }
       const newSet = new Set(prev);
-      if (newSet.has(section.section)) {
-        newSet.delete(section.section);
+      if (newSet.has(section.key)) {
+        newSet.delete(section.key);
       } else {
-        newSet.add(section.section);
+        newSet.add(section.key);
       }
       return newSet;
     });
@@ -59,7 +57,7 @@ export function WideBandAccordion({
     <div>
       {sections.map((section) => (
         <WideBandAccordionSection
-          key={section.section}
+          key={section.key}
           section={section}
           isOpen={isSectionOpen(section)}
           onToggle={() => handleSectionToggle(section)}
@@ -99,7 +97,7 @@ function WideBandAccordionSection({
         </div>
         <div
           tabIndex={0}
-          className={`collapse-content mt-1 w-full px-0 py-2 shadow transition-all duration-200 ${isOpen ? "block" : "hidden"} mb-4 flex flex-col space-y-4 md:space-y-6 print:mb-2 print:space-y-1 ${section.section !== ResumeSection.WorkExperience ? "pl-4 md:pl-64" : ""}`}
+          className={`collapse-content mt-1 w-full items-start px-0 pt-1 pb-0 shadow transition-all duration-200 ${isOpen ? "block" : "hidden"} mb-4 flex flex-col space-y-4 md:space-y-6 print:mb-2 print:space-y-1 ${section.key !== ResumeSection.WorkExperience ? "pl-4 md:pl-62" : ""}`}
         >
           {section.children}
         </div>

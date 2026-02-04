@@ -4,14 +4,7 @@ import { Prose } from "../Prose";
 export function Ogr4uTitle() {
   return (
     <div className="flex flex-row flex-wrap justify-end gap-x-2 md:gap-x-4">
-      <Link
-        className="text-[length:inherit] text-inherit"
-        to="https://ogr4u.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ogr4u.com
-      </Link>
+      ogr4u.com
     </div>
   );
 }

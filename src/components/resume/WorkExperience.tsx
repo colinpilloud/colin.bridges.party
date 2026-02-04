@@ -93,7 +93,7 @@ function AccordionWorkExperience() {
             </div>
             <div
               tabIndex={0}
-              className={`collapse-content mt-1 w-full px-4 pt-2 shadow transition-all duration-200 md:pl-64 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
+              className={`collapse-content mt-1 w-full pt-2 pl-4 shadow transition-all duration-200 md:pl-62 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
             >
               <Job {...job} />
             </div>

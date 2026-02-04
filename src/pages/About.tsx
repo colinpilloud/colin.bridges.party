@@ -104,7 +104,7 @@ export function About() {
   return (
     <>
       <BannerHeader content={"Colin\nBridges"} />
-      <div className="flex flex-col space-y-8 pl-4 lg:space-y-12 lg:pl-64">
+      <div className="flex flex-col space-y-8 pb-16 pl-4 lg:space-y-12 lg:pl-64">
         <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />

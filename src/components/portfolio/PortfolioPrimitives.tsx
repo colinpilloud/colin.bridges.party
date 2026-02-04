@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export function Carousel({ items }: { items: { src: string; alt: string }[] }) {
   return (
-    <div className="relative left-0">
+    <div>
       <Swiper
         threshold={5}
         longSwipesMs={200}

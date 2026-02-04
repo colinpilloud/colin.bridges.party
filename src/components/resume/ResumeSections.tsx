@@ -47,6 +47,6 @@ const sections: (AccordionSection & { section: ResumeSection })[] = [
     title: "Achievements // Awards",
     children: <AchievementsAndAwards />,
   },
-];
+].map((s) => ({ ...s, key: s.section }));
 
 export default sections;
