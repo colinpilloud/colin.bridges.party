@@ -17,7 +17,7 @@ export function OtherExperience() {
   ];
 
   return (
-    <div className="flex flex-col flex-nowrap not-print:items-end not-print:space-y-4 print:space-y-0">
+    <div className="flex flex-col flex-nowrap not-print:space-y-4 print:space-y-0">
       <OtherExperienceHeader>
         <span className="print:text-md text-lg md:text-xl">
           Magic Circle
