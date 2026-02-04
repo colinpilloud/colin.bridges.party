@@ -12,7 +12,7 @@ export function Header() {
   }
 
   return (
-    <div className="-mr-4 mb-4 not-print:md:-mr-[10vw]">
+    <div className="mb-4">
       <div className="grid grid-cols-2 items-center gap-4 not-print:hidden">
         <div className="flex flex-col items-end justify-end text-right">
           <h1 className="font-metal text-xl tracking-[0.05em]">

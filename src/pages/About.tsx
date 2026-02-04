@@ -6,7 +6,7 @@ import React from "react";
 
 function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="to-primary w-screen bg-linear-to-r from-transparent to-20% pt-10 pr-4 pb-4 leading-[0.9] md:pt-16 md:pr-[10vw]">
+    <div className="to-primary w-screen bg-linear-to-l from-transparent to-20% pt-10 pb-4 pl-4 leading-[0.9] lg:pl-64">
       <h1 className="text-4xl leading-10 font-bold whitespace-pre-line text-black md:text-6xl md:leading-14">
         {content}
       </h1>
@@ -16,7 +16,7 @@ function BannerHeader({ content }: { content: string }) {
 
 function Blurb() {
   return (
-    <section className="flex flex-col flex-nowrap items-end space-y-4">
+    <section className="flex flex-col flex-nowrap space-y-4">
       <Prose>
         I'm a career backend engineer in{" "}
         <span className="font-black">Portland, OR</span> who's done a little bit
@@ -37,14 +37,14 @@ function Blurb() {
 
 function HighlightedLike() {
   return (
-    <section className="text-secondary ml-4 flex flex-col items-end gap-4 text-2xl font-bold whitespace-pre-line md:text-4xl">
+    <section className="text-secondary flex flex-col gap-4 text-2xl font-bold whitespace-pre-line md:text-4xl">
       <div>
         <h4 className="text-sm font-bold">I really like</h4>
         <span className="text-6xl leading-[0.8]">
           solving problems{"\n"}with software.
         </span>
       </div>
-      <div className="grid grid-cols-1 justify-items-end gap-4 sm:grid-cols-2">
+      <div className="flex flex-col gap-4 lg:flex-row">
         <ButtonLink
           href="/portfolio"
           text="Portfolio"
@@ -60,9 +60,9 @@ type Like = string | ReactNode;
 
 function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
   return (
-    <section className="flex flex-col flex-nowrap items-end not-print:space-y-6">
+    <section className="flex flex-col flex-nowrap not-print:space-y-6">
       <h4 className="text-lg font-bold">{header}</h4>
-      <ul className="flex flex-col flex-nowrap items-end space-y-2">
+      <ul className="flex flex-col flex-nowrap space-y-2">
         {likes.map((like) => (
           <li
             key={
@@ -102,15 +102,17 @@ const outsideWorkLikes = [
 
 export function About() {
   return (
-    <div className="my-16 flex flex-col space-y-8 md:space-y-16">
+    <>
       <BannerHeader content={"Colin\nBridges"} />
-      <Blurb />
-      <HighlightedLike />
-      <LikesSection header="When I'm at work, I like..." likes={workLikes} />
-      <LikesSection
-        header="When I'm not at work, I like..."
-        likes={outsideWorkLikes}
-      />
-    </div>
+      <div className="flex flex-col space-y-8 pl-4 lg:space-y-12 lg:pl-64">
+        <Blurb />
+        <HighlightedLike />
+        <LikesSection header="When I'm at work, I like..." likes={workLikes} />
+        <LikesSection
+          header="When I'm not at work, I like..."
+          likes={outsideWorkLikes}
+        />
+      </div>
+    </>
   );
 }

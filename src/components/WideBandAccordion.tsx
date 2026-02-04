@@ -2,9 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { useOnPrint } from "../UseOnPrint";
 import FeatherIcon from "feather-icons-react";
+import { ResumeSection } from "@/types";
 
 export interface AccordionSection {
-  section: string;
+  section: ResumeSection;
   title: React.ReactNode;
   children: React.ReactNode;
   expandedByDefault?: boolean;
@@ -16,14 +17,14 @@ export function WideBandAccordion({
   sections: AccordionSection[];
 }) {
   // selectedKeys is a Set of string indices of open dropdowns, or "all" for all open
-  const [selectedKeys, setSelectedKeys] = useState<Set<string> | "all">(
+  const [selectedKeys, setSelectedKeys] = useState<Set<ResumeSection> | "all">(
     () =>
       new Set(
         sections
           .map((section, i) =>
             section.expandedByDefault ? section.section : null,
           )
-          .filter((i) => i !== null) as string[],
+          .filter((i) => i !== null) as ResumeSection[],
       ),
   );
 
@@ -34,21 +35,21 @@ export function WideBandAccordion({
   // TODO: restore previously expanded sections
   useOnPrint(expandAllAccordionSections, () => {});
 
-  const isOpen = (i: number) =>
+  const isSectionOpen = (section: AccordionSection) =>
     selectedKeys === "all" ||
-    (selectedKeys instanceof Set && selectedKeys.has(sections[i].section));
+    (selectedKeys instanceof Set && selectedKeys.has(section.section));
 
-  const handleToggle = (i: number) => {
+  const handleSectionToggle = (section: AccordionSection) => {
     setSelectedKeys((prev) => {
       if (prev === "all") {
         // If all are open, close all except this one
-        return new Set([sections[i].section]);
+        return new Set([section.section]);
       }
       const newSet = new Set(prev);
-      if (newSet.has(sections[i].section)) {
-        newSet.delete(sections[i].section);
+      if (newSet.has(section.section)) {
+        newSet.delete(section.section);
       } else {
-        newSet.add(sections[i].section);
+        newSet.add(section.section);
       }
       return newSet;
     });
@@ -56,13 +57,12 @@ export function WideBandAccordion({
 
   return (
     <div>
-      {sections.map((section, i) => (
+      {sections.map((section) => (
         <WideBandAccordionSection
           key={section.section}
           section={section}
-          i={i}
-          isOpen={isOpen}
-          handleToggle={handleToggle}
+          isOpen={isSectionOpen(section)}
+          onToggle={() => handleSectionToggle(section)}
         />
       ))}
     </div>
@@ -71,37 +71,35 @@ export function WideBandAccordion({
 
 function WideBandAccordionSection({
   section,
-  i,
   isOpen,
-  handleToggle,
+  onToggle,
 }: {
   section: AccordionSection;
-  i: number;
-  isOpen: (i: number) => boolean;
-  handleToggle: (i: number) => void;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
   return (
     <div className="mb-2">
       <div
-        className={`collapse -mr-[10vw] w-screen rounded-none ${isOpen(i) ? "collapse-open" : ""}`}
+        className={`collapse w-screen rounded-none ${isOpen ? "collapse-open" : ""}`}
       >
         <div
           tabIndex={0}
-          className="collapse-title to-primary print:text-md print:font-metal via-primary/60 flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent via-25% px-4 py-3 pr-[10vw] text-lg font-bold tracking-tight text-black uppercase md:text-2xl print:ml-4 print:text-left"
-          onClick={() => handleToggle(i)}
+          className="collapse-title print:text-md print:font-metal via-primary/40 from-primary flex w-full cursor-pointer items-center justify-start bg-gradient-to-r via-75% to-transparent py-3 pl-1 text-lg font-bold tracking-tight text-black uppercase md:text-2xl print:ml-4"
+          onClick={onToggle}
         >
-          <span className="flex-1 text-right">{section.title}</span>
-          <span className="ml-2 text-xl text-black print:hidden">
-            {isOpen(i) ? (
+          <span className="ml-2 text-xl text-black md:pl-58 print:hidden">
+            {isOpen ? (
               <FeatherIcon size="16" icon="minus" />
             ) : (
               <FeatherIcon size="16" icon="plus" />
             )}
           </span>
+          <span className="pl-2">{section.title}</span>
         </div>
         <div
           tabIndex={0}
-          className={`collapse-content mt-1 w-full p-4 pr-[10vw] shadow transition-all duration-200 ${isOpen(i) ? "block" : "hidden"} mb-4 flex flex-col items-end space-y-4 md:space-y-6 print:mb-2 print:space-y-1`}
+          className={`collapse-content mt-1 w-full px-0 py-2 shadow transition-all duration-200 ${isOpen ? "block" : "hidden"} mb-4 flex flex-col space-y-4 md:space-y-6 print:mb-2 print:space-y-1 ${section.section !== ResumeSection.WorkExperience ? "pl-4 md:pl-64" : ""}`}
         >
           {section.children}
         </div>
