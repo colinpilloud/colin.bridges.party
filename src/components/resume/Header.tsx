@@ -34,7 +34,11 @@ export function Header() {
         >
           Colin Bridges
         </Link>
-        <button onClick={download} className="btn-ghost btn-md btn-primary btn">
+        <button
+          onClick={download}
+          type="button"
+          className="text-neutral btn-md btn-primary btn"
+        >
           Download Printable PDF
         </button>
       </div>

@@ -71,7 +71,7 @@ function AccordionWorkExperience() {
           >
             <div
               tabIndex={0}
-              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent pr-[10vw] text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
+              className="collapse-title to-secondary/10 text-secondary print:text-md flex w-full cursor-pointer items-center justify-between bg-gradient-to-r from-transparent via-transparent via-[35%] pr-[10vw] text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
               onClick={() => handleToggle(job.company)}
             >
               <span className="flex-1 text-right">{job.company}</span>

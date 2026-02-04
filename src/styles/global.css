@@ -1,5 +1,12 @@
 @import "tailwindcss";
-@plugin 'daisyui';
+@plugin 'daisyui' {
+  themes: dark --default;
+}
+
+:root {
+  --color-primary: hsl(58, 100%, 50%);
+  --color-secondary: hsl(140, 100%, 50%);
+}
 
 @theme {
   --font-metal: "Burn The Witch", sans-serif;

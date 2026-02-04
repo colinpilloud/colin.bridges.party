@@ -44,7 +44,7 @@ export function List(props: ListProps) {
           return (
             <li
               key={item}
-              className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
+              className={`${classNames?.li || ""} w-xs list-disc not-print:list-inside md:w-md print:w-full`}
             >
               {item}
             </li>
@@ -54,7 +54,7 @@ export function List(props: ListProps) {
           return (
             <li
               key={i}
-              className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
+              className={`${classNames?.li || ""} w-xs list-disc not-print:list-inside md:w-md print:w-full`}
             >
               {item}
             </li>
@@ -63,7 +63,7 @@ export function List(props: ListProps) {
         return (
           <li
             key={undefined}
-            className={`${classNames?.li || ""} w-[22rem] list-disc not-print:list-inside md:w-[36rem] print:w-full`}
+            className={`${classNames?.li || ""} w-xs list-disc not-print:list-inside md:w-md print:w-full`}
           >
             {item}
           </li>
