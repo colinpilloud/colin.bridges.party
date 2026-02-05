@@ -3,7 +3,7 @@ import { List } from "./ResumePrimitives";
 
 function OtherExperienceHeader({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="not-print:text-secondary text-xl font-extrabold whitespace-pre-line uppercase print:leading-none">
+    <h2 className="not-print:text-secondary font-extrabold whitespace-pre-line uppercase print:leading-none">
       {children}
     </h2>
   );
@@ -19,9 +19,9 @@ export function OtherExperience() {
   return (
     <div className="flex flex-col flex-nowrap not-print:space-y-4 print:space-y-0">
       <OtherExperienceHeader>
-        <span className="print:text-md text-lg md:text-xl">
+        <span>
           Magic Circle
-          <span className="pl-px align-super text-[0.66rem]">Ⓜ️</span> Webring
+          <span className="pl-px align-super text-[0.40rem]">Ⓜ️</span> Webring
         </span>
       </OtherExperienceHeader>
       <List
@@ -30,7 +30,7 @@ export function OtherExperience() {
             {magicCircle.map((l) => (
               <span key={l.href}>
                 <Link
-                  className="not-print:text-secondary underline print:text-sm print:text-black print:no-underline"
+                  className="not-print:text-secondary underline print:text-black print:no-underline"
                   to={l.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -48,7 +48,7 @@ export function OtherExperience() {
       />
       <OtherExperienceHeader>
         <Link
-          className="not-print:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
+          className="not-print:text-secondary print:text-md text-right uppercase print:text-black"
           to="https://future.flip.city/demo"
           target="_blank"
           rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export function OtherExperience() {
       />
       <OtherExperienceHeader>
         <Link
-          className="not-print:text-secondary print:text-md text-right text-lg font-bold uppercase md:text-xl print:text-black"
+          className="not-print:text-secondary print:text-md text-right uppercase print:text-black"
           to="https://ogr4u.com"
           target="_blank"
           rel="noopener noreferrer"

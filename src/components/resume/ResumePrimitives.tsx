@@ -37,7 +37,7 @@ export function List(props: ListProps) {
   const { items, classNames } = props;
   return (
     <ul
-      className={`${classNames?.ul || ""} flex list-outside flex-col flex-nowrap space-y-4 print:ml-4 print:space-y-0`}
+      className={`${classNames?.ul || ""} flex list-outside flex-col flex-nowrap space-y-4 print:mb-1.25 print:ml-4 print:space-y-0`}
     >
       {items.map((item) => {
         if (typeof item === "string") {

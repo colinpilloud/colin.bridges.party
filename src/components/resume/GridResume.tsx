@@ -11,10 +11,7 @@ export function GridResume() {
         <Objective />
       </GridSectionWithHeader>
       <div className="grid grid-cols-2 gap-8">
-        <GridSectionWithHeader
-          title="Work Experience"
-          className="break-inside-auto"
-        >
+        <GridSectionWithHeader title="Work Experience">
           <WorkExperience />
         </GridSectionWithHeader>
         <div className="flex flex-col space-y-4">
@@ -34,16 +31,7 @@ export function GridResume() {
                 <GridSectionWithHeader
                   key={section.key}
                   title={title}
-                  className={
-                    (
-                      [
-                        ResumeSection.Objective,
-                        ResumeSection.WorkExperience,
-                      ] as ResumeSection[]
-                    ).includes(section.section)
-                      ? "col-span-2"
-                      : ""
-                  }
+                  className="break-inside-avoid"
                 >
                   {children}
                 </GridSectionWithHeader>
@@ -75,10 +63,7 @@ function GridSectionWithHeader({
 }) {
   return (
     <div
-      className={
-        "flex break-inside-avoid flex-col space-y-2" +
-        (className ? " " + className : "")
-      }
+      className={"flex flex-col space-y-2" + (className ? " " + className : "")}
     >
       <GridResumeHeader title={title} />
       {children}
