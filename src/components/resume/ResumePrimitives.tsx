@@ -77,7 +77,7 @@ export function SkillList({ skills }: { skills: string[] }) {
   return (
     <>
       {skills.map((item, i) => (
-        <span className="not-print:text-secondary font-semibold" key={i}>
+        <span className="not-print:text-secondary font-semibold" key={item}>
           {item}
           {i < skills.length - 1 && (
             <span className="not-print:text-primary font-normal">

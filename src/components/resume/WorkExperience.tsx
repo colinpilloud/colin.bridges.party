@@ -12,19 +12,21 @@ interface JobProps {
 
 function Job(props: JobProps) {
   return (
-    <div className="break-inside-avoid">
-      {props.roles.map((role) => (
-        <ResumeHeading variant="h3" key={role.title}>
-          <div className="flex items-center gap-x-2">
-            <span className="text-md font-semibold print:text-xs">
-              {role.title}
-            </span>
-            <span className="align-middle text-xs text-nowrap sm:text-sm print:text-[0.6rem]">
-              ({role.startDate} – {role.endDate})
-            </span>
-          </div>
-        </ResumeHeading>
-      ))}
+    <div className="flex break-inside-avoid flex-col not-print:gap-2">
+      <div className="flex flex-col not-print:gap-2">
+        {props.roles.map((role) => (
+          <ResumeHeading variant="h3" key={role.title}>
+            <div className="flex items-center gap-x-2 not-print:justify-between not-print:sm:justify-start">
+              <span className="text-md font-semibold print:text-xs">
+                {role.title}
+              </span>
+              <span className="align-middle text-xs text-nowrap sm:text-sm print:text-[0.6rem]">
+                ({role.startDate} – {role.endDate})
+              </span>
+            </div>
+          </ResumeHeading>
+        ))}
+      </div>
       <List items={props.responsibilities} />
     </div>
   );
