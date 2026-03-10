@@ -25,13 +25,18 @@ jobs:
 
       - name: Enable Corepack
         run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "yarn"
+
       - name: Install dependencies
         run: yarn install --immutable
-      - run: yarn build
+
+      - name: Build project
+        run: yarn build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4

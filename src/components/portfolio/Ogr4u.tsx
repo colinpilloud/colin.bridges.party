@@ -36,6 +36,7 @@ export function Ogr4u() {
       <iframe
         src="https://ogr4u.com"
         title="ogr4u.com"
+        sandbox="allow-scripts allow-same-origin"
         className="h-[450px] w-[80vw] rounded-2xl border-0 shadow-lg md:h-[600px] md:w-[400px]"
       />
       <Prose>
