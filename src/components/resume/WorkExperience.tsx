@@ -1,8 +1,6 @@
 import { List, ResumeHeading } from "./ResumePrimitives";
 import jobs from "./jobs.json";
-import { useState } from "react";
-import { useMediaQuery } from "../../UseMediaQuery";
-import FeatherIcon from "feather-icons-react/build/FeatherIcon";
+import { ResumeSubsection } from "./ResumeSubsection";
 
 interface JobProps {
   company: string;
@@ -39,82 +37,13 @@ interface RoleProps {
 }
 
 export function WorkExperience() {
-  const printMedia = useMediaQuery("print");
+  const items = jobs.map((job) => ({
+    key: job.company,
+    title: job.company,
+    content: <Job {...job} />,
+  }));
 
-  return printMedia ? <ListWorkExperience /> : <AccordionWorkExperience />;
-}
+  const defaultOpenKeys = jobs.length > 0 ? [jobs[0].company] : [];
 
-function AccordionWorkExperience() {
-  const [selectedKeys, setSelectedKeys] = useState<Set<string>>(
-    () => new Set([jobs[0].company]),
-  );
-
-  const isOpen = (company: string) => selectedKeys.has(company);
-
-  // Toggle open/close for a job
-  const handleToggle = (company: string) => {
-    setSelectedKeys((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(company)) {
-        newSet.delete(company);
-      } else {
-        newSet.add(company);
-      }
-      return newSet;
-    });
-  };
-
-  return (
-    <>
-      {jobs.map((job) => (
-        <div className="mb-2" key={job.company}>
-          <div
-            className={`collapse w-screen rounded-none md:[--work-content-indent:clamp(1rem,15vw,15.5rem)] md:[--work-title-indent:calc(var(--work-content-indent)-1rem)] ${isOpen(job.company) ? "collapse-open" : ""}`}
-          >
-            <div
-              tabIndex={0}
-              className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-start bg-gradient-to-l from-transparent via-transparent via-[15%] pl-1 text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
-              onClick={() => handleToggle(job.company)}
-            >
-              <span className="ml-2 text-xl text-black md:pl-[var(--work-title-indent)] print:hidden">
-                {isOpen(job.company) ? (
-                  <FeatherIcon
-                    size="16"
-                    icon="minus"
-                    className="text-secondary"
-                  />
-                ) : (
-                  <FeatherIcon
-                    size="16"
-                    icon="plus"
-                    className="text-secondary"
-                  />
-                )}
-              </span>
-              <span className="pl-2">{job.company}</span>
-            </div>
-            <div
-              tabIndex={0}
-              className={`collapse-content mt-1 mb-6 flex w-full flex-col space-y-4 pt-2 pl-4 shadow transition-all duration-200 md:space-y-6 md:pl-[var(--work-content-indent)] print:mb-3 print:space-y-2 ${isOpen(job.company) ? "block" : "hidden"}`}
-            >
-              <Job {...job} />
-            </div>
-          </div>
-        </div>
-      ))}
-    </>
-  );
-}
-
-function ListWorkExperience() {
-  return (
-    <div className="flex flex-col flex-nowrap space-y-1.75">
-      {jobs.map((job) => (
-        <div key={job.company} className="break-inside-avoid">
-          <h2 className="text-[0.8rem] font-bold uppercase">{job.company}</h2>
-          <Job {...job} />
-        </div>
-      ))}
-    </div>
-  );
+  return <ResumeSubsection items={items} defaultOpenKeys={defaultOpenKeys} />;
 }

@@ -11,6 +11,11 @@ export interface AccordionSection {
   expandedByDefault?: boolean;
 }
 
+const INDENTED_SECTION_KEYS: ReadonlySet<string> = new Set<string>([
+  ResumeSection.WorkExperience,
+  ResumeSection.OtherExperience,
+]);
+
 export function WideBandAccordion({
   sections,
 }: {
@@ -55,15 +60,17 @@ export function WideBandAccordion({
 
   return (
     <div>
-      {sections.map((section) => (
-        <WideBandAccordionSection
-          key={section.key}
-          section={section}
-          isOpen={isSectionOpen(section)}
-          shouldIndentContent={section.key !== ResumeSection.WorkExperience}
-          onToggle={() => handleSectionToggle(section)}
-        />
-      ))}
+      {sections.map((section) => {
+        return (
+          <WideBandAccordionSection
+            key={section.key}
+            section={section}
+            isOpen={isSectionOpen(section)}
+            shouldIndentContent={!INDENTED_SECTION_KEYS.has(section.key)}
+            onToggle={() => handleSectionToggle(section)}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -100,7 +107,7 @@ function WideBandAccordionSection({
         </div>
         <div
           tabIndex={0}
-          className={`collapse-content mt-1 mb-4 flex w-full flex-col items-start space-y-4 px-0 pt-1 pb-0 shadow transition-all duration-200 md:space-y-6 print:mb-2 print:space-y-1 ${isOpen ? "block" : "hidden"} ${shouldIndentContent ? "pl-4 md:pl-[var(--accordion-content-indent)]" : ""}`}
+          className={`collapse-content mt-1 mb-4 flex w-full flex-col items-start space-y-4 px-0 pt-1 pr-4 pb-0 shadow transition-all duration-200 md:space-y-6 print:mb-2 print:space-y-1 ${isOpen ? "block" : "hidden"} ${shouldIndentContent ? "pl-4 md:pl-[var(--accordion-content-indent)]" : ""}`}
         >
           {section.children}
         </div>
