@@ -6,7 +6,7 @@ import React from "react";
 
 function BannerHeader({ content }: { content: string }) {
   return (
-    <div className="to-primary w-screen bg-linear-to-l from-transparent to-20% pt-10 pb-4 pl-4 leading-[0.9] lg:pl-64">
+    <div className="to-primary w-screen bg-linear-to-l from-transparent to-20% pt-10 pb-4 pl-4 leading-[0.9] lg:pl-[clamp(1rem,15vw,16rem)]">
       <h1 className="text-4xl leading-10 font-bold whitespace-pre-line text-black md:text-6xl md:leading-14">
         {content}
       </h1>
@@ -109,7 +109,7 @@ export function About() {
   return (
     <>
       <BannerHeader content={"Colin\nBridges"} />
-      <div className="flex flex-col space-y-8 pb-16 pl-4 lg:space-y-12 lg:pl-64">
+      <div className="flex flex-col space-y-8 pb-16 pl-4 lg:space-y-12 lg:pl-[clamp(1rem,15vw,16rem)]">
         <Blurb />
         <HighlightedLike />
         <LikesSection header="When I'm at work, I like..." likes={workLikes} />

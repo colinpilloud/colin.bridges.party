@@ -60,6 +60,7 @@ export function WideBandAccordion({
           key={section.key}
           section={section}
           isOpen={isSectionOpen(section)}
+          shouldIndentContent={section.key !== ResumeSection.WorkExperience}
           onToggle={() => handleSectionToggle(section)}
         />
       ))}
@@ -70,14 +71,16 @@ export function WideBandAccordion({
 function WideBandAccordionSection({
   section,
   isOpen,
+  shouldIndentContent,
   onToggle,
 }: {
   section: AccordionSection;
   isOpen: boolean;
+  shouldIndentContent: boolean;
   onToggle: () => void;
 }) {
   return (
-    <div className="mb-2">
+    <div className="mb-2 md:[--accordion-content-indent:clamp(1rem,15vw,15.5rem)] md:[--accordion-title-indent:calc(var(--accordion-content-indent)-1rem)]">
       <div
         className={`collapse w-screen rounded-none ${isOpen ? "collapse-open" : ""}`}
       >
@@ -86,7 +89,7 @@ function WideBandAccordionSection({
           className="collapse-title print:text-md print:font-metal via-primary/40 from-primary flex w-full cursor-pointer items-center justify-start bg-gradient-to-r via-75% to-transparent py-3 pl-1 text-lg font-bold tracking-tight text-black uppercase md:text-2xl print:ml-4"
           onClick={onToggle}
         >
-          <span className="ml-2 text-xl text-black md:pl-58 print:hidden">
+          <span className="ml-2 text-xl text-black md:pl-[var(--accordion-title-indent)] print:hidden">
             {isOpen ? (
               <FeatherIcon size="16" icon="minus" />
             ) : (
@@ -97,7 +100,7 @@ function WideBandAccordionSection({
         </div>
         <div
           tabIndex={0}
-          className={`collapse-content mt-1 w-full items-start px-0 pt-1 pb-0 shadow transition-all duration-200 ${isOpen ? "block" : "hidden"} mb-4 flex flex-col space-y-4 md:space-y-6 print:mb-2 print:space-y-1 ${section.key !== ResumeSection.WorkExperience ? "pl-4 md:pl-62" : ""}`}
+          className={`collapse-content mt-1 mb-4 flex w-full flex-col items-start space-y-4 px-0 pt-1 pb-0 shadow transition-all duration-200 md:space-y-6 print:mb-2 print:space-y-1 ${isOpen ? "block" : "hidden"} ${shouldIndentContent ? "pl-4 md:pl-[var(--accordion-content-indent)]" : ""}`}
         >
           {section.children}
         </div>

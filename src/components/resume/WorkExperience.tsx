@@ -69,14 +69,14 @@ function AccordionWorkExperience() {
       {jobs.map((job) => (
         <div className="mb-2" key={job.company}>
           <div
-            className={`lg:-pl-60 collapse w-screen rounded-none ${isOpen(job.company) ? "collapse-open" : ""}`}
+            className={`collapse w-screen rounded-none md:[--work-content-indent:clamp(1rem,15vw,15.5rem)] md:[--work-title-indent:calc(var(--work-content-indent)-1rem)] ${isOpen(job.company) ? "collapse-open" : ""}`}
           >
             <div
               tabIndex={0}
               className="collapse-title to-secondary/20 text-secondary print:text-md flex w-full cursor-pointer items-center justify-start bg-gradient-to-l from-transparent via-transparent via-[15%] pl-1 text-lg font-bold uppercase md:text-xl print:ml-4 print:text-left"
               onClick={() => handleToggle(job.company)}
             >
-              <span className="ml-2 text-xl text-black md:pl-58 print:hidden">
+              <span className="ml-2 text-xl text-black md:pl-[var(--work-title-indent)] print:hidden">
                 {isOpen(job.company) ? (
                   <FeatherIcon
                     size="16"
@@ -95,7 +95,7 @@ function AccordionWorkExperience() {
             </div>
             <div
               tabIndex={0}
-              className={`collapse-content mt-1 w-full pt-2 pl-4 shadow transition-all duration-200 md:pl-62 ${isOpen(job.company) ? "block" : "hidden"} mb-6 flex flex-col space-y-4 md:space-y-6 print:mb-3 print:space-y-2`}
+              className={`collapse-content mt-1 mb-6 flex w-full flex-col space-y-4 pt-2 pl-4 shadow transition-all duration-200 md:space-y-6 md:pl-[var(--work-content-indent)] print:mb-3 print:space-y-2 ${isOpen(job.company) ? "block" : "hidden"}`}
             >
               <Job {...job} />
             </div>
