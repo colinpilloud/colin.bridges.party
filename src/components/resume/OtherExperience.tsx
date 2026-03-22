@@ -50,17 +50,16 @@ export function OtherExperience() {
         <List
           items={[
             <span key="ffc-link">
-              Site:{" "}
               <Link
                 className="not-print:text-secondary underline print:text-black print:no-underline"
                 to="https://future.flip.city/demo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                future.flip.city/demo
-              </Link>
+                Tournament companion webapp
+              </Link>{" "}
+              for bespoke pinball events
             </span>,
-            "Tournament companion webapp for bespoke pinball events",
             "Syncs with Firebase updates published from organizer's iOS app in real-time",
           ]}
         />
@@ -73,17 +72,16 @@ export function OtherExperience() {
         <List
           items={[
             <span key="ogr-link">
-              Site:{" "}
               <Link
                 className="not-print:text-secondary underline print:text-black print:no-underline"
                 to="https://ogr4u.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ogr4u.com
-              </Link>
+                At-hand scouting reference
+              </Link>{" "}
+              for Pinball League matches
             </span>,
-            "At-hand scouting reference for Pinball League matches",
             "Interactive filters allow rapid querying of machine and player data",
           ]}
         />

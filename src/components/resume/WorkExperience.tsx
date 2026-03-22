@@ -15,7 +15,7 @@ function Job(props: JobProps) {
         {props.roles.map((role) => (
           <ResumeHeading variant="h3" key={role.title}>
             <div className="flex items-center gap-x-2 not-print:justify-between not-print:sm:justify-start">
-              <span className="text-md font-semibold print:text-xs">
+              <span className="text-md font-semibold print:text-[0.7rem]">
                 {role.title}
               </span>
               <span className="align-middle text-xs text-nowrap sm:text-sm print:text-[0.6rem]">

@@ -23,9 +23,9 @@ function Blurb() {
         interest across the full stack.
       </Prose>
       <Prose>
-        I like creating{" "}
-        <span className="font-black">lean, modern APIs in AWS</span>, as well as
-        writing <span className="font-black">React / TypeScript webapps</span>.
+        I like creating <span className="font-black">lean, modern APIs</span>{" "}
+        over all kinds of domains. I also like writing{" "}
+        <span className="font-black">React / TypeScript webapps</span>.
       </Prose>
       <Prose className="text-primary font-extrabold">
         I am ready for my next role;{" "}
@@ -86,8 +86,9 @@ function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
 
 const workLikes = [
   <span key="dx">
-    establishing developer workflows with modern tooling, including{" "}
-    <span className="font-black">AI and LLM-based assistants</span>.
+    establishing a consistent developer experience with modern tooling,
+    including{" "}
+    <span className="font-black">Generative AI and agentic workflows</span>.
   </span>,
   "working with teammates to build a collaborative and professional engineering culture.",
   "mentoring junior engineers, especially those new to backend engineering.",

@@ -1,4 +1,3 @@
-import type React from "react";
 import type { ResumeSubsectionItem } from "./ResumeSubsectionAccordion";
 
 interface ResumeSubsectionListProps {
@@ -16,7 +15,7 @@ export function ResumeSubsectionList({
 }: ResumeSubsectionListProps) {
   return (
     <div
-      className={`flex flex-col flex-nowrap space-y-1.75 ${wrapperClassName ?? ""}`}
+      className={`space-y-1.4 flex flex-col flex-nowrap ${wrapperClassName ?? ""}`}
     >
       {items.map((item) => (
         <div

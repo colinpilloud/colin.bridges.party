@@ -5,7 +5,7 @@ import { ResumeSection } from "@/types";
 
 export function GridResume() {
   return (
-    <div className="flex flex-col gap-4 text-[0.6rem]">
+    <div className="flex flex-col gap-4 text-[0.55rem]">
       <div className="grid grid-cols-[2fr_3fr] gap-8">
         <div className="flex flex-col space-y-2">
           {sections
