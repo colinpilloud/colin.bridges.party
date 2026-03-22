@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { AppLayout } from "./components/AppLayout";
+import ScrollToTop from "./components/ScrollToTop";
 
 export function App() {
   return (
-    <AppLayout>
-      <Outlet />
-    </AppLayout>
+    <>
+      <ScrollToTop />
+      <AppLayout>
+        <Outlet />
+      </AppLayout>
+    </>
   );
 }
