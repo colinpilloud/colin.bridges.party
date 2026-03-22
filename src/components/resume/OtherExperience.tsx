@@ -21,7 +21,7 @@ export function OtherExperience() {
       <OtherExperienceHeader>
         <span>
           Magic Circle
-          <span className="pl-px align-super text-[0.40rem]">Ⓜ️</span> Webring
+          <span className="pl-px align-super text-[0.6em]">Ⓜ️</span> Webring
         </span>
       </OtherExperienceHeader>
       <List
@@ -40,7 +40,7 @@ export function OtherExperience() {
               </span>
             ))}
             that crowdsource rankings for Magic: the Gathering
-            <span className="align-super text-[0.3rem]">TM</span> cards
+            <span className="align-super text-[0.6em]">TM</span> cards
           </span>,
           "Monorepo TypeScript / React frontend powering all three web applications",
           "AWS infrastructure deployed via TypeScript CDK v2",

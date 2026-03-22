@@ -111,7 +111,7 @@ function ListWorkExperience() {
     <div className="flex flex-col flex-nowrap space-y-1.75">
       {jobs.map((job) => (
         <div key={job.company} className="break-inside-avoid">
-          <h2 className="text-md font-bold uppercase">{job.company}</h2>
+          <h2 className="text-[0.8rem] font-bold uppercase">{job.company}</h2>
           <Job {...job} />
         </div>
       ))}

@@ -6,6 +6,14 @@ export function TechnicalSkills() {
       <List
         classNames={{ ul: "print:ml-4" }}
         items={[
+          <span key="llm-tooling">
+            Generative{" "}
+            <span className="not-print:text-secondary font-semibold">
+              AI development workflows
+            </span>{" "}
+            for practical software delivery, including code generation,
+            refactoring, and debugging
+          </span>,
           <span key="api-development">
             Modern API development (both REST and GraphQL) in{" "}
             <SkillList skills={["Java", "Kotlin", "Scala", "Python"]} />

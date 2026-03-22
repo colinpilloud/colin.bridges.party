@@ -18,12 +18,14 @@ function Blurb() {
   return (
     <section className="flex flex-col flex-nowrap space-y-4">
       <Prose>
-        I'm a career backend engineer in{" "}
-        <span className="font-black">Portland, OR</span> who's done a little bit
-        of everything.
+        I'm a software engineer based in{" "}
+        <span className="font-black">Portland, OR</span> with experience and
+        interest across the full stack.
       </Prose>
       <Prose>
-        I like programming on the JVM and writing React / TypeScript webapps.
+        I like creating{" "}
+        <span className="font-black">lean, modern APIs in AWS</span>, as well as
+        writing <span className="font-black">React / TypeScript webapps</span>.
       </Prose>
       <Prose className="text-primary font-extrabold">
         I am ready for my next role;{" "}
@@ -83,9 +85,12 @@ function LikesSection({ header, likes }: { header: string; likes: Like[] }) {
 }
 
 const workLikes = [
-  "working with teammates to build a fun, inclusive engineering culture.",
+  <span key="dx">
+    establishing developer workflows with modern tooling, including{" "}
+    <span className="font-black">AI and LLM-based assistants</span>.
+  </span>,
+  "working with teammates to build a collaborative and professional engineering culture.",
   "mentoring junior engineers, especially those new to backend engineering.",
-  "establishing standards and building automation.",
   "folding useful functional programming concepts into everyday code.",
   "listening to metal.",
 ];

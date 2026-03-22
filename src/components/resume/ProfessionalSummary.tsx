@@ -1,6 +1,6 @@
 import { Prose } from "../Prose";
 
-export function Objective() {
+export function ProfessionalSummary() {
   return (
     <Prose>
       Jack-of-all-trades backend engineer looking for a role in the{" "}

@@ -1,5 +1,5 @@
 export const ResumeSection = {
-  Objective: "Objective",
+  ProfessionalSummary: "ProfessionalSummary",
   TechnicalSkills: "TechnicalSkills",
   AdditionalSkills: "AdditionalSkills",
   WorkExperience: "WorkExperience",

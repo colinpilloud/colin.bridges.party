@@ -1,5 +1,5 @@
 import type { AccordionSection } from "../WideBandAccordion";
-import { Objective } from "./Objective";
+import { ProfessionalSummary } from "./ProfessionalSummary";
 import { TechnicalSkills } from "./TechnicalSkills";
 import { AdditionalSkills } from "./AdditionalSkills";
 import { WorkExperience } from "./WorkExperience";
@@ -10,9 +10,9 @@ import { ResumeSection } from "@/types";
 
 const sections: (AccordionSection & { section: ResumeSection })[] = [
   {
-    section: ResumeSection.Objective,
-    title: "Objective",
-    children: <Objective />,
+    section: ResumeSection.ProfessionalSummary,
+    title: "Summary",
+    children: <ProfessionalSummary />,
     expandedByDefault: true,
   },
   {

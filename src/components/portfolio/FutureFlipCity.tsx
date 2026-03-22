@@ -47,7 +47,8 @@ export function FutureFlipCity() {
       <Prose>
         The tournament organizer uses an iOS app to manage the event, and
         updates are pushed into{" "}
-        <span className="text-secondary font-semibold">Firebase</span>. This{" "}
+        <span className="text-secondary font-semibold">Firebase</span> via calls
+        to a lightweight API. This{" "}
         <span className="text-secondary font-semibold">
           TypeScript / React webapp
         </span>{" "}
